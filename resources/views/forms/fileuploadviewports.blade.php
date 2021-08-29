@@ -32,72 +32,12 @@
                             </div>
 
                             <div class="stats col-lg-4 ml-1">
-                            <!-- {{--
-                                                                    <div class="items mb-3">
-                                                                        <div class="data_row col-12">
-                                                                            <div
-                                                                                class="registrant">{{ $registrant->auditiondetail->programname }}</div>
-                                                                            <div
-                                                                                class="filenname">{{ $registrant->video($videotype)['title'] }}</div>
-                                                                            <div
-                                                                                class="duration">{{ number_format($registrant->video($videotype)['duration'],0) }}
-                                                                                seconds
-                                                                            </div>
-                                                                            <div
-                                                                                class="approved_at">{{ $registrant->video($videotype)['approved'] }}</div>
-                                                                        <!-- {-- <div class="server_id">{{ $registrant->video($videotype)['id'] }}<div> --} -->
-                                                                        </div>
-                                                                    </div>
---}} -->
                                 <div class="flex mx-2 my-4 justify-around">
                                     @if($registrant->fileuploadapproved($filecontenttype))
                                         <div class="text-green-700 text-xs font-bold bg-green-100 p-2">
                                             Approved: {{ $registrant->fileuploadapprovaltimestamp($filecontenttype) }}
                                         </div>
-                                    @else
-                                        <a href="{{ route('fileupload.approve',['registrant' => $registrant, 'filecontenttype' => $filecontenttype]) }}">
-                                            <button
-                                                type="button"
-                                                class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-                                            >
-                                                Approve
-                                            </button>
-                                        </a>
                                     @endif
-                                    <a href="{{ route('fileupload.reject',['registrant' => $registrant, 'filecontenttype' => $filecontenttype]) }}">
-                                        <button
-                                            type="button"
-                                            class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-                                        >
-                                            Reject
-                                        </button>
-                                    </a>
-                                <!-- {{--
-                                                                        <div class="approved col-7">
-                                                                            <input type="checkbox"
-                                                                                   class="form-check-input approved"
-                                                                                   name="approved"
-                                                                                   id="approved_{{$filecontenttype->id}}"
-                                                                                   value="approved"
-                                                                                   server_id="{{ $registrant->fileuploads->where('filecontenttype_id', $filecontenttype->id)->first()->server_id }}"
-                                                                                {{ $registrant->fileuploads->where('filecontenttype_id',$filecontenttype->id)->first()->approved ? "CHECKED" : '' }}
-                                                                            />
-                                                                            <label
-                                                                                class="form-check-label">Approved</label>
-                                                                        </div>
-
-                                                                        <div class="rejected col-11 ml-1 "
-                                                                             server_id="{{ $registrant->video($videotype)['id'] }}">
-                                                        <span class="text-danger"
-                                                              style="font-size: .8rem; cursor:pointer;"
-                                                              title="Reject this video"
-                                                        >
-                                                            Reject
-                                                        </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                --}} -->
                                 </div>
                                 {{-- END VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT --}}
                                 @else
@@ -139,6 +79,7 @@
                                         <div class="flex justify-end">
                                             <input
                                                 class="bg-black text-white border rounded px-4 cursor-pointer"
+                                                style="background: black; color: white;border-radius: .5rem; cursor: pointer;"
                                                 type="submit" name="submit"
                                                 value="Upload {{ ucwords($filecontenttype->descr) }}"
                                             />
