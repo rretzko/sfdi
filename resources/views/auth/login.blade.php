@@ -25,7 +25,7 @@ Login
         @if(config('app.url') == 'http://localhost')
 		    <form method="POST" action="{{ route('tdr.login.update') }}" class="form-horizontal m-t-20">
         @else
-            <form method="POST" action="http//studentfolder.info/tdr-login" flass="form-horizontal m-t-20">
+            <form method="POST" action="/tdr/login" class="form-horizontal m-t-20">
         @endif
 			@csrf
 			<div class="form-group row">
@@ -68,8 +68,8 @@ Login
 
 			<div class="form-group m-t-10 mb-0 row">
 				<div class="col-sm-7 m-t-20">
-					@if (Route::has('usernameRequest') )
-					<a class="text-muted" href="{{ route('usernameRequest') }}">
+					@if (Route::has('usernameRequest.edit') )
+					<a class="text-muted" href="{{ route('usernameRequest.edit') }}">
 						<i class="mdi mdi-clipboard-account"></i> {{ __('Forgot Your Username?') }}
 					</a>
 					@endif
