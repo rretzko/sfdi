@@ -25,9 +25,12 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
         <!-- Styles -->
-        <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
-
-        <link href="{{asset('css/main.css')}}" rel="stylesheet"></link>
+        <link href="assets/css/main.css" rel="stylesheet">
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- {{--
+            <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
+            <link href="{{asset('css/main.css')}}" rel="stylesheet"></link>
+        --}} -->
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -40,5 +43,6 @@
         @yield('nav_sub_main')
         @yield('content')
     </body>
-    <script src="{{asset('js/main.js')}}" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <!-- {{-- <script src="{{asset('js/main.js')}}" defer></script> --}} -->
 </html>
