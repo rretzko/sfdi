@@ -12,7 +12,7 @@
         <!-- App Icons -->
 	<link rel="shortcut icon" href="{{ url('public/studentfolder.ico') }}">
         <link rel="icon" type="image/x-icon" href="{{url('public/studentfolder.ico')}}">
-        
+
         <!-- Scripts -->
         <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
         <script src="{{url('public/js/bootstrap.js')}}" defer></script>
@@ -22,9 +22,10 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
         <!-- Styles -->
-        <link href="{{url('public/css/bootstrap.css')}}" rel="stylesheet"> 
-        <link href="{{asset('css/main.css')}}" rel="stylesheet">
-        
+        <link href="{{url('public/css/bootstrap.css')}}" rel="stylesheet">
+        <!-- {{-- <link href="{{asset('css/main.css')}}" rel="stylesheet"> --}} -->
+        <link href="assets/css/main.css" rel="stylesheet">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -40,7 +41,7 @@
                 top: 100px;
                 width: 100vw;
             }
-            
+
             .container
             {
                 background-color: transparent;
@@ -49,7 +50,7 @@
                 grid-row-start: 2;
                 grid-row-end: 3;
             }
-            
+
             .full-height {
                 height: 100vh;
             }
@@ -74,23 +75,23 @@
                 top: 90px;
                 width: 100%;
             }
-            
+
                 .nav_guest.links > a{
                     color: black;
                 }
-            
+
             .nav_student
             {
                 background-color: rgba(255, 0, 0, 1);
                 display: none;
                 visibility: hidden;
             }
-            
+
                 .nav_student.links > a{
                         color: white;
                         font-size: 1.15rem;
                 }
-                
+
             .content {
                 text-align: center;
             }
@@ -112,7 +113,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-            
+
             /** NOTE: max-height! **/
             @media only screen and (max-height: 360px)
             {
@@ -122,7 +123,7 @@
                     grid-template-rows: 10% auto 10%;
                 }
             }
-            
+
             @media only screen and (min-width: 400px)
             {
                 .main
@@ -131,7 +132,7 @@
                     grid-template-rows: 20% 60% 40%;
                 }
             }
-            
+
             @media only screen and (min-width: 600px)
             {
                 .nav_guest {
@@ -141,13 +142,13 @@
                     top: 10px;
                     width: 100%;
                 }
-                
-                    .nav_guest.links > a 
+
+                    .nav_guest.links > a
                     {
                         color: white;
                     }
             }
-            
+
             @media only screen and (min-width: 800px)
             {
                 .col-md-8 /*bootstrap class*/
@@ -155,7 +156,7 @@
                     flex: 1 0 auto;
                     max-width: 100%;
                 }
-                
+
                 .main
                 {
                     grid-template-columns: 15% auto 15%;
@@ -169,16 +170,16 @@
                     grid-row-start: 2;
                     grid-row-end: 3;
                 }
-                
-                    
+
+
                 .nav_student
                 {
                     display: flex;
                     flex-wrap: wrap;
                     visibility: visible;
                 }
-                
-                    .nav_student.links > a 
+
+                    .nav_student.links > a
                     {
                         color: white;
                         font-size: .8rem;
@@ -191,7 +192,7 @@
         @yield('nav_guest')
         @yield('nav_student')
         @yield('content')
-        
+
         <!--Start of Tawk.to Script-->
         <script type="text/javascript">
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Email;
 use App\Http\Controllers\Controller;
+use App\Nonsubscriberemail;
 use App\Person;
 use App\Student;
 use App\User;
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 
 
-class UsernameRequestController extends Controller 
+class UsernameRequestController extends Controller
 
 {
     /*
@@ -36,7 +37,7 @@ class UsernameRequestController extends Controller
     use RegistersUsers;
     use SeniorYear;
     use UserName;
-    
+
     /**
      * Where to redirect users after registration.
      *
@@ -53,34 +54,38 @@ class UsernameRequestController extends Controller
     {
         $this->middleware('guest');
     }
-    
+
     public function update(Request $request)
     {
-        //find student users matching this username
-        $users = self::findStudentUsers($request['email']);
-       
-        if(!count($users)){
-            
+        $data = $request->validate([
+            'email' => ['required', 'email'],
+        ]);
+
+        //find Nonsubscriberemail objects matching this email
+        $emails = Nonsubscriberemail::where('email', $data['email'])->get();
+
+        if(! $emails->count()){
+
             $warning = $request['email'].' was not found. Please use the Chat '
                     . 'button in the bottom right-hand corner if you think this '
-                    . 'is in error. ['.self::BlindIndex($request['email'].']');
-            
+                    . 'is in error. ';
+
             return redirect(route('login'))->with('warning', $warning);
         }
-        
-        event(new \App\Events\UsernameReminderEvent($users));
-        
+
+        event(new \App\Events\UsernameReminderEvent($emails));
+
         $status = 'Your username has been sent to: '.$request['email'].'.';
-        
+
         return redirect(route('login'))->with('status', $status);
     }
-    
+
 /** END OF PUBLIC METHODS *****************************************************/
-    private function findStudentUsers($email) : array
+    private function findStudentUsers(array $data) : array
     {
-        $blind_index = self::BlindIndex($email);
-       
-        $sql = 'SELECT a.user_id '
+        return Nonsubscriberemail::where('email', $data['email'])->get();
+
+        /*$sql = 'SELECT a.user_id '
                 . 'FROM email_person a, emails b, school_student c '
                 . 'WHERE b.blind_index="'.$blind_index.'" '
                 . 'AND b.id=a.email_id '
@@ -90,43 +95,44 @@ class UsernameRequestController extends Controller
                     . 'SELECT EXISTS(SELECT d.school_id FROM school_teacher d '
                     . 'WHERE d.teacher_user_id=a.user_id)'
                 . ')';
-        
+
         return DB::select($sql) ?? [];
+        */
     }
-    
-/** DELETE EVERYTHING BELOW THIS LINE *****************************************/    
+
+/** DELETE EVERYTHING BELOW THIS LINE *****************************************/
     public function verifyUser($token)
     {
       $verifyUser = \App\VerifyUser::where('token', $token)->first();
-     
-      if(isset($verifyUser) ){//token is found 
-   
+
+      if(isset($verifyUser) ){//token is found
+
         $user = $verifyUser->user;
-        
+
         /* VERIFY USER */
         if(!$user->verified){ //user has not been previously verified
             $user->verified = 1;
             $user->save();
         }
-        
+
         $person = Person::find($user->id);
-        
+
         /* VERIFY USER PRIMARY EMAIL */
         $email = $person->emailPrimaryObject;
         $email->verify_Token($token);
-        
+
         $status = "Thanks! Your primary email has been verified!";
-        
+
       } else {
-        
+
           return redirect('/login')->with('status', "Sorry your email cannot be identified.");
       }
-      
+
       return redirect('/login')->with('status', $status);
     }
 
-/** END OF PUBLIC EVENTS ******************************************************/    
-    
+/** END OF PUBLIC EVENTS ******************************************************/
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -139,71 +145,71 @@ class UsernameRequestController extends Controller
             'name' => $this->createUserName($data['first_name'], $data['last_name']),
             'password' => Hash::make($data['password']),
         ]);
-        
+
         if($user->id){
-            
+
             $person = Person::create([
                 'user_id' => $user->id,
                 'first_name' => $data['first_name'],
                 'middle_name' => '', //stub value to allow encryption
                 'last_name' => $data['last_name'],
             ]);
-            
+
             //ensure a student object is available
             $student = Student::create([
                     'user_id' => $user->id,
                     'class_of' => self::SeniorYear()
                 ]);
-            
+
             //EMAILS
             $email_primary = self::email($data['email']);
-         
+
             $email_alternate = self::email('');
-            
+
             $person->emails()->attach($email_primary->id, ['type' => 'primary']);
             $person->emails()->attach($email_alternate->id, ['type' => 'alternate']);
         }
-        
+
         //send email verification letter if not already verified
-        if(strlen($email_primary->email) && 
+        if(strlen($email_primary->email) &&
             (!$email_primary->is_verified())){
-            
+
             event(new \App\Events\NewRegistrationEvent($student));
-            
+
         }else{ //user is using an already verified email; i.e. family email
-            
+
             $user->verified = 1;
             $user->save();
         }
 
         Auth::login($user);
-            
+
         return $user;
-        
+
     }
-    
+
     private function email($search_email)
     {
         $blind_index = self::BlindIndex($search_email);
-        
-        return (Email::where('blind_index', '=', $blind_index)->exists()) 
+
+        return (Email::where('blind_index', '=', $blind_index)->exists())
             ? Email::where('blind_index', '=', $blind_index)->first()
             : Email::create([
                 'email' => $search_email,
                 'blind_index' => $blind_index
-                ]);            
+                ]);
     }
-    
+
     protected function redirectTo()
     {
         return route('profile');
     }
-    
+
     protected function registered(Request $request, $user)
     {
         return redirect()->route('pending_verification');
     }
-    
+
     /**
      * Get a validator for an incoming registration request.
      *

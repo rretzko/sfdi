@@ -2,8 +2,10 @@
 
 namespace App\Listeners;
 
+use App\Mail\usernameReminderEmail;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Mail;
 
 class SendEmailUsernameReminderListener
 {
@@ -21,7 +23,7 @@ class SendEmailUsernameReminderListener
      * Handle the event.
      *
      * @param  object  $event
-     * $event->userids = 
+     * $event->userids =
      *  array:1 [▼
      *   0 => {#1335 ▼
      *     +"user_id": "6706"
@@ -31,18 +33,12 @@ class SendEmailUsernameReminderListener
      */
     public function handle(\App\Events\UsernameReminderEvent $event)
     {
-        foreach($event->userids AS $userid){
-     
-            $person = \App\Person::find($userid->user_id);
-            //always send to the primary email
-            \Illuminate\Support\Facades\Mail::to($person->emailPrimary)
-                ->send(new \App\Mail\usernameReminderEmail($person));
-            
-            //if available, also send to the alternate email 
-            if(strlen($person->emailAlternate)){
-                \Illuminate\Support\Facades\Mail::to($person->emailAlternate)
-                ->send(new \App\Mail\usernameReminderEmail($person));
-            }
+        foreach($event->emails AS $email){
+
+            $person = \App\Person::find($email->user_id);
+
+            Mail::to($email->email)
+                ->send(new usernameReminderEmail($person));
         }
     }
 }

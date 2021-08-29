@@ -14,15 +14,15 @@ class UsernameReminderEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $person;
+    public $emails;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(\App\Person $person)
+    public function __construct( $emails) //collection
     {
-        $this->person = $person;
+        $this->emails = $emails;
     }
 
     /**

@@ -14,7 +14,7 @@ class usernameReminderEmail extends Mailable
     use Queueable, SerializesModels;
 
     private $person;
-    
+
     /**
      * Create a new message instance.
      *
@@ -29,7 +29,7 @@ class usernameReminderEmail extends Mailable
      * Build the message.
      *
      * uses global MAIL_FROM_ADDRESS and MAIL_FROM_NAME for "From" and "Reply-To"
-     * 
+     *
      * @return $this
      */
     public function build()
@@ -37,7 +37,7 @@ class usernameReminderEmail extends Mailable
         return $this->view('emails.usernameReminder')
                 ->with([
                     'person' => $this->person,
-                    'username' => $this->person->user->name,
+                    'username' => $this->person->user->username,
                 ]);
     }
 }

@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notification;
 class MailResetPasswordNotification extends Notification
 {
     use Queueable;
-    
+
     public $details;
 
     /**
@@ -60,11 +60,11 @@ class MailResetPasswordNotification extends Notification
             //
         ];
     }
-    
+
     public function toDatabase($notifiable)
     {
         return [
-            'data' => __CLASS__.': '.__FUNCTION__.': '.__LINE__
-        ]
+            'data' => __CLASS__.': '.__FUNCTION__.': '.__LINE__,
+        ];
     }
 }
