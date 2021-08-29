@@ -62,7 +62,7 @@ class UsernameRequestController extends Controller
         ]);
 
         //find Nonsubscriberemail objects matching this email
-        $emails = Nonsubscriberemail::where('email', $data['email'])->get();
+        $emails = $this->findEmails($data);
 
         if(! $emails->count()){
 
@@ -81,10 +81,19 @@ class UsernameRequestController extends Controller
     }
 
 /** END OF PUBLIC METHODS *****************************************************/
-    private function findStudentUsers(array $data) : array
+    private function findEmails(array $data)
     {
-        return Nonsubscriberemail::where('email', $data['email'])->get();
+        $a = collect();
 
+        foreach(Nonsubscriberemail::all() AS $email){
+
+            if($email->email === strtolower($data['email'])){
+
+                $a->push($email);
+            }
+        }
+
+        return $a;
         /*$sql = 'SELECT a.user_id '
                 . 'FROM email_person a, emails b, school_student c '
                 . 'WHERE b.blind_index="'.$blind_index.'" '

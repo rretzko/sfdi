@@ -39,7 +39,7 @@ Reset Username
 					@enderror
 				</div>
                 <div class="col-12 ">
-                    <button DISABLED class="btn btn-primary btn-block waves-effect waves-light" type="submit">{{ __('Send Username') }}</button>
+                    <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">{{ __('Send Username') }}</button>
                 </div>
 
 			</div>
