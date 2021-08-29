@@ -28,11 +28,16 @@
         <link href="http://localhost/dev/sfdi/public/assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="http://localhost/dev/sfdi/public/assets/css/main.css" rel="stylesheet" type="text/css" />
         <link href="http://localhost/dev/sfdi/public/assets/css/style.css" rel="stylesheet" type="text/css" />
+    @elseif(config('app.url') ==='https://sfdi-39uni.ondigitalocean.app')
+        <link href="https://sfdi-39uni.ondigitalocean.app/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://sfdi-39uni.ondigitalocean.app/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="https://sfdi-39uni.ondigitalocean.app/assets/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="https://sfdi-39uni.ondigitalocean.app/assets/css/style.css" rel="stylesheet" type="text/css" />
     @else
-        <link href="https://sfdi-39uni.ondigitalocean.app/public/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="https://sfdi-39uni.ondigitalocean.app/public/assets/css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="https://sfdi-39uni.ondigitalocean.app/public/assets/css/main.css" rel="stylesheet" type="text/css" />
-        <link href="https://sfdi-39uni.ondigitalocean.app/public/assets/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://studentfolder.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://studentfolder.info/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="https://studentfolder.info/assets/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="https://studentfolder.info/assets/css/style.css" rel="stylesheet" type="text/css" />
     @endif
 
 <style>
@@ -45,7 +50,7 @@
 
 
 <body>
-{{ config('app.url') }}
+
 	<div class="header-bg">
 		<!-- Navigation Bar-->
 		<header id="topnav">
