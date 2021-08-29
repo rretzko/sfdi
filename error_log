@@ -1,0 +1,82 @@
+[03-Jan-2021 15:02:33 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php on line 408
+[04-Jan-2021 10:38:46 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php on line 2236
+[06-Jan-2021 10:19:58 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/laravel/framework/src/Illuminate/Support/Arr.php on line 21
+[13-Jan-2021 14:56:30 America/New_York] FJR: student 7358 is attempting to 
+[13-Jan-2021 14:57:47 America/New_York] FJR: student 7358 is attempting to Colleen Gross).  This email is already in use by 
+[13-Jan-2021 14:58:04 America/New_York] FJR: student 7358 is attempting to Colleen Gross).  This email is already in use by teacher_user_id: 5 (
+[13-Jan-2021 14:58:17 America/New_York] FJR: student 7358 is attempting to Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[13-Jan-2021 15:06:11 America/New_York] FJR: student 7358 is attempting to add no email for parent: 7546 (Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[13-Jan-2021 15:06:20 America/New_York] FJR: student 7358 is attempting to add no email for parent: 7546 (Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[13-Jan-2021 15:06:33 America/New_York] FJR: student 7358 is attempting to add no email for parent: 7546 (Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[13-Jan-2021 15:06:58 America/New_York] FJR: student 7358 is attempting to add no email for parent: 7546 (Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[13-Jan-2021 15:08:57 America/New_York] FJR: student 7358 is attempting to add no email for parent: 7546 (Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[13-Jan-2021 15:09:07 America/New_York] FJR: student 7358 is attempting to add no email for parent: 7546 (Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[13-Jan-2021 15:09:17 America/New_York] FJR: student 7358 is attempting to add no email for parent: 7546 (Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[13-Jan-2021 15:09:28 America/New_York] FJR: student 7358 is attempting to add no email for parent: 7546 (Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[13-Jan-2021 15:09:42 America/New_York] FJR: student 7358 is attempting to add no email for parent: 7546 (Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[13-Jan-2021 15:10:09 America/New_York] FJR: student 7358 is attempting to add no email for parent: 7546 (Colleen Gross).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[15-Jan-2021 09:20:11 America/New_York] FJR: student 1034 is attempting to add no email for parent: 4250 (Craig Thier).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[15-Jan-2021 12:39:27 America/New_York] FJR: student 7644 is attempting to add no email for parent: 4832 (Jennifer Barrett).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[19-Jan-2021 11:45:15 America/New_York] FJR: student 7351 is attempting to add no email for parent: 7692 (Pat McCay).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[19-Jan-2021 19:07:36 America/New_York] FJR: student 7725 is attempting to add no email for parent: 7726 (Richard Nkam).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[19-Jan-2021 21:40:36 America/New_York] FJR: student 1369 is attempting to add no email for parent: 4572 (Gary Yeary).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[20-Jan-2021 10:31:44 America/New_York] FJR: student 3389 is attempting to add no email for parent: 6522 (Timothy Lee).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[20-Jan-2021 12:55:58 America/New_York] FJR: student 1369 is attempting to add no email for parent: 4572 (Gary Yeary).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[20-Jan-2021 14:21:41 America/New_York] FJR: student 7423 is attempting to add no email for parent: 7426 (david lindenmuth sr.).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[21-Jan-2021 05:42:22 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php on line 45
+[21-Jan-2021 08:31:38 America/New_York] FJR: student 3337 is attempting to add no email for parent: 7796 (Tammy Welsey).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[21-Jan-2021 08:33:34 America/New_York] FJR: student 3337 is attempting to add no email for parent: 7796 (Tammy Welsey).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[21-Jan-2021 08:34:01 America/New_York] FJR: student 3337 is attempting to add no email for parent: 7796 (Tammy Welsey).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[21-Jan-2021 10:22:00 America/New_York] FJR: student 1621 is attempting to add no email for parent: 4814 (Jeffrey Adams).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[21-Jan-2021 10:37:44 America/New_York] FJR: student 7738 is attempting to add no email for parent: 4810 (Jeffrey Adams).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[21-Jan-2021 16:13:04 America/New_York] FJR: student 7779 is attempting to add no email for parent: 7781 (Jennifer L Penrod).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[21-Jan-2021 19:52:34 America/New_York] FJR: student 7820 is attempting to add no email for parent: 7823 (Jaclyn Halaw).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[21-Jan-2021 20:07:32 America/New_York] FJR: student 1524 is attempting to add no email for parent: 4721 (Jaclyn Halaw).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[22-Jan-2021 08:24:38 America/New_York] FJR: student 7350 is attempting to add no email for parent: 6238 (Shannon Werner).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[22-Jan-2021 08:51:18 America/New_York] FJR: student 7831 is attempting to add no email for parent: 7834 (Michele A Capraro).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[22-Jan-2021 08:51:18 America/New_York] FJR: student 7831 is attempting to add no email for parent: 7834 (Michele A Capraro).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[22-Jan-2021 08:51:45 America/New_York] FJR: student 7831 is attempting to add no email for parent: 7835 (Tom Capraro).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[22-Jan-2021 20:33:49 America/New_York] FJR: student 3227 is attempting to add no email for parent: 6366 (Steve Lyon).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[22-Jan-2021 20:33:49 America/New_York] FJR: student 3227 is attempting to add no email for parent: 6366 (Steve Lyon).  This email is already in use by teacher_user_id: 5 (Adam Conti).
+[29-Jan-2021 22:11:31 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php on line 2234
+[06-Feb-2021 07:50:41 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 634
+[08-Feb-2021 12:06:55 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php on line 45
+[09-Feb-2021 16:13:23 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 634
+[04-Apr-2021 21:07:25 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 0
+[06-Apr-2021 03:18:14 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php on line 45
+[10-Apr-2021 23:08:39 America/New_York] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ds66z4exc9ht/public_html/studentfolder.info/vendor/facade/ignition/src/QueryRecorder/Query.php on line 29
+[29-May-2021 12:43:07 America/New_York] FJR:2021-05-29 12:43:07: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:50:54 America/New_York] FJR:2021-05-29 12:50:54: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:50:54 America/New_York] FJR:2021-05-29 12:50:54: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:50:54 America/New_York] FJR:2021-05-29 12:50:54: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:51:19 America/New_York] FJR:2021-05-29 12:51:19: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:51:34 America/New_York] FJR:2021-05-29 12:51:34: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:51:34 America/New_York] FJR:2021-05-29 12:51:34: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:51:34 America/New_York] FJR:2021-05-29 12:51:34: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:52:14 America/New_York] FJR:2021-05-29 12:52:14: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:52:14 America/New_York] FJR:2021-05-29 12:52:14: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:52:15 America/New_York] FJR:2021-05-29 12:52:15: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:52:35 America/New_York] FJR:2021-05-29 12:52:35: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:52:35 America/New_York] FJR:2021-05-29 12:52:35: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 12:52:35 America/New_York] FJR:2021-05-29 12:52:35: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 13:10:12 America/New_York] FJR:2021-05-29 13:10:12: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 13:10:13 America/New_York] FJR:2021-05-29 13:10:13: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[29-May-2021 13:10:13 America/New_York] FJR:2021-05-29 13:10:13: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[31-May-2021 11:23:24 America/New_York] FJR:2021-05-31 11:23:24: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[31-May-2021 11:23:24 America/New_York] FJR:2021-05-31 11:23:24: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[31-May-2021 11:23:24 America/New_York] FJR:2021-05-31 11:23:24: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 11:28:35 America/New_York] FJR:2021-06-01 11:28:35: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 11:28:36 America/New_York] FJR:2021-06-01 11:28:36: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 11:28:36 America/New_York] FJR:2021-06-01 11:28:36: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 11:29:09 America/New_York] FJR:2021-06-01 11:29:09: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 11:29:09 America/New_York] FJR:2021-06-01 11:29:09: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 11:29:09 America/New_York] FJR:2021-06-01 11:29:09: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 11:33:30 America/New_York] FJR:2021-06-01 11:33:30: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 11:33:30 America/New_York] FJR:2021-06-01 11:33:30: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 11:33:30 America/New_York] FJR:2021-06-01 11:33:30: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 13:00:22 America/New_York] FJR:2021-06-01 13:00:22: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 13:00:22 America/New_York] FJR:2021-06-01 13:00:22: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 13:00:22 America/New_York] FJR:2021-06-01 13:00:22: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 13:00:22 America/New_York] FJR:2021-06-01 13:00:22: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 13:00:22 America/New_York] FJR:2021-06-01 13:00:22: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}
+[01-Jun-2021 13:00:22 America/New_York] FJR:2021-06-01 13:00:22: SproutVideo token error: a:1:{s:5:"error";s:15:"Account On-hold";}

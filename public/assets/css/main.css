@@ -1,0 +1,135 @@
+/* 
+    Created on : Feb 4, 2020, 10:35:43 AM
+    Author     : rick@mfrholdings.com
+*/
+
+html,body
+{   
+    /*background-image: url('https://studentfolder.info/public/assets/images/shutterstock_471279443.jpg'); /*clouds pastel*/
+    background-image: url('https://studentfolder.info/public/assets/images/clouds_pastel_web.png');
+    background-size: cover;
+    height: 101vh;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0, 0, 0, .2);
+  opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
+
+.advisory
+{
+    padding-bottom: .5rem;
+    visibility: hidden;
+}
+
+.advisory.permanent
+{
+    visibility: visible;
+}
+
+#header_Site
+{
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100vw;
+}
+
+    #logo
+    {
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+
+        #logo img
+        {
+            width: 50px;
+        }
+
+    #site_Name
+    {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding-top: 25px;
+        text-align: center;
+        width: 100%;
+    }
+
+.card
+{
+    border-radius: 1rem;
+}
+
+.card-header
+{
+    /*override bootstrap.css background-color: rgba(0, 0, 0, 0.03); */
+    background-color: transparent; 
+    /*override bootstrap.css border-bottom: 1px solid rgba(0, 0, 0, 0.125); */
+    border-bottom: 1px solid transparent;
+}
+    
+#nav_main
+#nav_sub_main
+{
+    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(0, 0, 0, .2);
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255, 255, 255, .7);
+    box-shadow: 5px 5px 5px #AAA;
+    border-radius: .25rem;
+}
+    
+.navbar
+{
+    margin-top:90px; /*place below absolute positioned site header */
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#subMainNav .navbar-nav
+{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.navbar-dark .navbar-nav .nav-link
+{
+    color: palevioletred;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover
+{
+    color: black;
+}
+
+section #voicings-And-Instruments
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.voicings-and-instruments
+{
+    display: flex;
+    flex-direction: row;
+}
+
