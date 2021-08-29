@@ -10,11 +10,11 @@
         <title>{{ config('app.name', 'StudentFolder.info') }}</title>
 
         <!-- App Icons -->
-	<link rel="shortcut icon" href="{{ url('public/studentfolder.ico') }}">
+	    <link rel="shortcut icon" href="{{ url('public/studentfolder.ico') }}">
         <link rel="icon" type="image/x-icon" href="{{url('public/studentfolder.ico')}}">
 
         <!-- Scripts -->
-        <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
+        <!-- <script src="assets/js/app.js') }}" defer></script> -->
         <script src="{{url('public/js/bootstrap.js')}}" defer></script>
 
         <!-- Fonts -->

@@ -64,8 +64,8 @@ Route::get('resetPassword/{token}', 'PasswordResetController@store')->name('rese
 Route::post('confirm', 'ConfirmPasswordController@store')->name('confirm');
 Route::get('usernameRequest', function(){
     return view('pages.username.username_request');
-})->name('username.request');
-Route::post('usernameRequest', 'UsernameRequestController@update')->name('usernameRequest');
+})->name('usernameRequest.edit');
+Route::post('usernameRequest/update', 'UsernameRequestController@update')->name('usernameRequest.update');
 
 /** EMAIL VERIFICATION */
 Route::get('user/verify/{token}', 'Auth\RegisterController@verifyUser');
