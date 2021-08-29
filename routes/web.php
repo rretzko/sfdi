@@ -62,11 +62,9 @@ Route::get('verifyEmailApi/{token}', 'EmailVerificationController@update');
 Route::post('resetRequest', 'PasswordResetRequestController@store')->name('resetRequest');
 Route::get('resetPassword/{token}', 'PasswordResetController@store')->name('resetPassword');
 Route::post('confirm', 'ConfirmPasswordController@store')->name('confirm');
-
-Route::get('usernameRequest', 'UsernameRequestController@update')->name('usernameRequest');
-//Route::get('usernameRequest', function(){
-//    return view('pages.username.username_request');
-//})->name('username.request');
+Route::get('usernameRequest', function(){
+    return view('pages.username.username_request');
+})->name('username.request');
 Route::post('usernameRequest', 'UsernameRequestController@update')->name('usernameRequest');
 
 /** EMAIL VERIFICATION */

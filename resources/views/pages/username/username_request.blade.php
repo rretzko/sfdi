@@ -26,11 +26,11 @@ Reset Username
 
 		Enter your email address below to have your username emailed to you.
 
-		<form method="POST" action="{{ route('usernameRequest') }}" class="form-horizontal m-t-20">
+		<form method="POST" action="{{ route('usernameRequest.update') }}" class="form-horizontal m-t-20">
 			@csrf
 			<div class="form-group row">
-				<div class="col-12">
-					<input DISABLED id="email" type="string" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email address">
+				<div class="col-12 mb-1">
+					<input id="email" type="string" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email address">
 
 					@error('email')
 						<span class="invalid-feedback" role="alert">
@@ -38,10 +38,15 @@ Reset Username
 						</span>
 					@enderror
 				</div>
+                <div class="col-12 ">
+                    <button DISABLED class="btn btn-primary btn-block waves-effect waves-light" type="submit">{{ __('Send Username') }}</button>
+                </div>
+
 			</div>
+<!-- {{--
 			<div class="form-group text-center row m-t-20">
 				<div class="col-12">
-					<!-- {{-- <button DISABLED class="btn btn-primary btn-block waves-effect waves-light" type="submit">{{ __('Send Username') }}</button> --}} -->
+					<button DISABLED class="btn btn-primary btn-block waves-effect waves-light" type="submit">{{ __('Send Username') }}</button>
 					<div  style="border: 1px solid darkred; color: darkred; padding: .5rem;">
 						The Username reset is temporarily disabled while we get the next release ready.<br />
 						Please click on the Chat button at the bottom-right-hand corner of this page and
@@ -49,7 +54,7 @@ Reset Username
 					</div>
 				</div>
 			</div>
-
+--}} -->
 			<div class="form-group m-t-10 mb-0 row">
 				<div class="col-sm-7 m-t-20">
 					@if (Route::has('login'))
