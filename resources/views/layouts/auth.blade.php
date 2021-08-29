@@ -26,9 +26,9 @@
 
 	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/icons.css') }}" rel="stylesheet">
-    <!-- {{-- <link href="{{ asset('css/main.css' )}}" rel="stylesheet" > --}} -->
+
     <link href="assets/css/main.css" rel="stylesheet">
-	<link href="{{ asset('css/style.css') }}" rel="stylesheet" >
+	<link href="assets/css/style.css" rel="stylesheet" >
 
         <style>
             .nav_guest,

@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'), 
+    'driver' => env('MAIL_DRIVER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -32,11 +32,11 @@ return [
     //DEFAULT
     //'host' => env('MAIL_HOST', 'smtp.mailgun.org'), //default
     //POSTMARK
-    //'host' => env('MAIL_HOST', 'smtp.postmarkapp.com'),
+    'host' => env('MAIL_HOST', 'smtp.postmarkapp.com'),
     //MAILTRAP
     //'host' => env('MAIL_HOST', 'smtp.mailtrap.io'),
     //GODADDY
-    'host' => env('MAIL_HOST', 'localhost'),
+    //'host' => env('MAIL_HOST', 'localhost'),
     /*
     |--------------------------------------------------------------------------
     | SMTP Host Port
@@ -53,6 +53,61 @@ return [
     //'port' => env('MAIL_PORT', 587),
     //'port' => env('MAIL_PORT', 2525),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Mailer Configurations
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure all of the mailers used by your application plus
+    | their respective settings. Several examples have been configured for
+    | you and you are free to add your own as your application requires.
+    |
+    | Laravel supports a variety of mail "transport" drivers to be used while
+    | sending an e-mail. You will specify which one you are using for your
+    | mailers below. You are free to add additional mailers as required.
+    |
+    | Supported: "smtp", "sendmail", "mailgun", "ses",
+    |            "postmark", "log", "array"
+    |
+    */
+    'mailers' => [
+        'smtp' => [
+            'transport' => 'smtp',
+            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'port' => env('MAIL_PORT', 587),
+            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'timeout' => null,
+            'auth_mode' => null,
+        ],
+
+        'ses' => [
+            'transport' => 'ses',
+        ],
+
+        'mailgun' => [
+            'transport' => 'mailgun',
+        ],
+
+        'postmark' => [
+            'transport' => 'postmark',
+        ],
+
+        'sendmail' => [
+            'transport' => 'sendmail',
+            'path' => '/usr/sbin/sendmail -bs',
+        ],
+
+        'log' => [
+            'transport' => 'log',
+            'channel' => env('MAIL_LOG_CHANNEL'),
+        ],
+
+        'array' => [
+            'transport' => 'array',
+        ],
+    ],
     /*
     |--------------------------------------------------------------------------
     | Global "From" Address
@@ -112,7 +167,7 @@ return [
     //MAILTRAP
     //'username' => env('MAILTRAP_USERNAME'),
     //'password' => env('MAILTRAP_PASSWORD'),
-    
+
     //DEFAULT
     'username' => env('MAIL_USERNAME'), //default
     'password' => env('MAIL_PASSWORD'), //default
@@ -161,7 +216,7 @@ return [
     */
 
     'log_channel' => env('MAIL_LOG_CHANNEL'),
-    
+
     /*
     |--------------------------------------------------------------------------
     | POSTMARK TOKEN
@@ -169,7 +224,7 @@ return [
     |
     */
     'postmark' => ['token' => "d9af2667-ffbc-4806-ad7e-a37f3e468f03"],
-    
+
     /*
     |--------------------------------------------------------------------------
     | UNIVERSAL TO (for testing)
@@ -179,7 +234,7 @@ return [
     /*'to' => ['address' => "rick@mfrholdings.com",
              'name' => 'PROD'
         ],
-     * 
+     *
      */
 
 ];
