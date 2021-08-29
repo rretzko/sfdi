@@ -24,8 +24,8 @@
 	</title>
 	<meta content="Admin Dashboard" name="description" />
 
-	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/icons.css') }}" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
 
     <link href="assets/css/main.css" rel="stylesheet">
 	<link href="assets/css/style.css" rel="stylesheet" >
