@@ -23,16 +23,29 @@
 	<link href="assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
 	<!-- App css -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+    @if(config('app.url') === 'http://localhost')
+        <link href="http://localhost/dev/sfdi/public/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://localhost/dev/sfdi/public/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="http://localhost/dev/sfdi/public/assets/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="http://localhost/dev/sfdi/public/assets/css/style.css" rel="stylesheet" type="text/css" />
+    @else
+        <link href="https://sfdi-39uni.ondigitalocean.app/public/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://sfdi-39uni.ondigitalocean.app/public/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="https://sfdi-39uni.ondigitalocean.app/public/assets/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="https://sfdi-39uni.ondigitalocean.app/public/assets/css/style.css" rel="stylesheet" type="text/css" />
+    @endif
+
+<style>
+    #topnav {
+        top: -88px;
+    }
+</style>
 
 </head>
 
 
 <body>
-
+{{ config('app.url') }}
 	<div class="header-bg">
 		<!-- Navigation Bar-->
 		<header id="topnav">
