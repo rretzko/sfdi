@@ -1,5 +1,4 @@
 @extends('layouts.formCenter')
-@extends('navs.navGuest')
 @extends('headers.headerSite')
 
 @section('content')
