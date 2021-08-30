@@ -57,7 +57,7 @@ Register
 					<li>You have an existing account on StudentFolder.info.
 						<ul>
 							<li>Please <b>DO NOT</b> create duplicate accounts.</li>
-							<li>Check with your teacher or use the '<a href="{{ route('username.request') }}">Forgot Your Username?</a>' from the <a href="{{ route('login') }}">Log In</a> page.</li>
+							<li>Check with your teacher or use the '<a href="{{ route('usernameRequest.edit') }}">Forgot Your Username?</a>' from the <a href="{{ route('login') }}">Log In</a> page.</li>
 						</ul>
 					</li>
 					<li>You use a shared/family email address.
