@@ -102,7 +102,7 @@ class LoginController extends Controller
     public function destroy()
     {
         auth()->logout();
-
+dd(__LINE__);
         return redirect()->intended('/');
     }
 }
