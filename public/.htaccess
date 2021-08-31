@@ -6,9 +6,9 @@
     RewriteEngine On
 
     #FJR edits to force https
-    RewriteCond %{HTTPS} off
-    RewriteCond %{HTTP_HOST} ^(www\.)?studentfolder\.info$ [NC]
-    RewriteRule ^(.*)$ https://studentfolder.info%{REQUEST_URI} [E=UPGRADE,L,R=301]
+    #RewriteCond %{HTTPS} off
+    #RewriteCond %{HTTP_HOST} ^(www\.)?studentfolder\.info$ [NC]
+    #RewriteRule ^(.*)$ https://studentfolder.info%{REQUEST_URI} [E=UPGRADE,L,R=301]
     #end FJR edits
 
     # Handle Authorization Header
