@@ -10,21 +10,21 @@
         <title>{{ config('app.name', 'StudentFolder.info') }}</title>
 
         <!-- App Icons -->
-	    <link rel="shortcut icon" href="{{ url('public/studentfolder.ico') }}">
-        <link rel="icon" type="image/x-icon" href="{{url('public/studentfolder.ico')}}">
+	    <link rel="shortcut icon" href="https://studentfolder.info/public/studentfolder.ico') }}">
+        <link rel="icon" type="image/x-icon" href="https://studentfolder.info/public/studentfolder.ico')}}">
 
         <!-- Scripts -->
         <!-- <script src="assets/js/app.js') }}" defer></script> -->
-        <script src="{{url('public/js/bootstrap.js')}}" defer></script>
+        <script src="https://studentfolder.info/public/js/bootstrap.js')}}" defer></script>
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
         <!-- Styles -->
-        <link href="https://studentfolder.info/public/css/bootstrap.css') }}" rel="stylesheet">
+        <link href="https://studentfolder.info/public/css/bootstrap.css" rel="stylesheet">
         <!-- {{-- <link href="{{asset('css/main.css')}}" rel="stylesheet"> --}} -->
-        <link href="https://studentfolder.info/public/assets/css/main.css') }}" rel="stylesheet">
+        <link href="https://studentfolder.info/public/assets/css/main.css" rel="stylesheet">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
