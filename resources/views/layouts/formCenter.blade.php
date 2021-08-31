@@ -22,9 +22,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
         <!-- Styles -->
-        <link href="https://studentfolder.info/public/css/bootstrap.css" rel="stylesheet">
+        <link href="https://studentfolder.info/css/bootstrap.css" rel="stylesheet">
         <!-- {{-- <link href="{{asset('css/main.css')}}" rel="stylesheet"> --}} -->
-        <link href="https://studentfolder.info/public/assets/css/main.css" rel="stylesheet">
+        <link href="https://studentfolder.info/assets/css/main.css" rel="stylesheet">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">

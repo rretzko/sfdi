@@ -1,12 +1,12 @@
-/* 
+/*
     Created on : Feb 4, 2020, 10:35:43 AM
     Author     : rick@mfrholdings.com
 */
 
 html,body
-{   
+{
     /*background-image: url('https://studentfolder.info/public/assets/images/shutterstock_471279443.jpg'); /*clouds pastel*/
-    background-image: url('https://studentfolder.info/public/assets/images/clouds_pastel_web.png');
+    background-image: url('https://studentfolder.info/assets/images/clouds_pastel_web.png');
     background-size: cover;
     height: 101vh;
 }
@@ -81,11 +81,11 @@ html,body
 .card-header
 {
     /*override bootstrap.css background-color: rgba(0, 0, 0, 0.03); */
-    background-color: transparent; 
+    background-color: transparent;
     /*override bootstrap.css border-bottom: 1px solid rgba(0, 0, 0, 0.125); */
     border-bottom: 1px solid transparent;
 }
-    
+
 #nav_main
 #nav_sub_main
 {
@@ -96,7 +96,7 @@ html,body
     box-shadow: 5px 5px 5px #AAA;
     border-radius: .25rem;
 }
-    
+
 .navbar
 {
     margin-top:90px; /*place below absolute positioned site header */
