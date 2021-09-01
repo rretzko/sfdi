@@ -175,7 +175,8 @@
                             <a href="{{route('eapplication.edit',['registrant' => $registrant->id])}}" class="btn btn-primary waves-effect waves-light">eApplication</a>
                         @endif
                     @else
-                        <a href="{{route('pdf.application',['registrant' => $registrant->id])}}" class="btn btn-primary waves-effect waves-light">Download Application PDF</a>
+                       <!-- {{-- <a href="{{route('pdf.application',['registrant' => $registrant->id])}}" class="btn btn-primary waves-effect waves-light">Download Application PDF</a> --}} -->
+                           <a href="https://studentfolder.info/pdf/application/{{ $registrant->id }}" class="btn btn-primary waves-effect waves-light">Download Application PDF</a>
                     @endif
                 @else
                     <p>The following must be corrected before an application can be printed:</p>
