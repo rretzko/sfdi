@@ -129,7 +129,7 @@
                             @if(config('app.url') === 'http://localhost')
 							    <form id="logout-form" action="{{ route('tdr.login.destroy') }}" method="POST" style="display: none;">@csrf</form>
                             @else
-                                <form id="logout-form" action="{{ route('tdr.login.destroy') }}" method="POST" style="display: none;">@csrf</form>
+                                <form id="logout-form" action="https://studentfolder.info/tdr/logout" method="POST" style="display: none;">@csrf</form>
                             @endif
 						</ul>
 						<!-- End navigation menu -->
