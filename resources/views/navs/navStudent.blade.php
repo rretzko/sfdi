@@ -25,7 +25,7 @@
                             <a href="{{ route('logout') }}" class="nav-item nav-link" title="logout" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                             Logout
                             </a>
-                            <form id="frm-logout" action="{{ route('tdr.login.destroy') }}" method="POST" style="display: none;">
+                            <form id="frm-logout" action="https://studentfolder.info/tdr/logout" method="POST" style="display: none;">
                                 {{ csrf_field() }}
                             </form>
                         </div><!-- navbar-nav -->
