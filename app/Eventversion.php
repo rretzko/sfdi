@@ -548,7 +548,7 @@ if(($teacher->user_id == 362) ||
 //if(auth()->id() == 6822){dd($student->teachers);}
         foreach($student->teachers AS $teacher){
 
-            if($teacher->organizations->contains($org) &&
+            if($teacher->organizations()->contains($org) &&
                 ($this->studentIsPending($student, $teacher))){
 
                 return false;

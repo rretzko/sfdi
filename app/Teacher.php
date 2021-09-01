@@ -75,15 +75,15 @@ class Teacher extends Model
      */
     public function getOrganizationsAuthorizedAttribute()
     {
-        return $this->organizations;
+        return $this->organizations();
 
         /** @todo build authorization routine */
-        $orgs[] = $this->organizations->filter(function ($org){
+        //$orgs[] = $this->organizations->filter(function ($org){
 
-            return $org->pivot->authorized === '1';
-        });
+         //   return $org->pivot->authorized === '1';
+        //});
 
-        return $orgs;
+        //return $orgs;
     }
 
     /**
@@ -138,9 +138,18 @@ class Teacher extends Model
 
     public function organizations()
     {
+        /** WORKAROUND: THERE'S A BETTER WAY TO DO THIS */
+        //2021-09-01
+        $organizations = collect();
+        foreach(Membership::where('user_id', $this->user_id)->get() AS $membership){
+
+            $organizations->push(Organization::find($membership->organization_id));
+        }
+
+        return $organizations;
         //2021-08-28
-        return $this->belongsToMany(Organization::class, 'organization_user', 'user_id', 'organization_id')
-            ->withTimestamps();
+        //return $this->belongsToMany(Organization::class, 'organization_user', 'user_id', 'organization_id')
+        //    ->withTimestamps();
             //->withPivot('authorized');
         /*
         return $this->belongsToMany(Organization::class, 'organization_person', 'user_id', 'organization_id')
