@@ -10,7 +10,8 @@
                 @else
                     <a href="{{ route('guest.pitch_files') }}">Pitch Files</a>
 
-                    <a href="{{ route('tdr.login.update') }}">Login</a>
+                    <a href="{{ route('login') }}">Login</a>
+                    <!-- {{-- <a href="{{ route('tdr.login.update') }}">Login</a> --}} -->
 
                     @if (Route::has('register'))
                         <a href="{{ route('register') }}">Register</a>
