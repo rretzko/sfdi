@@ -13,7 +13,7 @@ use PDF;
 class ApplicationController extends Controller
 {
     public function __invoke(\App\Registrant $registrant)
-    {
+    {dd(__LINE__);
         //2021-08-28
         $teacher = Teacher::find(auth()->id());
         $school = $registrant->student->person->user->schools->first();
