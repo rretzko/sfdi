@@ -125,8 +125,12 @@
 							<li class="{{ Route::currentRouteNamed( 'parents' ) ?  'has-submenu active' : '' }}"><a href="{{route('parents')}}"><i class="dripicons-user-group"></i> {{ __('Parents') }}</a></li>
 							<li class="{{ Route::currentRouteNamed( 'credentials' ) ?  'has-submenu active' : '' }}"><a href="{{route('credentials')}}"><i class="dripicons-lock"></i> {{ __('Change Password') }}</a></li>
                                        <!-- {--                  <li class="{{ Route::currentRouteNamed( 'log' ) ?  'has-submenu active' : '' }}"><a href="{{route('log')}}"><i class="dripicons-mail"></i> {{ __('Message Log') }}</a></li> --} -->
-							<li class=""><a href="{{route('tdr.login.destroy')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="dripicons-exit"></i> {{ __('Logout') }}</a></li>
-							<form id="logout-form" action="{{ route('tdr.login.destroy') }}" method="POST" style="display: none;">@csrf</form>
+							<li class=""><a href="{{route('tdr.login.destroy')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="dripicons-exit"></i> {{ __('LogOut') }}</a></li>
+                            @if(config('app.url') === 'http://localhost')
+							    <form id="logout-form" action="{{ route('tdr.login.destroy') }}" method="POST" style="display: none;">@csrf</form>
+                            @else
+                                <form id="logout-form" action="{{ route('tdr.login.destroy') }}" method="POST" style="display: none;">@csrf</form>
+                            @endif
 						</ul>
 						<!-- End navigation menu -->
 					</div> <!-- end #navigation -->
