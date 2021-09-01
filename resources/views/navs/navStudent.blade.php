@@ -23,9 +23,9 @@
                             <a href="{{url('student')}}" class="nav-item nav-link {{$nav_links['student']}}" title="student">Student</a>
                             <a href="{{url('history')}}" class="nav-item nav-link disabled" title="history">History</a>
                             <a href="{{ route('logout') }}" class="nav-item nav-link" title="logout" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                            Logout
+                            LogOut
                             </a>
-                            <form id="frm-logout" action="https://studentfolder.info/tdr/logout" method="POST" style="display: none;">
+                            <form id="frm-logout" action="https://studentfolder.info/logout" method="POST" style="display: none;">
                                 {{ csrf_field() }}
                             </form>
                         </div><!-- navbar-nav -->
