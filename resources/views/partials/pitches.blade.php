@@ -15,14 +15,14 @@
                     <li>
                         <label>High</label>
                         <audio controls>
-                            <source src="/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3" type="audio/mpeg">
+                            <source src="/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li>
                         <label>Low</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano_I/soprano_1_low_scale.mp3') }}" type="audio/mpeg">
+                            <source src="asset/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_low_scale.mp3" type="audio/mpeg">
                             <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano_I/soprano_1_low_scale.mp3') }}" type="audio/ogg">
                         </audio>
                     </li>
