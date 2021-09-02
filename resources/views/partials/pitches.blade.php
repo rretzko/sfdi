@@ -16,21 +16,21 @@
                         <label>High</label>
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3" type="audio/mpeg">
-                            <source src="/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li>
                         <label>Low</label>
                         <audio controls>
-                            <source src="asset/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_low_scale.mp3" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano_I/soprano_1_low_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_low_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li>
                         <label>Chromatic</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano/soprano_chromatic_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano/soprano_chromatic_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano/soprano_chromatic_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano/soprano_chromatic_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -40,8 +40,8 @@
                     <li>
                         <label>Solo</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Soprano_I/S1_Solo_Shenandoah.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Soprano_I/S1_Solo_Shenandoah.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Soprano_I/S1_Solo_Shenandoah.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Soprano_I/S1_Solo_Shenandoah.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -53,8 +53,8 @@
                     <li>
                         <label>Without Soprano I</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Soprano_I/Swan.-S1.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Soprano_I/Swan.-S1.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Soprano_I/Swan.-S1.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Soprano_I/Swan.-S1.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -68,22 +68,22 @@
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano_II/soprano_2_high_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano_II/soprano_2_high_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_II/soprano_2_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_II/soprano_2_high_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano_II/soprano_2_low_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano_II/soprano_2_low_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_II/soprano_2_low_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_II/soprano_2_low_scale.mp3') }}" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano/soprano_chromatic_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Soprano/soprano_chromatic_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano/soprano_chromatic_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano/soprano_chromatic_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -92,8 +92,8 @@
                     <li>
                         <label>Solo</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Soprano_II/S2_Solo_Shenandoah.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Soprano_II/S2_Solo_Shenandoah.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Soprano_II/S2_Solo_Shenandoah.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Soprano_II/S2_Solo_Shenandoah.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -105,8 +105,8 @@
                     <li>
                         <label>Without Soprano II</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Soprano_II/Swan.-S2.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Soprano_II/Swan.-S2.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Soprano_II/Swan.-S2.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Soprano_II/Swan.-S2.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -120,22 +120,22 @@
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto_I/alto_1_high_scale.mp3') }}" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_I/alto_1_high_scale.mp3" type="audio/mpeg">
                             <source src="{{ asset('pitchfiles/nja-sc/scales/Alto_I/alto_1_high_scale.mp3') }}" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto_I/alto_1_low_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto_I/alto_1_low_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_I/alto_1_low_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_I/alto_1_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto/alto_chromatic_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto/alto_chromatic_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto/alto_chromatic_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto/alto_chromatic_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -145,8 +145,8 @@
                     <li>
                         <label>Solo</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Alto_I/A1_Solo_Shenandoah.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Alto_I/A1_Solo_Shenandoah.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Alto_I/A1_Solo_Shenandoah.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Alto_I/A1_Solo_Shenandoah.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -158,8 +158,8 @@
                     <li>
                         <label>Without Alto</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Alto/Swan.-A.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Alto/Swan.-A.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Alto/Swan.-A.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Alto/Swan.-A.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -173,22 +173,22 @@
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto_II/alto_2_high_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto_II/alto_2_high_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_II/alto_2_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_II/alto_2_high_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto_II/alto_2_low_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto_II/alto_2_low_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_II/alto_2_low_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_II/alto_2_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto/alto_chromatic_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto/alto_chromatic_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto/alto_chromatic_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto/alto_chromatic_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -198,8 +198,8 @@
                     <li>
                         <label>Solo</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Alto_II/A2_Solo_Shenandoah.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Alto_II/A2_Solo_Shenandoah.mp3') }}" type="audio/ogg">
+                            <source src="{https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Alto_II/A2_Solo_Shenandoah.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Alto_II/A2_Solo_Shenandoah.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -211,8 +211,8 @@
                     <li>
                         <label>Without Alto</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Alto/Swan.-A.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Alto/Swan.-A.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Alto/Swan.-A.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Alto/Swan.-A.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -226,22 +226,22 @@
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor_I/tenor_1_high_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor_I/tenor_1_high_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_I/tenor_1_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_I/tenor_1_high_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor_I/tenor_1_low_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor_I/tenor_1_low_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_I/tenor_1_low_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_I/tenor_1_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor/tenor_chromatic_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor/tenor_chromatic_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor/tenor_chromatic_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor/tenor_chromatic_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -251,8 +251,8 @@
                     <li>
                         <label>Solo</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Tenor_I/T1_Solo_Shenandoah.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Tenor_I/T1_Solo_Shenandoah.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Tenor_I/T1_Solo_Shenandoah.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Tenor_I/T1_Solo_Shenandoah.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -264,8 +264,8 @@
                     <li>
                         <label>Without Tenor</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Tenor/Swan.-T.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Tenor/Swan.-T.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Tenor/Swan.-T.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Tenor/Swan.-T.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -279,22 +279,22 @@
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor_II/tenor_2_high_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor_II/tenor_2_high_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_II/tenor_2_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_II/tenor_2_high_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor_II/tenor_2_low_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor_II/tenor_2_low_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_II/tenor_2_low_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_II/tenor_2_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor/tenor_chromatic_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Tenor/tenor_chromatic_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor/tenor_chromatic_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor/tenor_chromatic_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -304,8 +304,8 @@
                     <li>
                         <label>Solo</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Tenor_II/T2_Solo_Shenandoah.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Tenor_II/T2_Solo_Shenandoah.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Tenor_II/T2_Solo_Shenandoah.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Tenor_II/T2_Solo_Shenandoah.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -317,8 +317,8 @@
                     <li>
                         <label>Without Tenor</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Tenor/Swan.-T.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Tenor/Swan.-T.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Tenor/Swan.-T.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Tenor/Swan.-T.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -332,22 +332,22 @@
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass_I/bass_1_high_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass_I/bass_1_high_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_I/bass_1_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_I/bass_1_high_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass_I/bass_1_low_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass_I/bass_1_low_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_I/bass_1_low_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_I/bass_1_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass/bass_chromatic_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass/bass_chromatic_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass/bass_chromatic_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass/bass_chromatic_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -357,8 +357,8 @@
                     <li>
                         <label>Solo</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Bass_I/B1_Solo_Shenandoah.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Bass_I/B1_Solo_Shenandoah.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Bass_I/B1_Solo_Shenandoah.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Bass_I/B1_Solo_Shenandoah.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -370,8 +370,8 @@
                     <li>
                         <label>Without Bass</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Bass/Swan.-B.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Bass/Swan.-B.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Bass/Swan.-B.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Bass/Swan.-B.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -385,22 +385,22 @@
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass_II/bass_2_high_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass_II/bass_2_high_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_II/bass_2_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_II/bass_2_high_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass_II/bass_2_low_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass_II/bass_2_low_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_II/bass_2_low_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_II/bass_2_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass/bass_chromatic_scale.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Bass/bass_chromatic_scale.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass/bass_chromatic_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass/bass_chromatic_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -410,8 +410,8 @@
                     <li>
                         <label>Solo</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Bass_II/B2_Solo_Shenandoah.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/shenandoah/Bass_II/B2_Solo_Shenandoah.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Bass_II/B2_Solo_Shenandoah.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/shenandoah/Bass_II/B2_Solo_Shenandoah.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -423,8 +423,8 @@
                     <li>
                         <label>Without Bass</label>
                         <audio controls>
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Bass/Swan.-B.mp3') }}" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/quintet_Swan/without_Bass/Swan.-B.mp3') }}" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Bass/Swan.-B.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/quintet_Swan/without_Bass/Swan.-B.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
