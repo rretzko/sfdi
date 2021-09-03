@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
 use SproutVideo;
 use SproutVideo\UploadToken;
 
@@ -68,7 +69,7 @@ class Fileserver extends Model
             ->folder_id;
 
         $token = UploadToken::create_upload_token([
-            'return_url' => 'https://thedirectorsroom.com/fileserver/confirmation/'
+            'return_url' => 'https://studentfolder.info/fileserver/confirmation/'
                 . $this->registrant->id.'/'.$filecontenttype->id.'/'.auth()->id().'/'.$folder_id
         ]);
 
@@ -78,7 +79,11 @@ class Fileserver extends Model
 
         }else{
 
-            error_log('FJR:'.date('Y-m-d G:i:s').': SproutVideo token error: '.serialize($token));
+            Log::info('FJR:'.date('Y-m-d G:i:s').': SproutVideo token error: '.serialize($token));
+            Log::info('FJR: '.date('Y-m-d G:i:s').': registrant->id: '.$this->registrant->id);
+            Log::info('FJR: '.date('Y-m-d G:i:s').': filecontenttype->id: '.$filecontenttype->id);
+            Log::info('FJR: '.date('Y-m-d G:i:s').': auth()->id(): '.auth()->id());
+            Log::info('FJR: '.date('Y-m-d G:i:s').': folder_id(): '.$folder_id);
 
             return '***00000***';
         }
