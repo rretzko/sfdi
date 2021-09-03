@@ -27,6 +27,7 @@ Route::get('/guest/pitchfiles/', function() {
 })->name('guest.pitch_files');
 
 /** SPROUT VIDEO CONFIRMATIONS */
+////https://thedirectorsroom.com/fileserver/confirmation/651234/99/98/97
 Route::get('fileserver/confirmation/{registrant}/{filecontenttype}/{person}/{folder_id}', 'Fileservers\FileserverController@store');
 
 Route::get('/registrant/approve/{registrant}/{filecontenttype}', [FileapprovalController::class,'approve'])->name('fileupload.approve');

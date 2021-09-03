@@ -61,7 +61,7 @@ class FileserverController extends Controller
         $fileserver = new Fileserver($registrant);
 
         $folders = Fileuploadfolder::where('eventversion_id', $eventversion->id)
-            ->whereIn('instrumentation_id', $registrant->instrumentations)
+            ->where('instrumentation_id', $registrant->instrumentations->first()->id)
             ->get();
 
         $self_registration_open_date = Carbon::parse($eventversion->studentRegistrationDate('videos_student_open'))->format('F jS');
