@@ -3,7 +3,11 @@
  * @since 2020.06.22
  */
 
-var PATH = 'http://localhost/dev/sfdi/public/'; //https://studentfolder.info/';
+if(location.hostname === 'localhost') {
+    var PATH = 'http://localhost/dev/sfdi/public/'; //https://studentfolder.info/';
+}else{
+    var PATH = 'https://studentfolder.info/'; //https://studentfolder.info/';
+}
 
 function teachersFromSchool()
 {
