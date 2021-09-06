@@ -20,7 +20,7 @@ function teachersFromSchool()
     }
     //clear any existing messages
     $('.instructionTeacher').css('display', 'none');
-
+alert($path);
     $.ajax({
        method: 'POST',
        //url: PATH+'TeachersFromSchool',
