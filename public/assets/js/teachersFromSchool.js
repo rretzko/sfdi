@@ -17,7 +17,7 @@ function teachersFromSchool()
 
     //clear any existing messages
     $('.instructionTeacher').css('display', 'none');
-
+alert(PATH+'TeachersFromSchool');
     $.ajax({
        method: 'POST',
        url: PATH+'TeachersFromSchool',
