@@ -80,7 +80,7 @@ Add School
 <link href="{{ asset('/plugins/select2/select2.min.css') }}" rel="stylesheet" type="text/css" />
 <script src="{{ asset('/plugins/select2/select2.min.js') }}"></script>
 <!-- <script src="{{asset('/js/teachersFromSchool.js')}}"></script> -->
-<script src="https://studentfolder.info/js/teachersFromSchool.js" ></script>
+<script src="https://studentfolder.info/assets/js/teachersFromSchool.js" ></script>
 <!-- <script src="http://localhost/dev/sfdi/public/assets/js/teachersFromSchool.js"></script> -->
 <script type="text/javascript">
     $(document).ready(function() {
