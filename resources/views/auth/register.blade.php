@@ -15,7 +15,11 @@ Register
 
 	<div class="p-2">
 
-		<form method="POST" action="{{ route('register') }}" class="form-horizontal m-t-20">
+        @if(config('app.url') === 'http://localhost')
+		    <form method="POST" action="{{ route('register') }}" class="form-horizontal m-t-20">
+        @else
+            <form method="POST" action="https://studentfolder.info/register" class="form-horizontal m-t-20">
+        @endif
 			@csrf
 			<div class="form-group row">
 				<div class="col-12">
