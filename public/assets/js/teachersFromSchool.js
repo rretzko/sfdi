@@ -3,11 +3,8 @@
  * @since 2020.06.22
  */
 
-if(location.hostname === 'localhost') {
-    var PATH = 'http://localhost/dev/sfdi/public/'; //https://studentfolder.info/';
-}else{
-    var PATH = 'https://studentfolder.info/'; //https://studentfolder.info/';
-}
+var PATH = 'http://localhost/dev/sfdi/public/'; //https://studentfolder.info/';
+
 
 function teachersFromSchool()
 {
@@ -15,12 +12,19 @@ function teachersFromSchool()
     var advisory = 'If not listed above, please ask your teacher to sign up at <a href="https:\\TheDirectorsRoom.com" title="Sign up at TheDirectorsRoom.com" target="_blank" tabindex="-1">TheDirectorsRoom.com</a>.';
     var advisory_none = 'Please ask your teacher to sign up at <a href="https:\\TheDirectorsRoom.com" title="Sign up at TheDirectorsRoom.com" target="_blank" tabindex="-1">TheDirectorsRoom.com</a>.';
 
+    //path
+    if(location.hostname === 'localhost') {
+        var $path = PATH+'TeachersFromSchool';
+    }else{
+        var $path = 'https://studentfolder.info/TeachersFromSchool';
+    }
     //clear any existing messages
     $('.instructionTeacher').css('display', 'none');
-alert(PATH+'TeachersFromSchool');
+
     $.ajax({
        method: 'POST',
-       url: PATH+'TeachersFromSchool',
+       //url: PATH+'TeachersFromSchool',
+        url: $path,
        data: {
            'school_id' : $('#id').val(),
             '_token' : $("input[name='_token']").val()
