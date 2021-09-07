@@ -80,7 +80,7 @@ class EapplicationController extends Controller
             return $eventversion->event->id;
         }else{ //default application
 
-            dd($base.DIRECTORY_SEPARATOR.'default');
+            //dd($base.DIRECTORY_SEPARATOR.'default');
             return 'default';
         }
 

@@ -13,7 +13,7 @@ use PDF;
 class ApplicationController extends Controller
 {
     public function __invoke(\App\Registrant $registrant)
-    {dd(__LINE__);
+    {
         //2021-08-28
         $teacher = Teacher::find(auth()->id());
         $school = $registrant->student->person->user->schools->first();
@@ -111,7 +111,7 @@ class ApplicationController extends Controller
             return $eventversion->event->id;
         }else{ //default application
 
-            dd($base.DIRECTORY_SEPARATOR.'default');
+            //dd($base.DIRECTORY_SEPARATOR.'default');
             return 'default';
         }
 
