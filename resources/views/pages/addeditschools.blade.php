@@ -8,7 +8,11 @@ Add School
 <div class="row">
     <div class="col-12">
 
-        <form class="school_add m-t-40" method="post" action="{{route('storeSchool')}}">
+        @if(config('app.url') === 'http://localhost')
+            <form class="school_add m-t-40" method="post" action="{{route('storeSchool')}}">
+        @else
+            <form class="school_add m-t-40" method="post" action="https://studentfolder.info/school/store">
+        @endif
                 @csrf
             <div class="card">
                 <div class="card-body">

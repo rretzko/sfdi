@@ -23,8 +23,8 @@
         <link href="http://localhost/dev/sfdi/public/assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
         <link href="http://localhost/dev/sfdi/public/assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     @else
-        <link href="https://studentfolder.info/public/assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-        <link href="https://studentfolder.info/public/assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://studentfolder.info/assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://studentfolder.info/assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     @endif
 
 	<!-- App css -->
@@ -186,12 +186,23 @@
         <!--End of Tawk.to Script-->
 
 	<!-- jQuery  -->
-	<script src="{{ asset('js/jquery.min.js') }}"></script>
-	<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-	<script src="{{ asset('js/jquery.slimscroll.js') }}"></script>
-	<script src="{{ asset('js/app.js') }}"></script>
-        <script src="{{ asset('js/notifications.js') }}"></script>
-        <script src="{{ asset('js/tdr_main.js') }}"></script>
+    @if(config('app.url') === 'http://localhost')
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.slimscroll.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+            <script src="{{ asset('js/notifications.js') }}"></script>
+            <script src="{{ asset('js/tdr_main.js') }}"></script>
+    @else
+        <script src="https://studentfolder.info/asset/js/jquery.min.js"></script>
+        <script src="https://studentfolder.info/asset/js/bootstrap.bundle.min.js"></script>
+        <script src="https://studentfolder.info/asset/js/jquery.slimscroll.js"></script>
+        <script src="https://studentfolder.info/asset/js/app.js"></script>
+        <script src="https://studentfolder.info/asset/js/notifications.js"></script>
+        <script src="https://studentfolder.info/asset/js/tdr_main.js"></script>
+
+    @endif
+
 	@yield('pagescripts')
 </body>
 </html>
