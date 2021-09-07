@@ -194,12 +194,12 @@
             <script src="{{ asset('js/notifications.js') }}"></script>
             <script src="{{ asset('js/tdr_main.js') }}"></script>
     @else
-        <script src="https://studentfolder.info/asset/js/jquery.min.js"></script>
-        <script src="https://studentfolder.info/asset/js/bootstrap.bundle.min.js"></script>
-        <script src="https://studentfolder.info/asset/js/jquery.slimscroll.js"></script>
-        <script src="https://studentfolder.info/asset/js/app.js"></script>
-        <script src="https://studentfolder.info/asset/js/notifications.js"></script>
-        <script src="https://studentfolder.info/asset/js/tdr_main.js"></script>
+        <script src="https://studentfolder.info/assets/js/jquery.min.js"></script>
+        <script src="https://studentfolder.info/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://studentfolder.info/assets/js/jquery.slimscroll.js"></script>
+        <script src="https://studentfolder.info/assets/js/app.js"></script>
+        <script src="https://studentfolder.info/assets/js/notifications.js"></script>
+        <script src="https://studentfolder.info/assets/js/tdr_main.js"></script>
 
     @endif
 
