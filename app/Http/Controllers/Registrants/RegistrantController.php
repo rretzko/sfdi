@@ -9,6 +9,7 @@ use App\Eventversion;
 use App\Videoserver;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RegistrantController extends Controller
 {
@@ -176,14 +177,22 @@ class RegistrantController extends Controller
      */
     public function update(Request $request, Registrant $registrant)
     {
-        $voicings = implode(',',
-                array_merge($request['chorals'], $request['instrumentals']));
+        //$voicings = implode(',',
+        //        array_merge($request['chorals'], $request['instrumentals']));
 
-        $ad = \App\Auditiondetail::find($registrant->auditionnumber);
-        $ad->update([
+        $registrant->update([
             'programname' => $request['programname'],
-            'voicings' => $voicings,
-            ]);
+        ]);
+
+        DB::table('instrumentation_registrant')
+            ->where('registrant_id', '=', $registrant->id)
+            ->update(['instrumentation_id'=> $request['chorals'][0]]);
+
+        //$ad = \App\Auditiondetail::find($registrant->auditionnumber);
+        //$ad->update([
+        //    'programname' => $request['programname'],
+        //    'voicings' => $request['chorals'],
+        //    ]);
 
         return redirect(route('registrant.profile.edit', ['eventversion' => $registrant->eventversion]))
                 ->with('success', $request['programname']
