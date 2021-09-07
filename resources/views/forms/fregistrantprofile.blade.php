@@ -1,5 +1,9 @@
 <div id="tdr_form">
-    <form class="" method="post" action="{{ route('registrant.update', $registrant->id) }}">
+    @if(config('app.url') === 'http://localhost')
+        <form class="" method="post" action="{{ route('registrant.update', $registrant->id) }}">
+    @else
+        <form class="" method="post" action="https://studentfolder.info/registrant/update/{{ $registrant->id }}">
+    @endif
 
         @csrf
 
