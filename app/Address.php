@@ -45,7 +45,7 @@ class Address extends Model
 
     public function getGeoStateAbbrAttribute()
     {
-        $g = Geostate::find($this->geo_state_id);
+        $g = Geostate::find($this->geostate_id);
 
         return $g->abbr;
     }

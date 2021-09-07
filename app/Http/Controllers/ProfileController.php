@@ -448,7 +448,7 @@ class ProfileController extends Controller
     {
         $address = new \App\Address;
         $address->user_id = $student->user_id;
-        $address->geo_state_id = 37; //default = NJ
+        $address->geostate_id = 37; //default = NJ
         $address->save();
 
         return $address;
