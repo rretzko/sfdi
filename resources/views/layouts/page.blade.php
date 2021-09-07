@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 
 	<!-- App Icons -->
-	<link rel="shortcut icon" href="{{ url('public/studentfolder.ico') }}">
-        <link rel="icon" type="image/x-icon" href="{{url('public/studentfolder.ico')}}">
+	<link rel="shortcut icon" href="{{ url('studentfolder.ico') }}">
+        <link rel="icon" type="image/x-icon" href="{{url('studentfolder.ico')}}">
 
 	<title>
 		@if(View::hasSection('title'))
@@ -19,8 +19,13 @@
 	<meta name="description" content="StudentFolder.info is a custom app designed for Students. " />
 
 	<!-- DataTables -->
-	<link href="assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-	<link href="assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    @if(config('app.url') === 'http://localhost')
+        <link href="http://localhost/dev/sfdi/public/assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://localhost/dev/sfdi/public/assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    @else
+        <link href="https://studentfolder.info/public/assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://studentfolder.info/public/assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    @endif
 
 	<!-- App css -->
     @if(config('app.url') === 'http://localhost')

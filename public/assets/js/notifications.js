@@ -1,4 +1,4 @@
-/* 
+/*
  * notifications.js
  * @since 2020.06.30
  */
@@ -21,9 +21,9 @@ function getNotifications()
             '_token' : $("input[name='_token']").val()
         },
        success: function(response){
-           
+
            var obj = JSON.parse(response); //create json object
-          
+
            //console.log(obj['count']);
            if(obj['count'] > 0){
                 $('.noti-icon-badge').html(obj['count']);
@@ -38,21 +38,21 @@ function getNotifications()
            $('.slimscroll-noti').html(obj['items']);
        },
        error: function(jqXHR, textStatus, errorThrown){
-           console.log(JSON.stringify(jqXHR));
-           console.log("AJAX error: "+textStatus+' : '+errorThrown);
+           //console.log(JSON.stringify(jqXHR));
+           console.log("assets/js/notification.js AJAX error: "+textStatus+' : '+errorThrown);
        }
     });
-    
+
 }
 
 function updateIcon()
 {
-    
+
 }
 
 function updateNotifications()
 {
-    
+
 }
 
 

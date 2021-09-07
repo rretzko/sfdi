@@ -522,7 +522,7 @@ function updateAlertIcon()
 
         var url = PATH+'AjaxAlertIcon';
 
-        runAjax(url, data, replaceAlertIcon);
+        //runAjax(url, data, replaceAlertIcon);
     }
 }
 
