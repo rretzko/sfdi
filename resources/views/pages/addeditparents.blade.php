@@ -8,7 +8,11 @@
 <div class="row">
     <div class="col-12">
 
-        <form class="parentguardian_add  m-t-40" method="post" action="@if($person->user_id > 0) {{route('updateParent', [$person->user_id])}} @else {{route('storeParent')}}@endif">
+        @if(config('app.url') === 'http://localhost')
+            <form class="parentguardian_add  m-t-40" method="post" action="@if($person->user_id > 0) {{route('updateParent', [$person->user_id])}} @else {{route('storeParent')}} @endif ">
+        @else
+            <form class="parentguardian_add  m-t-40" method="post" action="@if($person->user_id > 0) https://studentfolder.info/parent/update/{{ $person->user_id}} @else https://studentfolder.info/parent/store @endif ">
+        @endif
             @csrf
 
             <div class="card">
