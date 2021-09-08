@@ -22,7 +22,12 @@ Profile
 </div>
 <!-- end page title end breadcrumb -->
 
-<form class="" method="post" action="{{route('profile.update')}}">
+@if(config('app.url') === 'http://localhost')
+    <form class="" method="post" action="{{route('profile.update')}}">
+@else
+    <form class="" method="post" action="https://studentfolder.info/profile/update">
+@endif
+
     @csrf
 
     @if($errors->any())
