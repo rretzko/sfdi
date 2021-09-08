@@ -329,7 +329,13 @@ class ProfileController extends Controller
         //$cntr = 0;
         auth()->user()->instrumentations()->detach();
 
-        auth()->user()->instrumentations()->sync($request['chorals']);
+        if((! isset($request['chorals'])) || ($request['chorals'][0] < 1)){
+            auth()->user()->instrumentations()->sync(1); //force selection of Alto
+        }else{
+            auth()->user()->instrumentations()->sync($request['chorals']);
+        }
+
+
         /*
         foreach($request['chorals'] AS $instrumentation_id){
 
