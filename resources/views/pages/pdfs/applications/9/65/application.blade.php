@@ -38,7 +38,7 @@
     <tr>
         <td style="width: 10%;">
             <!-- <img src="https:\\studentfolder.info\assets\images\njmea_logo_state.jpg" alt="NJMEA Logo"/> -->
-            <img src="https:\\studentfolder.info\njmea_logo_state.jpg" alt="NJMEA Logo"/>
+            <!-- <img src="https:\\studentfolder.info\njmea_logo_state.jpg" alt="NJMEA Logo"/> -->
             <img src="assets/images/njmea_logo_state.jpg" alt="NJMEA Logo" />
         </td>
         <td style="width: 72%;">
