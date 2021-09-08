@@ -319,8 +319,6 @@
             {{ $registrant->student->person->fullName }}
         </td>
     </tr>
-
-    </tr>
 </table>
 </body>
 </html>
