@@ -149,7 +149,7 @@ Profile
                                    type="text"
                                    id="address01" name="address01"
                                    placeholder=""
-                                   value="{{$student->person->address->address01 ?? ''}}">
+                                   value="{{$student->person->address && $student->person->address->id ? $student->person->address->address01 : ''}}">
                             @if($errors->has('address01'))
                                 <p class="help text-danger">{{$errors->first('address01')}}</p>
                             @endif
@@ -167,7 +167,7 @@ Profile
                                    type="text"
                                    id="address02" name="address02"
                                    placeholder=""
-                                   value="{{$student->person->address->address02 ?? ''}}">
+                                   value="{{$student->person->address && $student->person->address->id ? $student->person->address->address02 : ''}}">
                             @if($errors->has('address02'))
                                 <p class="help text-danger">{{$errors->first('address02')}}</p>
                             @endif
@@ -185,7 +185,7 @@ Profile
                                    type="text"
                                    id="city" name="city"
                                    placeholder=""
-                                   value="{{ $student->person->address->city ?? '' }}">
+                                   value="{{ $student->person->address && $student->person->address->id ? $student->person->address->city : '' }}">
                             @if($errors->has('city'))
                                 <p class="help text-danger">{{$errors->first('city')}}</p>
                             @endif
@@ -203,7 +203,7 @@ Profile
                                 type="text"
                                 id="postal_code" name="postal_code"
                                 placeholder=""
-                                value="{{ $student->person->address->postalcode ?? '' }}">
+                                value="{{ $student->person->address && $student->person->address->id ? $student->person->address->postalcode : '' }}">
                                 @if($errors->has('postalcode'))
                                     <p class="help text-danger">{{$errors->first('postalcode')}}</p>
                                 @endif
