@@ -172,7 +172,7 @@ class Student extends Model
     {
         $ss = Shirtsize::find($this->shirt_size);
 
-        return ucwords($ss->descr);
+        return ($ss) ? ucwords($ss->descr) : 'None found';
     }
 
     /**
