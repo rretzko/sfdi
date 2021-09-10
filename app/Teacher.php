@@ -168,8 +168,16 @@ class Teacher extends Model
      */
     public function paypalApproved(\App\Eventversion $eventversion, $schools) : bool
     {
+        $paypal = 0;
+
         foreach($schools AS $school){
 
+            /*$paypal += DB::table('eventversionteacherconfigs')
+                ->where('user_id', $this->user_id)
+                ->where('eventversion_id', $eventversion->id)
+                ->where('school_id', $school->id)
+                ->value('paypalstudent') ?? 0;
+*/
             foreach( Eventversionteacherconfig::where([
                 'user_id' => $this->user_id,
                 'school_id' => $school->id,
@@ -183,7 +191,7 @@ class Teacher extends Model
             }
         }
 
-        return false;
+        return (bool)$paypal;
     }
 
     public function person()

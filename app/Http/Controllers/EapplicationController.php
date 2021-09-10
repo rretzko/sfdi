@@ -71,7 +71,7 @@ class EapplicationController extends Controller
      */
     public function edit(Registrant $registrant)
     {
-        $eventversion = Eventversion::find(substr($registrant->auditionnumber,0,2));
+        $eventversion = Eventversion::find(substr($registrant->id,0,2));
 
         return view('pages.eapplications.'.$eventversion->event->id.'.'.$eventversion->id.'.eapplication', [
             'eventversion' => $eventversion,
@@ -80,6 +80,7 @@ class EapplicationController extends Controller
             'page_title' => $eventversion->name.' eApplication',
             'path_audit' => 'forms.eapplications.'.$eventversion->event->id.'.'.$eventversion->id.'.feapplication_audit',
             'path_update' => 'forms.eapplications.'.$eventversion->event->id.'.'.$eventversion->id.'.feapplication_update',
+            'eapplication' => Eapplication::find($registrant->id),
             ]);
     }
 
@@ -92,7 +93,7 @@ class EapplicationController extends Controller
      */
     public function update(Request $request, Registrant $registrant)
     {
-        $eventversion = Eventversion::find(substr($registrant->auditionnumber,0,2));
+        $eventversion = Eventversion::find(substr($registrant->id,0,2));
 
         $request->validate([
             'absences' => ['required', 'numeric'],
@@ -108,7 +109,7 @@ class EapplicationController extends Controller
             'videouse' => ['required', 'numeric'],
         ]);
 
-        Eapplication::updateOrCreate(['auditionnumber' => $registrant->auditionnumber],
+        Eapplication::updateOrCreate(['id' => $registrant->id],
                 [
                     'absences' => $request['absences'],
                     'courtesy' => $request['courtesy'],
@@ -175,7 +176,7 @@ class EapplicationController extends Controller
             'registrant_due' => $registrant->due(),
             'self_registration_open' => $eventversion->isSelfRegistrationOpen,
             'video_titles' => $video_titles,
-            'payment_hints' => '('.$registrant->auditionnumber.')',
+            'payment_hints' => '('.$registrant->id.')',
         ]);
 
     }

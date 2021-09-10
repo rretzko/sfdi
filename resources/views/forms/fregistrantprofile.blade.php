@@ -240,7 +240,7 @@
                     </div>
 
                     <!-- ALL-SHORE CHORUS -->
-                    @if($eventversion->id == 61)
+                    @if($eventversion->id == 69)
                         <script src="https://www.paypal.com/sdk/js?client-id=AVgkHTtHdeKot57GhJ5gBplnqNqR_hJOveftQHxAaWxtBfXhNPJu99bDc2yxFUEQaBx_QOWAgITlJtD2&currency=USD" data-sdk-integration-source="button-factory"></script>
                         <script>
                             function initPayPalButton() {
@@ -280,13 +280,13 @@
                     @endif
 
                 <!-- SJCDA -->
-                    @if(($eventversion->id > 61) && ($eventversion->id < 65))
+                    @if(($eventversion->id > 65) && ($eventversion->id < 69))
 
                         <div id="smart-button-container">
                             <div style="text-align: center;">
                                 <div style="margin-bottom: 1.25rem;">
-                                    <p>SJCDA 2021 Virtual Choruses</p>
-                                    <select id="item-options"><option value="Jr or Sr HS Chorus" price="15" @if(isset($select_jrsr)){{ $select_jrsr }} @endif>Jr or Sr HS Chorus - 15 USD</option><option value="Elementary Chorus" price="10" @if(isset($select_elem)){{ $select_elem }} @endif>Elementary Chorus - 10 USD</option></select>
+                                    <p>SJCDA 2022 Virtual Choruses</p>
+                                    <select id="item-options"><option value="Jr or Sr HS Chorus" price="${{ number_format($registration_fee,2) }}" @if(isset($select_jrsr)){{ $select_jrsr }} @endif>Jr or Sr HS Chorus - {{ number_format($registration_fee,2) }} USD</option><option value="Elementary Chorus" price="10" @if(isset($select_elem)){{ $select_elem }} @endif>Elementary Chorus - 15 USD</option></select>
                                     <select style="visibility: hidden" id="quantitySelect"></select>
                                 </div>
                                 <div id="paypal-button-container"></div>
@@ -302,7 +302,7 @@
                                 if (!isNaN(quantity)) {
                                     quantitySelect.style.visibility = "visible";
                                 }
-                                var orderDescription = 'SJCDA 2021 Virtual Choruses '+{{ $payment_hints }}+" "+{{$registrant->student->activeSchool->id }}+" "+{{ $registrant->user_id }};
+                                var orderDescription = 'SJCDA 2022 Virtual Choruses '+{{ $payment_hints }}+" "+{{$registrant->student->activeSchool->id }}+" "+{{ $registrant->user_id }};
                                 if(orderDescription === '') {
                                     orderDescription = 'Item';
                                 }
@@ -377,7 +377,7 @@
                         </script>
                     @endif
 
-                    @if(($eventversion->id > 99) && ($eventversion->id < 100))
+                    @if(($eventversion->id > 65) && ($eventversion->id < 69))
                         <div id="smart-button-container">
                             <div style="text-align: center;">
                                 <div id="paypal-button-container"></div>
@@ -386,9 +386,9 @@
                         <script src="https://www.paypal.com/sdk/js?client-id=ASQ0S-J8FN0jLmw3GBj4GarsKfa_0-36zIj9NJbaey_FBN0NXMIfl-b1APAoBlo99hqS_ZhDns3Tg6ZB&components=buttons,funding-eligibility"></script>
                         <script>
                             var FUNDING_SOURCES = [
-                                paypal.FUNDING.PAYPAL,
-                                paypal.FUNDING.CREDIT,
-                                paypal.FUNDING.CARD
+                                paypal.FUNDING.CREDIT //,
+                                // paypal.FUNDING.PAYPAL,
+                                //paypal.FUNDING.CARD
                             ];
                             // Loop over each funding source/payment method
                             FUNDING_SOURCES.forEach(function(fundingSource) {
@@ -418,7 +418,7 @@
 
                                     createOrder: function(data, actions) {
                                         return actions.order.create({
-                                            purchase_units: [{"description":"SJCDA 2021 Events","amount":{"currency_code":"USD","value":15}}]
+                                            purchase_units: [{"description":"SJCDA 2022 Events","amount":{"currency_code":"USD","value":{{ number_format($registration_fee,2) }}}}]
                                         });
                                     },
 

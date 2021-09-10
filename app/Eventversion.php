@@ -80,7 +80,7 @@ class Eventversion extends Model
         return $this->hasOne(Eventversionvideo::class);
     }
 
-    public function eventversionteacherconfig()
+    public function eventversionteacherconfigs()
     {
         return $this->hasMany(Eventversionteacherconfig::class);
     }

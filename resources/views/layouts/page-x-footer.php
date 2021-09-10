@@ -159,17 +159,19 @@
 	<!-- end wrapper -->
 
 
-	<!-- Footer
-	<footer class="footer">
-		<div class="container">
+	<!-- Footer -->
+	<footer class="footer" style="z-index: 1;">
+
+        <div class="container">
 			<div class="row">
 				<div class="col-12">
 					&copy; 2020 <a href="http://studentfolder.info/">StudentFolder.info</a> <span class="d-none d-md-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://www.newwavedigitaldesigns.com/">New Wave Digital Designs</a>.</span>
 				</div>
 			</div>
 		</div>
+
 	</footer>
-	 End Footer -->
+	<!-- End Footer -->
 
         <!--Start of Tawk.to Script-->
         <script type="text/javascript">

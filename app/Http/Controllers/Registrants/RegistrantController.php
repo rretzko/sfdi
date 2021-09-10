@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Registrants;
 
+use App\Eventversionteacherconfig;
 use App\Http\Controllers\Controller;
 use App\Fileserver;
 use App\Registrant;
@@ -9,6 +10,7 @@ use App\Eventversion;
 use App\Videoserver;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 
 class RegistrantController extends Controller
@@ -119,6 +121,8 @@ class RegistrantController extends Controller
         $video_close_date = Carbon::parse($eventversion->studentRegistrationDate('videos_student_close'))->format('F jS');
         //Carbon\Carbon::parse($eventversion->eventversiondates->where('datetype_id', \App\Datetype::where('descr', 'videos_student_open')->first()->id)->first()->dt)->format('F jS');
 
+        $iseapplication = $eventversion->eventversionconfig->eapplication;
+
         return view('pages.registrants.profile', [
             'registrant' => $registrant,
             'eventversion' => $eventversion,
@@ -153,6 +157,7 @@ class RegistrantController extends Controller
             'video_close_date' => $video_close_date,
             'fileserver' => $fileserver,
             'filename' => $fileserver->buildFilename($registrant),
+            'iseapplication' => $iseapplication,
         ]);
     }
 

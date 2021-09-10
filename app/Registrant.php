@@ -26,7 +26,6 @@ class Registrant extends Model
 
     public function canPaypal() : bool
     {
-        return false;
         /** @todo build teacher approval functionality for students to use PayPal */
         $can = false;
 

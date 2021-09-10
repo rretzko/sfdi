@@ -95,6 +95,7 @@ Route::get('parents', 'ParentguardiansController@index')->name('parents');
 /** PDFS */
 Route::get('/pdf/application/{registrant}','Pdfs\ApplicationController')->name('pdf.application');
 Route::get('/pdf/eapplication/{registrant}','Pdfs\EapplicationController')->name('pdf.eapplication');
+Route::post('/registrant/{registrant}/eapplication','Registrants\RegistrantApplicationController@update')->name('registrant.eapplication');
 
 /** PROFILE */
 Route::get('profile', 'ProfileController@index')->name('profile');
