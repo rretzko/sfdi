@@ -286,7 +286,17 @@
                             <div style="text-align: center;">
                                 <div style="margin-bottom: 1.25rem;">
                                     <p>SJCDA 2022 Virtual Choruses</p>
-                                    <select id="item-options"><option value="Jr or Sr HS Chorus" price="${{ number_format($registration_fee,2) }}" @if(isset($select_jrsr)){{ $select_jrsr }} @endif>Jr or Sr HS Chorus - {{ number_format($registration_fee,2) }} USD</option><option value="Elementary Chorus" price="10" @if(isset($select_elem)){{ $select_elem }} @endif>Elementary Chorus - 15 USD</option></select>
+                                    <select id="item-options">
+                                        <option value="Jr or Sr HS Chorus" price="${{ number_format($registration_fee,2) }}" @if(isset($select_jrsr)){{ $select_jrsr }} @endif>
+                                            Jr or Sr HS Chorus - {{ number_format($registration_fee,2) }} USD
+                                        </option>
+                                        <!-- {{-- ELEMENTARY CHORUS WILL REGISTER AT A DIFFERENT TIME OF YEAR IN 2021
+                                        <option value="Elementary Chorus" price="10" @if(isset($select_elem)){{ $select_elem }} @endif>
+                                            Elementary Chorus - 15 USD
+                                        </option>
+                                        --}} -->
+                                    </select>
+
                                     <select style="visibility: hidden" id="quantitySelect"></select>
                                 </div>
                                 <div id="paypal-button-container"></div>
