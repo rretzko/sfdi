@@ -1,4 +1,5 @@
 <div class=" mx-2 p-2">
+
     @if($eventversion->eventversionconfig->virtualaudition)
         <h4 class="font-bold">File Uploads</h4>
 

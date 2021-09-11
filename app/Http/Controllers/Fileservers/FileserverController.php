@@ -92,6 +92,7 @@ class FileserverController extends Controller
         'choral' => $eventversion->event->isChoral(),
         'registrant_paid' => $registrant->paid(),
         'registrant_due' => $registrant->due(),
+        'payment_hints' => $eventversion->eventversionconfig->eapplication ? '('.$registrant->id.')' : '',
     ]);
 
     }

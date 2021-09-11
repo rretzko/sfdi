@@ -7,6 +7,7 @@ use App\Fileupload;
 use App\Utility\Fileviewport;
 use App\Video;
 use App\Videotype;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
@@ -67,23 +68,18 @@ class Registrant extends Model
         return $this->hasOne(Eapplication::class, 'auditionnumber', 'auditionnumber');
     }
 
-    public function paid() : float
-    {
-        return DB::table('payments')
-                ->where('user_id', '=', $this->user_id)
-                ->where('school_id', '=', $this->school_id)
-                ->where('eventversion_id', '=', $this->eventversion->id)
-                ->get()->sum('amount');
-    }
-
-    public function payments()
-    {
-        return $this->hasMany(Payment::class);
-    }
-
     public function eventversion()
     {
         return $this->belongsTo(Eventversion::class);
+    }
+
+    public function fileuploadapprovaltimestamp($filecontenttype) : string
+    {
+        return Carbon::parse(\App\Fileupload::where('registrant_id', $this->id)
+            ->where('filecontenttype_id', $filecontenttype->id)
+            ->first()
+            ->approved)
+            ->format('M d, Y g:i a');
     }
 
     public function fileuploadapproved($filecontenttype) : bool
@@ -217,6 +213,20 @@ class Registrant extends Model
     public function instrumentations()
     {
         return $this->belongsToMany(Instrumentation::class, 'instrumentation_registrant');
+    }
+
+    public function paid() : float
+    {
+        return DB::table('payments')
+            ->where('user_id', '=', $this->user_id)
+            ->where('school_id', '=', $this->school_id)
+            ->where('eventversion_id', '=', $this->eventversion->id)
+            ->get()->sum('amount');
+    }
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
     }
 
     public function registration_Fee() : float
