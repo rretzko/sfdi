@@ -177,11 +177,12 @@
 
                                     {{-- SIGNATURES --}}
                                     <div class="w-4/12 mx-auto">
-                                        @if(config('app.url') === 'http://localhost')
+                                        <form method="post" action="{{ route('registrant.eapplication', ['registrant' => $registrant]) }}">
+                                        <!-- {{--  @if(config('app.url') === 'http://localhost')
                                             <form method="post" action="{{ route('registrant.eapplication', ['registrant' => $registrant]) }}">
                                         @else
                                             <form method="post" action="https://studentfolder.info/registrants/{{ $registrant->id }}/eapplication">
-                                        @endif
+                                        @endif --}} -->
                                             @csrf
                                             <div class="input-group">
                                                 <input type="checkbox" name="signaturestudent" value="1"
