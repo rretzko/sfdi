@@ -214,6 +214,11 @@ class Registrant extends Model
                 ->value('id') ?? false;
     }
 
+    public function inpersonaudition()
+    {
+        return $this->hasOne(Inpersonaudition::class);
+    }
+
     public function instrumentals() : array
     {
         $parts = explode(',', $this->auditiondetail->voicings);

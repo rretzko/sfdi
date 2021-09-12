@@ -12,7 +12,33 @@
 
         @else
 
-            @foreach($eventversion->filecontenttypes AS $filecontenttype)
+            <!-- ALL-SHORE CHORUS 2022 -->
+            @if($eventversion->id === 69)
+                <div style="background-color: {{ $registrant->inpersonaudition && $registrant->inpersonaudition->inperson ? 'darkgreen' : 'darkred' }}; border-radius: .5rem; margin:auto; width: 66%;display: flex; ">
+                    <div style="margin: auto;">
+                        @if(config('app.url') === 'http://localhost')
+                            <a href="{{ route('registrant.profile.store.inperson',['eventversion' => $eventversion, 'registrant' => $registrant]) }}" style="color: white; align-self: center;">
+                                @if($registrant->inpersonaudition && $registrant->inpersonaudition->inperson)
+                                    Click here if you wish to submit a virtual audition
+                                @else
+                                    Click here if you wish to audition in person.
+                                @endif
+                            </a>
+                        @else
+                            <a href="https://studentfolder.info/registrant/profile/{{ $eventversion->id }}/{{ $registrant->id }}/inperson" style="color: white; align-self: center;">
+                                @if($registrant->inpersonaudition && $registrant->inpersonaudition->inperson)
+                                    Click here if you wish to submit a virtual audition
+                                @else
+                                    Click here if you wish to audition in person.
+                                @endif
+                            </a>
+                        @endif
+                    </div>
+                </div>
+            @endif
+
+            @if((! $registrant->inpersonaudition) || (! $registrant->inpersonaudition->inperson))
+                @foreach($eventversion->filecontenttypes AS $filecontenttype)
 
                 <div class="shadow-lg rounded border-2 mb-4">
                     <h3 class="pl-2 pt-1">
@@ -91,6 +117,8 @@
                             </div>
 
                             @endforeach
+            @endif
+
                             @endif
                             @endif
                         </div>

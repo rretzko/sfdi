@@ -103,6 +103,7 @@ Route::post('profile/update', 'ProfileController@update')->name('profile.update'
 
 /** REGISTRANTS */
 Route::get('registrant/profile/{eventversion}', 'Registrants\RegistrantController@edit')->name('registrant.profile.edit');
+Route::get('registrant/profile/{eventversion}/{registrant}/inperson', 'Registrants\InpersonauditionController@update')->name('registrant.profile.store.inperson');
 Route::get('registrant/pitchfiles/{eventversion}', 'Registrants\PitchfilesController@index')->name('pitchfiles');
 //Route::get('registrant/profile/{registrant}', 'Registrants\RegistrantController@show')->name('registrant.profile.edit');
 //Route::get('registrant/profile/edit/{registrant}', 'Registrants\ProfileController@edit')->name('registrant.profile.show');
