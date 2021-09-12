@@ -105,6 +105,17 @@ class Registrant extends Model
         return $viewport->viewport();
     }
 
+    public function getInstrumentationsCSVAttribute()
+    {
+        $descrs = [];
+
+        foreach($this->instrumentations AS $instrumentation){
+            $descrs[] = $instrumentation->abbr;
+        }
+
+        return ($descrs) ? implode(',',$descrs) : 'None found';
+    }
+
     public function getPrimaryAuditionVoicingAbbrAttribute() : string
     {
         if(! is_null($this->auditiondetail->voicings)){

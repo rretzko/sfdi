@@ -40,7 +40,7 @@ class Fileserver extends Model
     {
         $filename = $registrant->student->person->last;
         $filename .= substr($registrant->student->person->first,0,5).'_';
-        $filename .= str_replace(',','_',$registrant->InstrumentationsCSV.'_');
+        $filename .= str_replace(',','_',$registrant->instrumentationsCSV.'_');
 
         return $filename;
     }
