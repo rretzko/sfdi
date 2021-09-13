@@ -519,6 +519,10 @@ if(($teacher->user_id == 362) ||
         //dd($this->isQualified_Student_Not_Prohibited($student));
         //dd($this->isQualified_Student_Is_Approved($student));
         //dd($this->isQualified_Student_Grades($student));
+
+        //early exit: student registration is not open
+        if($this->studentRegistrationDate('student_open') > Carbon::now()){ return false;};
+
         return ($this->isQualified_Student_Not_Prohibited($student) &&
                 $this->isQualified_Student_Is_Approved($student) &&
                 $this->isQualified_Student_Grades($student));
