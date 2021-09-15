@@ -221,7 +221,7 @@
 <table>
     <tr>
         <th style="text-align: right; font-size: small;">
-            THE AUDITION FEE IS: $25.00
+            THE AUDITION FEE IS: ${{ number_format($eventversion->eventversionconfig->registrationfee,2) }} {{-- changed to $25 from $20 per Michael Doheney email 23-Jul-20 --}}
         </th>
     </tr>
 </table>
