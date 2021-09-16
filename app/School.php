@@ -43,6 +43,36 @@ class School extends Model
         return $this->name.', '.$this->city.' '.self::getGeoStatesAttribute();
     }
 
+    /**
+     * @since 2020.05.28
+     *
+     * abbreviate common terms
+     *
+     * @return string
+     */
+    public function getShortNameAttribute() : string
+    {
+        $abbrs = [
+            'High School' => 'HS',
+            'Regional High School' => 'RHS',
+            'International' => 'Int\'l',
+            'University' => 'U',
+        ];
+
+        $haystack = $this->name; //avoid repeated downstream calls
+        $str = $haystack;   //initialize $str value
+
+        foreach($abbrs AS $descr => $abbr){
+
+            if(strstr($haystack, $descr)){
+
+                $str = str_replace($descr, $abbr, $haystack);
+            }
+        }
+
+        return $str;
+    }
+
     public function getStudentStatus($student_id) : string
     {
         $statustype_id = DB::table('school_student')

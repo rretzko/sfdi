@@ -70,7 +70,7 @@
             {{ strtoupper($registrant->instrumentationsCSV) }}
         </td>
         <td style="width: 15%;">
-            Grade: {{ $registrant->student->gradeClassof }}
+            Grade:: {{ $registrant->student->gradeClassof }}
         </td>
         <td style="width: 30%;">
             {{ strlen($registrant->student->person->user->schools->first()->shortName) < 20
@@ -117,7 +117,7 @@
     </tr>
     <tr class="sectionSignaturesSubscript">
         <td colspan="2" style="font-size: .8rem; padding-left: 7rem;">
-            PARENT/LEGAL GUARDIAN CELL: {{ $registrant->student->guardians->first()->phoneMobile }}
+            PARENT/LEGAL GUARDIAN CELL: {{ $registrant->student->guardians->count() ? $registrant->student->guardians->first()->phoneMobile : '' }}
         </td>
     </tr>
 </table>
@@ -204,7 +204,7 @@
             {{ $registrant->student->person->fullName }}
         </td>
         <td style="width: 15%; color: red;">
-            {{ $registrant->instrumentationsCSV }}
+            {{ strtoupper($registrant->instrumentationsCSV) }}
         </td>
         <td style="width: 15%;">
             Grade: {{ $registrant->student->gradeClassof }}
