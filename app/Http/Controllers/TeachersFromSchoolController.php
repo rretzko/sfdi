@@ -17,7 +17,7 @@ class TeachersFromSchoolController extends Controller
     {
         $a = [];
         $school = School::find($request['school_id']);
-        $teachers = $school->teachers();
+        $teachers = ($school) ? $school->teachers() : [];
 
         if(count($teachers)){
 
