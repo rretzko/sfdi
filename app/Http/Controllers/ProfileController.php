@@ -168,7 +168,7 @@ class ProfileController extends Controller
         $student->person->save();
 
         //ADDRESS
-        Address::updateOrCreate(
+        $address = Address::updateOrCreate(
             [
                 'user_id' => auth()->id(),
             ],
@@ -180,6 +180,7 @@ class ProfileController extends Controller
                 'postalcode' => $request['postalcode'],
             ]
         );
+
 /*
         $address = is_null($student->person->address)
                 ? self::setAddress($student) //create a dummy address
