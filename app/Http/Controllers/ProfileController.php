@@ -168,7 +168,7 @@ class ProfileController extends Controller
         $student->person->save();
 
         //ADDRESS
-        $address = Address::updateOrCreate(
+        /*$address = Address::updateOrCreate(
             [
                 'user_id' => auth()->id(),
             ],
@@ -179,7 +179,7 @@ class ProfileController extends Controller
                 'geostate_id' => $request['geostate_id'],
                 'postalcode' => $request['postalcode'],
             ]
-        );
+        );*/
 
 /*
         $address = is_null($student->person->address)
