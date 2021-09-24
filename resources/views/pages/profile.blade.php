@@ -140,8 +140,6 @@ Profile
             <div class="card m-t-40">
                 <div class="card-body">
                     <h4 class="mt-0 header-title">Home Address</h4>
-                    <h6>The Home address has been temporarily removed while we are fixing this code</h6>
-                    <hidden id="geostate_id" value="37" />
 
                     <!-- ADDRESS_01, 02 -->
                     <div class="form-group row">
