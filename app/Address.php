@@ -64,7 +64,7 @@ class Address extends Model
     {
         $address = $this->where('user_id', $user_id)->first();
 
-        if(is_null($address)){
+        if($user_id && is_null($address)){
             Address::create([
                 'user_id' => $user_id,
                 'address01' => '',
