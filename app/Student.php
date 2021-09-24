@@ -26,6 +26,19 @@ class Student extends Model
 
     public $incrementing = false;
 
+    public function findaddress($type)
+    {
+        if($this->person->address) {
+
+            if ($this->person->address->$type) {
+
+                return $this->person->address->$type;
+            }
+        }
+
+        return ''; //default
+    }
+
     /**
      * Calculate $this students contemporaneous grade from any year
      * Used to determine if $this was eligible to participate in an event
