@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Address;
 use App\Email;
 use App\Emailtype;
 use App\Http\Controllers\Controller;
@@ -129,6 +130,17 @@ class RegisterController extends Controller
 
             //$person->emails()->attach($email_primary->id, ['type' => 'primary']);
             //$person->emails()->attach($email_alternate->id, ['type' => 'alternate']);
+
+            //ADDRESS
+            //create a row of encrypted blank values
+            Address::create([
+                'user_id' => $user->id,
+                'address01' => '',
+                'address02' => '',
+                'city' => '',
+                'geostate_id' => 37,
+                'postalcode' => '',
+            ]);
         }
 
         //send email verification letter if not already verified

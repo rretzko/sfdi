@@ -11,7 +11,7 @@ class Address extends Model
 
     protected $primaryKey = 'user_id';
     protected $encryptable = ['address01', 'address02', 'city', 'postalcode'];
-    protected $fillable = ['address01', 'address02', 'city', 'geostate_id', 'postalcode'];
+    protected $fillable = ['address01', 'address02', 'city', 'geostate_id', 'postalcode','user_id'];
 
     public function geoState(){
 
@@ -53,6 +53,28 @@ class Address extends Model
     public function person()
     {
         return belongsTo(Person::class, 'user_id', 'user_id');
+    }
+
+    /**
+     * Original implementation created null rows for newly registered users
+     * Null values created encryption problem when decrypting null value
+     * @param $user_id
+     */
+    public function resolveNullAddressFields($user_id)
+    {
+        $address = $this->where('user_id', $user_id)->first();
+
+        if(is_null($address)){
+            Address::create([
+                'user_id' => $user_id,
+                'address01' => '',
+                'address02' => '',
+                'city' => '',
+                'geostate_id' => 37,
+                'postalcode' => '',
+            ]);
+        }
+
     }
 
 }

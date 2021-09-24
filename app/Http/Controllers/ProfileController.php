@@ -45,6 +45,10 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        //identify and resolve any student user with a NULL address
+        $address = new Address;
+        $address->resolveNullAddressFields(auth()->id());
+
         //Used by domain owner to see student record
         //6706 = fake student: arron casey
         $faux = 6706;
@@ -98,6 +102,7 @@ class ProfileController extends Controller
             $user = \App\User::find(6706); //$faux = 6706 = acasey734
             Auth::login($user);
         }
+
         return view('pages.profile', self::arguments());
     }
 

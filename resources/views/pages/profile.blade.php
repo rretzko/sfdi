@@ -143,7 +143,6 @@ Profile
                     <h6>The Home address has been temporarily removed while we are fixing this code</h6>
                     <hidden id="geostate_id" value="37" />
 
-<!-- {{--
                     <!-- ADDRESS_01, 02 -->
                     <div class="form-group row">
                         <label for="address_01" class="col-sm-2 col-form-label">Address</label>
@@ -216,7 +215,7 @@ Profile
                         </div>
 
                     </div>
---}} -->
+
                 </div>
             </div>
 

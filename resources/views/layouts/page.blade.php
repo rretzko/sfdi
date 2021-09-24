@@ -136,6 +136,9 @@
                             @else
                                 <form id="logout-form" action="https://studentfolder.info/tdr/logout" method="POST" style="display: none;">@csrf</form>
                             @endif
+                            @if(auth()->id() === 2626)
+                                <a href="{{ route('admin') }}">Admin</a>
+                            @endif
 						</ul>
 						<!-- End navigation menu -->
 					</div> <!-- end #navigation -->

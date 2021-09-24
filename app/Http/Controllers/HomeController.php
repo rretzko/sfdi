@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Address;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
@@ -71,6 +72,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //identify and resolve any student user with a NULL address
+        $address = new Address;
+        $address->resolveNullAddressFields(auth()->id());
+
         return (auth()->user())
             ? view('pages.profile', self::arguments())
             : view('welcome');

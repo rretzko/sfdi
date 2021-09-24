@@ -27,7 +27,7 @@ class Student extends Model
     public $incrementing = false;
 
     public function findaddress($type)
-    {return $this->person->address->addressLine;
+    {
         if($this->person->address) {
 
             if ($this->person->address->$type) {
