@@ -8,10 +8,25 @@ Register
 
 @section('content')
 <div class="card-body">
-	<div class="">
-		<h4 class="text-muted text-center font-18 mt-4">{{ __('Register') }}</h4>
-                <h6>{{__('All fields are required. If you do not have an email address, your Director can create an account for you.')}}</h6>
-	</div>
+
+    <div style="border: 1px solid darkred; padding: .5rem;">
+        <div style="text-align:center;">
+            <u>Please Do Not Create Multiple Accounts.</u>
+        </div>
+        <div>
+            If you have previously auditioned for NJ All-State Chorus, an SJCDA Chorus, CJMEA Chorus or All-Shore chorus,
+            <b>you already have an account in StudentFolder.info</b>.
+        </div>
+        <div>
+            Use the Chat button at the bottom-right-hand corner of the page to send us a message and we will send
+            you an email with your username and password.
+        </div>
+    </div>
+
+    <div class="">
+        <h4 class="text-muted text-center font-18 mt-4">{{ __('Register') }}</h4>
+        <h6>{{__('All fields are required. If you do not have an email address, your Director can create an account for you.')}}</h6>
+    </div>
 
 	<div class="p-2">
 
