@@ -124,7 +124,11 @@ Profile
                                     class="form-control">
                                 @foreach($grades_class_ofs AS $class_of => $value)
                                     <option value="{{$class_of}}"
-                                            {{$class_of == $student->classof ? "SELECTED" : ""}}
+                                            @if($student->classof)
+                                                {{$class_of == $student->classof ? "SELECTED" : ""}}
+                                            @else {{-- default to grade 10 --}}
+                                                {{ $value == 10 ? "SELECTED" : "" }}
+                                            @endif
                                         >{{$value}}</option>
                                 @endforeach
                             </select>
