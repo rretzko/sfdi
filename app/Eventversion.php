@@ -87,7 +87,11 @@ class Eventversion extends Model
 
     public function filecontenttypes()
     {
-        return $this->belongsToMany(Filecontenttype::class, 'eventversion_filecontenttype');
+        return $this->belongsToMany(Filecontenttype::class, 'eventversion_filecontenttype')
+            ->withPivot('title')
+            ->withPivot('order_by')
+            ->orderBy('eventversion_filecontenttype.order_by')
+            ->withTimestamps();;
     }
 
     public function getAuditionManagerNameAttribute()
