@@ -130,17 +130,27 @@ class Student extends Model
 
     public function getCurrentSchoolAttribute()
     {
-        $teacherschools = $this->teachers->first()->person->user->schools;
+       $grade = $this->calc_Grade();
 
-        $schools = $this->person->user->schools;
+       foreach($this->schools AS $school){
 
-        foreach($schools AS $school){
+           if($school->gradesArray &&
+            in_array($this->calc_Grade(), $school->gradesArray)){
 
-            if($teacherschools->contains($school)){
+               return $school;
+           }
+       }
+        //$teacherschools = $this->teachers->first()->person->user->schools;
 
-                return $school;
-            }
-        }
+        //$schools = $this->person->user->schools;
+
+        //foreach($schools AS $school){
+
+        //    if($teacherschools->contains($school)){
+
+        //        return $school;
+        //    }
+        //}
 
         return new School;
     }

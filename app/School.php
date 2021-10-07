@@ -27,9 +27,17 @@ class School extends Model
 
     public function getGradesArrayAttribute() : array
     {
-        if(is_null($this->grades)){ self::setDefaultGrades();}
+        $grades = DB::table('gradetype_school_user')
+            ->where('school_id', '=', $this->id)
+            ->distinct()
+            ->pluck('gradetype_id')
+            ->toArray();
 
-        return explode(',', $this->grades);
+        //if(is_null($grades)){ self::setDefaultGrades();}
+
+        return (count($grades))
+            ? $grades
+            : $this->setDefaultGrades();
 
     }
 
@@ -134,6 +142,8 @@ class School extends Model
     {
         $this->grades = '9,10,11,12';
         $this->save();
+
+        return $this->grades;
     }
 
 }
