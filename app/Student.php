@@ -104,7 +104,7 @@ class Student extends Model
     }
 
     public function getActiveSchoolAttribute()
-    {//if(auth()->id() == 8040){dd($this->schools);}
+    {
         foreach($this->schools AS $school){
 
             $grades = explode(',',$school->grades);
@@ -126,6 +126,29 @@ class Student extends Model
     public function getBirthDateAttribute() : string
     {
         return \Carbon\Carbon::parse($this->birthday)->format('Y-m-d');
+    }
+
+    public function getCurrentSchoolAttribute()
+    {
+        $teacherschools = $this->teachers->first()->person->user->schools;
+
+        $schools = $this->person->user->schools;
+
+        foreach($schools AS $school){
+
+            if($teacherschools->contains($school)){
+
+                return $school;
+            }
+        }
+
+        return new School;
+    }
+
+
+    public function getCurrentSchoolnameAttribute()
+    {
+        return $this->getCurrentSchoolAttribute()->name;
     }
 
     public function getEmailPersonalAttribute() : string

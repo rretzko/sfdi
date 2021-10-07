@@ -162,7 +162,7 @@
                                             throughout {{ $registrant->student->person->pronoun->possessive }} South
                                             Jersey experience.  {{ ucwords($registrant->student->person->pronoun->personal) }}
                                             is a qualified student, and is now enrolled in Grade {{ $registrant->student->grade }}
-                                            at <b>{{ $registrant->student->person->user->schools()->first()->name }}</b>.
+                                            at <b>{{ $registrant->student->currentSchoolname }}</b>.
                                             In the event that <b>{{ $registrant->student->person->fullName }}</b> is
                                             accepted for membership in this chorus, we will use our influence to see that
                                             {{ $registrant->student->person->pronoun->personal }} is properly prepared,
