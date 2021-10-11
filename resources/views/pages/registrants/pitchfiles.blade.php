@@ -41,7 +41,11 @@
 
                             <section class="pitchfiles_wrapper col-9" style="display: flex; justify-content: center; ">
 
-                                @include('partials.pitches')
+                                @if($eventversion->id === 66)
+                                    @include('partials.12.66.pitches')
+                                @else
+                                    @include('partials.pitches')
+                                @endif
 
                             </section>
 
