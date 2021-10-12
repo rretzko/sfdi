@@ -519,15 +519,15 @@ if(($teacher->user_id == 362) ||
     }
 
     private function isQualified_Student(Student $student) : bool
-    {//if((auth()->id() == 7719) && ($this->id == 64)){dd(self::isQualified_Student_Is_Approved($student));}
+    {//if((auth()->id() == 2626) && ($this->id == 69)){dd(self::isQualified_Student_Grades($student));}
         //dd($this->isQualified_Student_Not_Prohibited($student));
         //dd($this->isQualified_Student_Is_Approved($student));
         //dd($this->isQualified_Student_Grades($student));
-
+//dd($this->studentRegistrationDate('student_open'));
         //early exit: student registration is not open
         if($this->studentRegistrationDate('student_open') > Carbon::now()){ return false;}
 /** WORKAROUND */
-if($this->id == 69){ return false;}
+//if($this->id == 69){ return false;}
 
         return ($this->isQualified_Student_Not_Prohibited($student) &&
                 $this->isQualified_Student_Is_Approved($student) &&
