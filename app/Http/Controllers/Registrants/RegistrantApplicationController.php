@@ -146,11 +146,23 @@ class RegistrantApplicationController extends Controller
             [
                 'signatureguardian' => ($data['signatureguardian'] ?? 0),
                 'signaturestudent' => ($data['signaturestudent'] ?? 0),
-            ],
+            ]
         );
 
+        $event = $registrant->eventversion->event;
+
         //update registrant status
-        $registrant->resetRegistrantType('applied');
+        //if SJCDA registrants with two eSignatures, then 'registered' else 'applied
+        if( (($event->id === 11) || ($event->id === 12)) &&
+            ($data['signatureguardian'] && $data['signaturestudent'])
+            )
+        {
+            $registrant->resetRegistrantType('registered');
+
+        }else {
+
+            $registrant->resetRegistrantType('applied');
+        }
 
         return redirect(route('registrant.profile.edit', [$registrant->eventversion]));
     }

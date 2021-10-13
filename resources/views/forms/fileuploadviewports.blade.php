@@ -13,6 +13,7 @@
         @else
 
             <!-- ALL-SHORE CHORUS 2022 -->
+            <!-- {{--
             @if($eventversion->id === 69)
                 <div style="background-color: {{ $registrant->inpersonaudition && $registrant->inpersonaudition->inperson ? 'darkgreen' : 'darkred' }}; border-radius: .5rem; margin:auto; width: 66%;display: flex; ">
                     <div style="margin: auto;">
@@ -36,7 +37,7 @@
                     </div>
                 </div>
             @endif
-
+--}} -->
             @if((! $registrant->inpersonaudition) || (! $registrant->inpersonaudition->inperson))
                 @foreach($eventversion->filecontenttypes AS $filecontenttype)
 
