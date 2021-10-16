@@ -26,6 +26,7 @@ Registration Profile
                             @endif
 
                             @if($self_registration_open || ($isRegistered && $video_registration_open) ||
+                                (($eventversion->id === 66) || ($eventversion_id === 67)) ||
             (auth()->id() === 8457)) {{-- SYDNEY VOLLMAR --}}
                                 @include('forms.fregistrantprofile')
                             @else
