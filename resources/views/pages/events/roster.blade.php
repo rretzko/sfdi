@@ -27,9 +27,11 @@ Profile
                             @csrf
 
                             @forelse($eventversions AS $eventversion)
-                                <div class="mb-1 col-12 text-center">
-                                    <a href="{{route('registrant.profile.edit', ['eventversion' => $eventversion->id])}}" class="btn btn-info col-8 text-white">{{$eventversion->name}}</a>
-                                </div>
+                                @if($eventversion->id !== 65) {{-- NOT NJ 2021 All-State Chorus --}}
+                                    <div class="mb-1 col-12 text-center">
+                                        <a href="{{route('registrant.profile.edit', ['eventversion' => $eventversion->id])}}" class="btn btn-info col-8 text-white">{{$eventversion->name}}</a>
+                                    </div>
+                                @endif
                             @empty
                                 No active events found.<br />
                                 If you have been told that events are open,
