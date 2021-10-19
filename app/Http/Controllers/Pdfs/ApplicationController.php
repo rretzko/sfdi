@@ -17,10 +17,14 @@ class ApplicationController extends Controller
         //2021-08-28
         $teacher = Teacher::find(auth()->id());
         $school = $registrant->student->person->user->schools->first();
+        $schoolname = $school->name;
 
         $eventversion = $registrant->eventversion;
         $filename = self::build_Filename($eventversion, $registrant); //ex: "2021_NJASC_2021_BhargavaV.pdf"
         $me = auth()->user();
+
+        $registrantfullname = $registrant->student->person->fullName;
+        $registrantfirstname = $registrant->student->person->first;
 
         //ex. pages.pdfs.applications.12.64.application
         $pdf = \Barryvdh\DomPDF\Facade::loadView('pages.pdfs.applications.'//9.65.2021_22_application',
@@ -29,7 +33,8 @@ class ApplicationController extends Controller
             . $eventversion->id
             . '.application',
             //.applicationTest',
-            compact('registrant','eventversion', 'teacher', 'school','me'));
+            compact('registrant','eventversion', 'teacher', 'school','me','schoolname',
+            'registrantfirstname','registrantfullname'));
 
         //log application printing
         Application::create([
