@@ -123,6 +123,8 @@ class RegistrantController extends Controller
 
         $iseapplication = $eventversion->eventversionconfig->eapplication;
 
+        $sjcdaapplicationclosed = Carbon::now() > $eventversion->studentRegistrationDate('student_close');
+
         return view('pages.registrants.profile', [
             'registrant' => $registrant,
             'eventversion' => $eventversion,
@@ -158,6 +160,7 @@ class RegistrantController extends Controller
             'fileserver' => $fileserver,
             'filename' => $fileserver->buildFilename($registrant),
             'iseapplication' => $iseapplication,
+            'sjacdaapplicationclosed' => $sjcdaapplicationclosed,
         ]);
     }
 

@@ -32,7 +32,7 @@ class Student extends Model
 
             if ($this->person->address->$type) {
 
-                return $this->person->address->$type;
+        //        return $this->person->address->$type;
             }
         }
 
@@ -88,6 +88,11 @@ class Student extends Model
     echo '===================================<br />';
     dd(__LINE__);
 }else {*/
+        foreach($this->teachers AS $teacher){
+          //  if($teacher->user_id === 8708){echo $teacher->user_id.'<br />';}
+        }
+        //dd($this->teachers);
+
     foreach ($this->teachers as $teacher) {
 
         foreach ($teacher->eventversionsOpen as $eventversion) {
@@ -98,6 +103,7 @@ class Student extends Model
             }
         }
     }
+
 //}
         //if($this->user_id == 7719){dd($a);}
         return array_unique($a);

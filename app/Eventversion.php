@@ -198,6 +198,9 @@ class Eventversion extends Model
      */
     public function getIsVideoRegistrationOpenAttribute()
     {
+        //early exit
+        if(! $this->eventversionconfig->virtualaudition){ return false;}
+
         //2021-08-28
         $dateopen = $this->eventversiondates->where('datetype_id', Datetype::where('descr','videos_student_open')
             ->first()->id)

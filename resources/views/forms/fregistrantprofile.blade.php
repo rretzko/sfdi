@@ -175,7 +175,7 @@
                     @if($registrant->eventversion->eventversionconfig->eapplication)
                         @if($registrant->eapplication)
                             <span class="color-success">Your application has been approved! </span>
-                        @elseif( // SJCDA-specific application period closes before media files uploads close 
+                        @elseif( // SJCDA-specific application period closes before media files uploads close
                                     ($eventversion->id === 66) || ($eventversion->id === 67) &&
                                     ($sjcdaapplicationclosed)
                                 )
@@ -318,7 +318,7 @@
                                     quantitySelect.style.visibility = "visible";
                                 }
                                 <!-- {{-- var orderDescription = 'SJCDA 2022 Virtual Choruses '+{{ $payment_hints }}+" "+{{$registrant->student->activeSchool->id }}+" "+{{ $registrant->user_id }}; --}} -->
-                                var orderDescription = 'SJCDA 2022 Virtual Choruses '+{{ $registrant->id }};
+                                var orderDescription = 'SJCDA 2022 Virtual Choruses {{ $registrant->id }}';
                                 if(orderDescription === '') {
                                     orderDescription = 'Item';
                                 }

@@ -25,7 +25,7 @@ class Address extends Model
      */
     public function getAddressLineAttribute()
     {
-        $parts = ['address_01', 'address_02', 'city', 'geoStateAbbr', 'postal_code'];
+        $parts = ['address01', 'address02', 'city', 'geoStateAbbr', 'postal_code'];
         $address = [];
 
         foreach($parts AS $part){
