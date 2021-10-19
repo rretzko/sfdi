@@ -45,7 +45,7 @@ class Guardian extends Model
 
     public function getGuardiantypeDescriptionAttribute()
     {
-        return Guardiantype::find($this->pivot->guardiantype_id)->first()->descr;
+        return Guardiantype::find($this->pivot->guardiantype_id)->descr;
     }
 
     public function getPhoneBlockAttribute() : string
