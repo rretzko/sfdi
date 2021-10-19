@@ -186,7 +186,19 @@ class ProfileController extends Controller
             ]
         );*/
 
-/*
+        Address::updateOrCreate(
+            [
+                  'user_id' => auth()->id(),
+            ],
+            [
+                'address01' => $request['address01'],
+                'address02' => $request['address02'],
+                'city' => $request['city'],
+                'geostate_id' => $request['geostate_id'],
+                'postalcode' => $request['postalcode'],
+            ]
+        );
+        /*
         $address = is_null($student->person->address)
                 ? self::setAddress($student) //create a dummy address
                 : $student->person->address;
@@ -197,7 +209,8 @@ class ProfileController extends Controller
         $address->geostate_id = $request['geostate_id'];
         $address->postalcode = $request['postalcode'];
         $address->save();
-*/
+        */
+
         /** EMAILS ARE NOT MANDATORY VALUES FOR STUDENTS */
         $this->emails($request);
 

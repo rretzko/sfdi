@@ -32,7 +32,7 @@ class Student extends Model
 
             if ($this->person->address->$type) {
 
-        //        return $this->person->address->$type;
+                return $this->person->address->$type;
             }
         }
 

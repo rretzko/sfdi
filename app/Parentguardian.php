@@ -9,14 +9,14 @@ use Illuminate\Support\Facades\DB;
 class Parentguardian extends Model
 {
     use SoftDeletes;
-    
+
     protected $primaryKey = 'user_id';
     public $fillable = [
         'user_id',
         'parentguardiantype_id',
         ];
     public $incrementing = false;
-    
+
     public function parentguardianType_Description($student_id) : string
     {
         return DB::table('parentguardiantypes')
@@ -37,12 +37,12 @@ class Parentguardian extends Model
                 ])
                 ->value('parentguardiantype_id') ?? 1; //default to mother
     }
-    
+
     public function person()
     {
         return $this->belongsTo(Person::class, 'user_id');
     }
-    
+
     public function students()
     {
         return $this->belongsToMany(
@@ -50,6 +50,6 @@ class Parentguardian extends Model
                 'parentguardian_user_id', 'student_user_id')
                 ->withPivot('parentguardiantype_id');
     }
-/** END OF PUBLIC FUNCTIONS ***************************************************/    
+/** END OF PUBLIC FUNCTIONS ***************************************************/
 
 }
