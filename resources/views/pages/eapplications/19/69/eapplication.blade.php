@@ -101,7 +101,7 @@
                         @if(config('app.url') === 'http://localhost')
                                 <form method="post" action="{{ route('registrant.eapplication', ['registrant' => $registrant]) }}">
                             @else
-                                <form method="post" action="https://thedirectorsroom.com/registrant/{{ $registrant->id }}/eapplication">
+                                <form method="post" action="https://studentfolder.info/registrant/{{ $registrant->id }}/eapplication">
                             @endif
 
                                             @csrf
