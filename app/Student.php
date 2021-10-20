@@ -167,6 +167,12 @@ class Student extends Model
         return $this->getCurrentSchoolAttribute()->name;
     }
 
+    public function getCurrentTeachernameAttribute()
+    {
+        return $this->teachers->first()->person->fullName;
+
+    }
+
     public function getEmailPersonalAttribute() : string
     {
         return Nonsubscriberemail::where('user_id', $this->user_id)

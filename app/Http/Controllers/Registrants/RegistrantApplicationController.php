@@ -128,6 +128,11 @@ class RegistrantApplicationController extends Controller
      */
     public function update(Request $request, Registrant $registrant)
     {
+        if(($registrant->id > 689999) && ($registrant->id < 700000)){
+
+            return $this->update_AllShore($request, $registrant);
+        }
+
         $data = $request->validate([
             'signatureguardian' => ['nullable', 'numeric'],
             'signaturestudent' => ['nullable', 'numeric'],
@@ -214,5 +219,38 @@ class RegistrantApplicationController extends Controller
             .'/'
             .$registrant->eventversion->id
             .'/eapplication';
+    }
+
+    private function update_AllShore($request, $registrant)
+    {
+        $input = $request->validate([
+            'eligibility' => ['required', 'numeric'],
+            'rulesandregs' => ['required', 'numeric'],
+            'imageuse' => ['required', 'numeric'],
+            'absences' => ['required', 'numeric'],
+            'lates' => ['required', 'numeric'],
+            'signaturestudent' => ['nullable', 'numeric'],
+            'signatureguardian' => ['nullable', 'numeric'],
+        ]);
+
+        $eventversionid = substr($registrant->id, 0, (strlen($registrant->id) - 4));
+
+        Eapplication::updateOrCreate(
+            [
+                'registrant_id' => $registrant->id,
+                'eventversion_id' => $eventversionid
+            ],
+            [
+                'eligibility' => $input['eligibility'],
+                'rulesandregs' => $input['rulesandregs'],
+                'imageuse' => $input['imageuse'],
+                'absences' => $input['absences'],
+                'lates' => $input['lates'],
+                'signaturestudent' => $input['signaturestudent'] ?? 0,
+                'signatureguardian' => $input['signatureguardian'] ?? 0,
+            ]
+        );
+
+        return redirect(route('registrant.profile.edit', [$registrant->eventversion]));
     }
 }
