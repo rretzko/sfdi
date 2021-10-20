@@ -160,6 +160,7 @@ class RegistrantController extends Controller
             'fileserver' => $fileserver,
             'filename' => $fileserver->buildFilename($registrant),
             'iseapplication' => $iseapplication,
+            'test' => $sjcdaapplicationclosed,
             'sjacdaapplicationclosed' => $sjcdaapplicationclosed,
         ]);
     }

@@ -177,7 +177,7 @@
                             <span class="color-success">Your application has been approved! </span>
                         @elseif( // SJCDA-specific application period closes before media files uploads close
                                     ($eventversion->id === 66) || ($eventversion->id === 67) &&
-                                    ($sjcdaapplicationclosed)
+                                    ($test)
                                 )
                             <span class="color-danger">The self-registration eApplications are closed.</span>
                         @else
