@@ -1,7 +1,5 @@
 @extends('layouts.page')
 
-
-
 @section('content')
 
     <div class="bg-white" style="padding: .5rem;">
@@ -95,8 +93,6 @@
                                     </div>
                                 @endif
                             </div>
-
-
 
                         @if(config('app.url') === 'http://localhost')
                                 <form method="post" action="{{ route('registrant.eapplication', ['registrant' => $registrant]) }}">
