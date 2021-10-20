@@ -60,6 +60,22 @@ class Eventversion extends Model
                 ->value('dt');
     }
 
+    public function dates(string $descr) : string
+    {
+        $datetype = Datetype::where('descr', $descr)->first();
+
+        $dt = $this->eventversiondates
+                ->where('datetype_id',$datetype->id)
+                ->first()
+                ->dt ?? null;
+
+        //ex: Mon, Jul 19,2021 08:30
+        return ($dt)
+            ? \Illuminate\Support\Carbon::parse($dt)
+                ->format('D, M d,Y H:i',$dt)
+            : 'not found';
+    }
+
     public function event()
     {
         return $this->belongsTo(Event::class);

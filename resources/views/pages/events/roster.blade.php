@@ -27,7 +27,8 @@ Profile
                             @csrf
 
                             @forelse($eventversions AS $eventversion)
-                                @if($eventversion->id !== 65) {{-- NOT NJ 2021 All-State Chorus --}}
+                                {{-- display buttons for eventversion where the results have NOT been released--}}
+                                @if($eventversion->dates('results_release')=== 'not found')
                                     <div class="mb-1 col-12 text-center">
                                         <a href="{{route('registrant.profile.edit', ['eventversion' => $eventversion->id])}}" class="btn btn-info col-8 text-white">{{$eventversion->name}}</a>
                                     </div>
