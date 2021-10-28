@@ -251,6 +251,26 @@ class RegistrantApplicationController extends Controller
             ]
         );
 
+        $this->updateAllshoreRegistrantStatus($input, $registrant);
+
         return redirect(route('registrant.profile.edit', [$registrant->eventversion]));
+    }
+
+    private function updateAllshoreRegistrantStatus(array $input, $registrant)
+    {
+        $status = 'applied'; //input passes all tests
+
+        $tests = ['absences', 'eligibility','imageuse', 'lates', 'rulesandregs', 'signatureguardian', 'signaturestudent'];
+
+        foreach($tests AS $test){
+
+            if(! (array_key_exists($test, $input) && $input[$test] )){
+
+                $status = 'eligible'; //input test failed
+            }
+        }
+
+        //update status
+        $registrant->resetRegistrantType($status);
     }
 }
