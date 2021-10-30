@@ -76,6 +76,24 @@ class Eventversion extends Model
             : 'not found';
     }
 
+    /**
+     * Return 'yyyy-mm-dd hh:mm:ss'
+     * @param string $descr
+     * @return string
+     */
+    public function date_raw(string $descr) : string
+    {
+        $datetype = Datetype::where('descr', $descr)->first();
+
+        $dt = $this->eventversiondates
+                ->where('datetype_id',$datetype->id)
+                ->first()
+                ->dt ?? null;
+
+        //ex: 2021-07-19 21:10:11
+        return ($dt) ?? false;
+    }
+
     public function event()
     {
         return $this->belongsTo(Event::class);

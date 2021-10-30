@@ -125,6 +125,8 @@ class RegistrantController extends Controller
 
         $sjcdaapplicationclosed = Carbon::now() > $eventversion->studentRegistrationDate('student_close');
 
+        $videosubmissionclosed = Carbon::now() > $eventversion->date_raw('videos_student_close');
+
         return view('pages.registrants.profile', [
             'registrant' => $registrant,
             'eventversion' => $eventversion,
@@ -147,6 +149,7 @@ class RegistrantController extends Controller
             'registrant_due' => $registrant->due(),
             'self_registration_open' => $eventversion->isSelfRegistrationOpen,
             'video_registration_open' => $eventversion->isVideoRegistrationOpen,
+            'videosubmissionclosed' => $videosubmissionclosed,
             'video_titles' => $video_titles,
             'select_elem' => ($eventversion->id === 62) ? 'SELECTED' : '',
             'select_jrsr' => ($eventversion->id !== 62) ? 'SELECTED' : '',

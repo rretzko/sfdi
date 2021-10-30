@@ -105,12 +105,18 @@
 
                                         {{-- SAVE BUTTON --}}
                                         <div class="flex justify-end">
-                                            <input
-                                                class="bg-black text-white border rounded px-4 cursor-pointer"
-                                                style="background: black; color: white;border-radius: .5rem; cursor: pointer;"
-                                                type="submit" name="submit"
-                                                value="Upload {{ ucwords($filecontenttype->descr) }}"
-                                            />
+                                            @if($videosubmissionclosed)
+                                                <div style="background: gray; color: white;" >
+                                                    Video submission is closed
+                                                </div>
+                                            @else
+                                                <input
+                                                    class="bg-black text-white border rounded px-4 cursor-pointer"
+                                                    style="background: black; color: white;border-radius: .5rem; cursor: pointer;"
+                                                    type="submit" name="submit"
+                                                    value="Upload {{ ucwords($filecontenttype->descr) }}"
+                                                />
+                                            @endif
                                         </div>
 
                                     </form>
