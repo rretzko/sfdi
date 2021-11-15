@@ -88,7 +88,7 @@ class LoginController extends Controller
         }
 
         //recordkeeping
-        info('FJR: FAILED LOGIN: username: '.$request['username'].' with password: '.$request['password']);
+        info('FJR: FAILED LOGIN: username: '.$request['name'].' with password: '.$request['password']);
 
         return back();
     }

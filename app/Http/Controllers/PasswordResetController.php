@@ -37,27 +37,27 @@ class PasswordResetController extends Controller
     public function store(Request $request, $token)
     {
         $pr = \App\PasswordResets::firstWhere('token', $token);
-        
+
         if(!$pr){
-         
+
             Session::flash('err', 'Unable to find this token. Please use the most current email.');
             return redirect('/password/reset');
         }
-     
+
         //user has maximum of one-hour past token creation to activate reset
-        $max_time = Carbon::parse($pr->created_at)->addHour(); 
-        
+        $max_time = Carbon::parse($pr->created_at)->addHour();
+
         if($max_time->lt(Carbon::now())){
-         
+
             Session::flash('warning', 'Your password-reset time has expired.');
             return redirect('/login');
-            
+
         }else{
-            
+
             auth()->login(\App\User::find($pr->user_id));
-            
+
             Session::flash('user_id', $pr->user_id);
-            
+
             return view('pages.confirm');
         }
     }

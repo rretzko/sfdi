@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Nonsubscriberemail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Session;
@@ -31,6 +32,8 @@ class PasswordResetRequestController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * 223pdoherty@frhsd.com
+     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -38,7 +41,7 @@ class PasswordResetRequestController extends Controller
     {
         //\App\Http\Requests\School_AddStore
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string',
+            'email' => 'required|email',
         ]);
 
         if($validator->fails()){
@@ -47,28 +50,20 @@ class PasswordResetRequestController extends Controller
             return redirect()->back()->withInput();
         }
 
-        $user = (\App\User::where('name', $request['name'])->exists())
-                ? \App\User::firstWhere('name', $request['name'])
-                : NULL;
+        $nonsubscriber = new Nonsubscriberemail();
+        //array of user objects
+        $users = $nonsubscriber->getUserFromEmail($request['email']);
 
-        if(!$user){
+        if(! count($users)){
 
-            Session::flash('err', 'Unknown user name.');
+            Session::flash('err', 'Unknown email address: '.$request['email'].' .');
 
             return redirect()->back()->withInput();
 
         }
+//dd($users[0]['person']['student']->emailSchool);
 
-        $person = \App\Person::find($user->id);
-
-        if(!strlen($person->emailPrimary)){
-
-            Session::flash('err', 'No email found to send reset notice.');
-
-            return redirect()->back()->withInput();
-        }
-
-        event(new \App\Events\ResetPasswordRequestEvent($person));
+        event(new \App\Events\ResetPasswordRequestEvent($users));
 
         Session::flash('status', 'Your password-reset email has been sent.');
 

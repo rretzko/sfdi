@@ -1,4 +1,4 @@
-@extends('layouts.auth')
+@extends('layouts.reset')
 @extends('navs.navGuest')
 @extends('headers.headerSite')
 
@@ -24,13 +24,13 @@ Reset Password
 			</div>
 		@endif
 
-		Enter your user name below to get the instructions to reset the password.
+		Enter your email below to receive the reset-password instructions.
 
 		<form method="POST" action="{{ route('resetRequest') }}" class="form-horizontal m-t-20">
 			@csrf
 			<div class="form-group row">
 				<div class="col-12">
-					<input DISABLED id="name" type="string" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="User Name">
+					<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="email@addr.ess">
 
 					@error('name')
 						<span class="invalid-feedback" role="alert">
@@ -41,7 +41,7 @@ Reset Password
 			</div>
 			<div class="form-group text-center row m-t-20">
 				 <div class="col-12">
-				<!-- {{--	<button DISABLED class="btn btn-primary btn-block waves-effect waves-light" type="submit">{{ __('Send Password Reset Link') }}</button> --}} -->
+					<button class="btn btn-primary btn-block waves-effect waves-light" type="submit">{{ __('Send Password Reset Link') }}</button>
 				</div>
 			</div>
 
@@ -61,6 +61,7 @@ Reset Password
 				</div>
 			</div>
 		</form>
+
 	</div>
 </div>
 @endsection
