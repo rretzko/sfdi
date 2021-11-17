@@ -1,14 +1,10 @@
 @extends('layouts.page')
 
-
-
 @section('content')
 
     <div class="bg-white" style="padding: .5rem;">
 
-        <h4>
-            {{ __($eventversion->name.' Application for: '.$registrant->student->person->fullName) }}
-        </h4>
+
 
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
 
