@@ -13,19 +13,21 @@
             <li>Scales
                 <ul>
                     <li>
-                        <label>High</label>
-                        <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3" type="audio/mpeg">
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3" type="audio/ogg">
-                        </audio>
-                    </li>
-                    <li>
                         <label>Low</label>
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_low_scale.mp3" type="audio/mpeg">
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
+
+                    <li>
+                        <label>High</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_I/soprano_1_high_scale.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+
                     <li>
                         <label>Chromatic</label>
                         <audio controls>
@@ -66,19 +68,21 @@
             <li>Scales
                 <ul>
                     <li style="display: flex;">
-                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
-                        <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_II/soprano_2_high_scale.mp3" type="audio/mpeg">
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_II/soprano_2_high_scale.mp3" type="audio/ogg">
-                        </audio>
-                    </li>
-                    <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_II/soprano_2_low_scale.mp3" type="audio/mpeg">
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_II/soprano_2_low_scale.mp3') }}" type="audio/ogg">
                         </audio>
                     </li>
+
+                    <li style="display: flex;">
+                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_II/soprano_2_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Soprano_II/soprano_2_high_scale.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
@@ -117,13 +121,7 @@
         <ul>
             <li>Scales
                 <ul>
-                    <li style="display: flex;">
-                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
-                        <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_I/alto_1_high_scale.mp3" type="audio/mpeg">
-                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto_I/alto_1_high_scale.mp3') }}" type="audio/ogg">
-                        </audio>
-                    </li>
+
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
@@ -131,6 +129,15 @@
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_I/alto_1_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
+
+                    <li style="display: flex;">
+                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_I/alto_1_high_scale.mp3" type="audio/mpeg">
+                            <source src="{{ asset('pitchfiles/nja-sc/scales/Alto_I/alto_1_high_scale.mp3') }}" type="audio/ogg">
+                        </audio>
+                    </li>
+
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
@@ -171,19 +178,21 @@
             <li>Scales
                 <ul>
                     <li style="display: flex;">
-                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
-                        <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_II/alto_2_high_scale.mp3" type="audio/mpeg">
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_II/alto_2_high_scale.mp3" type="audio/ogg">
-                        </audio>
-                    </li>
-                    <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_II/alto_2_low_scale.mp3" type="audio/mpeg">
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_II/alto_2_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
+
+                    <li style="display: flex;">
+                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_II/alto_2_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Alto_II/alto_2_high_scale.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
@@ -224,19 +233,21 @@
             <li>Scales
                 <ul>
                     <li style="display: flex;">
-                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
-                        <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_I/tenor_1_high_scale.mp3" type="audio/mpeg">
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_I/tenor_1_high_scale.mp3" type="audio/ogg">
-                        </audio>
-                    </li>
-                    <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_I/tenor_1_low_scale.mp3" type="audio/mpeg">
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_I/tenor_1_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
+
+                    <li style="display: flex;">
+                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_I/tenor_1_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_I/tenor_1_high_scale.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
@@ -277,19 +288,21 @@
             <li>Scales
                 <ul>
                     <li style="display: flex;">
-                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
-                        <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_II/tenor_2_high_scale.mp3" type="audio/mpeg">
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_II/tenor_2_high_scale.mp3" type="audio/ogg">
-                        </audio>
-                    </li>
-                    <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_II/tenor_2_low_scale.mp3" type="audio/mpeg">
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_II/tenor_2_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
+
+                    <li style="display: flex;">
+                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_II/tenor_2_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Tenor_II/tenor_2_high_scale.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
@@ -330,19 +343,21 @@
             <li>Scales
                 <ul>
                     <li style="display: flex;">
-                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
-                        <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_I/bass_1_high_scale.mp3" type="audio/mpeg">
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_I/bass_1_high_scale.mp3" type="audio/ogg">
-                        </audio>
-                    </li>
-                    <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_I/bass_1_low_scale.mp3" type="audio/mpeg">
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_I/bass_1_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
+
+                    <li style="display: flex;">
+                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_I/bass_1_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_I/bass_1_high_scale.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>
@@ -383,19 +398,21 @@
             <li>Scales
                 <ul>
                     <li style="display: flex;">
-                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
-                        <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_II/bass_2_high_scale.mp3" type="audio/mpeg">
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_II/bass_2_high_scale.mp3" type="audio/ogg">
-                        </audio>
-                    </li>
-                    <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Low</label>
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_II/bass_2_low_scale.mp3" type="audio/mpeg">
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_II/bass_2_low_scale.mp3" type="audio/ogg">
                         </audio>
                     </li>
+
+                    <li style="display: flex;">
+                        <label style="padding-top: 1rem;margin-right: 1rem;">High</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_II/bass_2_high_scale.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/scales/Bass_II/bass_2_high_scale.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+
                     <li style="display: flex;">
                         <label style="padding-top: 1rem;margin-right: 1rem;">Chromatic</label>
                         <audio controls>

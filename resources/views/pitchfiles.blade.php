@@ -19,7 +19,7 @@
 
                             <div class="card-header-title">
                                 Pitches, sheet music and accompaniments for
-                                <strong>2021 NJ All-state Chorus</strong>
+                                <strong>2021 NJ All-state Chorus and CJMEA Region II Chorus</strong>
                             </div>
 
                         </div>
