@@ -23,7 +23,7 @@ Login
 	<div class="p-2">
 
         @if(config('app.url') == 'http://localhost')
-		    <form method="POST" action="{{ route('tdr.login.update') }}" class="form-horizontal m-t-20">
+		    <form method="POST" action="{{ route('sfdi.login.update') }}" class="form-horizontal m-t-20">
         @else
             <form method="POST" action="/tdr/login" class="form-horizontal m-t-20">
         @endif

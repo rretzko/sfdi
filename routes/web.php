@@ -17,8 +17,8 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 
 /** CUSTOM LOGIN CONTROLLERS */
-Route::post('tdr/login', 'TdrAuths\LoginController@update')->name('tdr.login.update');
-Route::post('tdr/logout', 'TdrAuths\LoginController@destroy')->name('tdr.login.destroy');
+Route::post('sfdi/login', 'SfdiAuths\LoginController@update')->name('sfdi.login.update');
+Route::post('sfdi/logout', 'SfdiAuths\LoginController@destroy')->name('sfdi.login.destroy');
 
 /** Guest Pitch Files */
 //Guest can access pitch files
