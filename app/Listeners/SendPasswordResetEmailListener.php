@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\User;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
@@ -27,25 +28,20 @@ class SendPasswordResetEmailListener
      */
     public function handle(\App\Events\ResetPasswordRequestEvent $event)
     {
-        $emails = [];
+        foreach($event->emails AS $email) {
 
-        foreach($event->users AS $user) {
+            $token = sha1(time());
 
-            if (strlen($user['person']['student']->emailPersonal)) {
+            $user = User::find($email->user_id);
 
-                $emails[] = $user['person']['student']->emailPersonal;
+            if ($user->isStudent()){
+
+                \Illuminate\Support\Facades\Mail::to($email->email)
+                    ->send(new \App\Mail\passwordResetEmail($user, $email->email, $token));
+            }else{
+
+                dd(__METHOD__);
             }
-
-            if (strlen($user['person']['student']->emailSchool)) {
-
-                $emails[] = $user['person']['student']->emailSchool;
-            }
-        }
-
-        foreach(array_unique($emails) AS $uemail) {
-
-            \Illuminate\Support\Facades\Mail::to('rretzko@hotmail.com') //$uemail
-                ->send(new \App\Mail\passwordResetEmail($event->users, $uemail));
         }
 
     }

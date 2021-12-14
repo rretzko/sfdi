@@ -32,7 +32,7 @@ return [
     //DEFAULT
     //'host' => env('MAIL_HOST', 'smtp.mailgun.org'), //default
     //POSTMARK
-    'host' => env('MAIL_HOST', 'smtp.postmarkapp.com'),
+    //'host' => env('MAIL_HOST', 'smtp.postmarkapp.com'),
     //MAILTRAP
     //'host' => env('MAIL_HOST', 'smtp.mailtrap.io'),
     //GODADDY
@@ -48,7 +48,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 25),
+    //'port' => env('MAIL_PORT', 25),
     //'port' => env('MAIL_PORT', 465),
     //'port' => env('MAIL_PORT', 587),
     //'port' => env('MAIL_PORT', 2525),
@@ -74,10 +74,11 @@ return [
         'smtp' => [
             'transport' => 'smtp',
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            //'host' => env('MAIL_HOST', 'smtp.postmarkapp.com'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'username' => env('MAIL_USERNAME_SANDBOX'),
+            'password' => env('MAIL_PASSWORD_SANDBOX'),
             'timeout' => null,
             'auth_mode' => null,
         ],
@@ -106,6 +107,13 @@ return [
 
         'array' => [
             'transport' => 'array',
+        ],
+        'failover' => [
+            'transport' => 'failover',
+            'mailers' => [
+                'smtp',
+                'log',
+            ],
         ],
     ],
     /*
@@ -151,7 +159,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    //'encryption' => env('MAIL_ENCRYPTION', 'tls'),
 
     /*
     |--------------------------------------------------------------------------
@@ -168,9 +176,13 @@ return [
     //'username' => env('MAILTRAP_USERNAME'),
     //'password' => env('MAILTRAP_PASSWORD'),
 
-    //DEFAULT
-    'username' => env('MAIL_USERNAME'), //default
-    'password' => env('MAIL_PASSWORD'), //default
+    //PRODUCTION
+    'username' => env('MAIL_USERNAME'),
+    'password' => env('MAIL_PASSWORD'),
+
+    //SANDBOX
+    //'username' => env('MAIL_USERNAME_SANDBOX'),
+    //'password' => env('MAIL_PASSWORD_SANDBOX'),
 
     /*
     |--------------------------------------------------------------------------
@@ -223,7 +235,7 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'postmark' => ['token' => "d9af2667-ffbc-4806-ad7e-a37f3e468f03"],
+    //'postmark' => ['token' => env('POSTMARK_SECRET_SANDBOX')],
 
     /*
     |--------------------------------------------------------------------------

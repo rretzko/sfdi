@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\_TdrAuths;
 
-use Illuminate\Support\Carbon;
+use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
-use Session;
 
-class PasswordResetController extends Controller
+class LoginController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,32 +34,9 @@ class PasswordResetController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $token)
-    {dd($token);
-        $pr = \App\PasswordResets::firstWhere('token', $token);
-
-        if(!$pr){
-
-            Session::flash('err', 'Unable to find this token. Please use the most current email!');
-            return redirect('/password/reset');
-        }
-
-        //user has maximum of one-hour past token creation to activate reset
-        $max_time = Carbon::parse($pr->created_at)->addHour();
-
-        if($max_time->lt(Carbon::now())){
-
-            Session::flash('warning', 'Your password-reset time has expired.');
-            return redirect('/login');
-
-        }else{
-
-            auth()->login(\App\User::find($pr->user_id));
-
-            Session::flash('user_id', $pr->user_id);
-
-            return view('pages.confirm');
-        }
+    public function store(Request $request)
+    {
+        //
     }
 
     /**
@@ -91,9 +68,29 @@ class PasswordResetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $data = $request->validate([
+            'name' => ['required', 'string'],
+            'password' => ['required', 'string']
+        ]);
+
+        $user = User::where('username', $data['name'])->first();
+
+        if($user){
+            $hasher = app('hash');
+            if($hasher->check($data['password'], $user->password)) {
+                auth()->login($user);
+
+                return redirect()->intended('home');
+            }
+
+        }
+
+        //recordkeeping
+        info('FJR: FAILED LOGIN: username: '.$request['name'].' with password: '.$request['password']);
+
+        return back();
     }
 
     /**
@@ -102,8 +99,10 @@ class PasswordResetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+        auth()->logout();
+
+        return redirect()->intended('/');
     }
 }

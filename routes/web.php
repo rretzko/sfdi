@@ -19,6 +19,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 /** CUSTOM LOGIN CONTROLLERS */
 Route::post('sfdi/login', 'SfdiAuths\LoginController@update')->name('sfdi.login.update');
 Route::post('sfdi/logout', 'SfdiAuths\LoginController@destroy')->name('sfdi.login.destroy');
+Route::get('sfdi/password_request', 'SfdiAuths\PasswordController@create')->name('sfdi.password_request.create');
+Route::post('sfdi/password_request/update', 'SfdiAuths\PasswordController@update')->name('sfdi.password_request.update');
+Route::get('sfdi/resetPassword/{token}', 'SfdiAuths\PasswordResetController@store')->name('sfdi.resetPassword');
+
 
 /** Guest Pitch Files */
 //Guest can access pitch files
@@ -62,7 +66,7 @@ Route::get('rejected/{student}/{teacher}', 'Signeds\StudentrejectedController')-
 /** UTILITIES */
 Route::get('verifyEmailApi/{token}', 'EmailVerificationController@update');
 Route::post('resetRequest', 'PasswordResetRequestController@store')->name('resetRequest');
-Route::get('resetPassword/{token}', 'PasswordResetController@store')->name('resetPassword');
+//Route::get('resetPassword/{token}', 'PasswordResetController@store')->name('resetPassword');
 Route::post('confirm', 'ConfirmPasswordController@store')->name('confirm');
 Route::get('usernameRequest', function(){
     return view('pages.username.username_request');

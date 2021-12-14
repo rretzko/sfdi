@@ -13,18 +13,20 @@ class passwordResetEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    private $uemail;
-    private $users;
+    private $email;
+    private $token;
+    private $user;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(array $users, string $uemail)
+    public function __construct(\App\User $user, string $email, string $token)
     {
-        $this->uemail = $uemail;
-        $this->users = $users;
+        $this->email = $email;
+        $this->token = $token;
+        $this->user = $user;
     }
 
     /**
@@ -36,22 +38,19 @@ class passwordResetEmail extends Mailable
      */
     public function build()
     {
-        foreach ($this->users as $user) {
+        $pr = \App\PasswordResets::firstOrCreate([
+            'email' => $this->email,
+            'token' => $this->token,
+            'user_id' => $this->user->id,
+        ]);
 
-            $token = sha1(time());
+        $pr->save();
 
-            $pr = \App\PasswordResets::firstOrCreate([
-                'email' => $this->uemail,
-                'token' => $token,
+        return $this->view('emails.passwordReset')
+            ->with([
+                'person' => $this->user['person'],
+                'user_name' => $this->user->username,
+                'token' => $this->token,
             ]);
-            $pr->save();
-
-            return $this->view('emails.passwordReset')
-                ->with([
-                    'person' => $user['person'],
-                    'user_name' => $user->username,
-                    'token' => $token,
-                ]);
-        }
     }
 }

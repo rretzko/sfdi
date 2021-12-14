@@ -7,6 +7,7 @@ use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
@@ -14,15 +15,16 @@ class ResetPasswordRequestEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $users;
+    public $emails;
+
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(array $users)
+    public function __construct(Collection $emails)
     {
-        $this->users = $users;
+        $this->emails = $emails;
     }
 
     /**

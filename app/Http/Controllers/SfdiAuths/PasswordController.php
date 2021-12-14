@@ -1,12 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\SfdiAuths;
 
-use Illuminate\Support\Carbon;
+use App\Events\ResetPasswordRequestEvent;
+use App\Http\Controllers\Controller;
+use App\Nonsubscriberemail;
 use Illuminate\Http\Request;
-use Session;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
-class PasswordResetController extends Controller
+class PasswordController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,7 +28,7 @@ class PasswordResetController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.sfdiauths.forgotpassword');
     }
 
     /**
@@ -34,32 +37,9 @@ class PasswordResetController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $token)
-    {dd($token);
-        $pr = \App\PasswordResets::firstWhere('token', $token);
-
-        if(!$pr){
-
-            Session::flash('err', 'Unable to find this token. Please use the most current email!');
-            return redirect('/password/reset');
-        }
-
-        //user has maximum of one-hour past token creation to activate reset
-        $max_time = Carbon::parse($pr->created_at)->addHour();
-
-        if($max_time->lt(Carbon::now())){
-
-            Session::flash('warning', 'Your password-reset time has expired.');
-            return redirect('/login');
-
-        }else{
-
-            auth()->login(\App\User::find($pr->user_id));
-
-            Session::flash('user_id', $pr->user_id);
-
-            return view('pages.confirm');
-        }
+    public function store(Request $request)
+    {
+        //
     }
 
     /**
@@ -88,12 +68,30 @@ class PasswordResetController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $input = $request->validate([
+           'email' => ['required', 'email'],
+        ]);
+
+        $emails = Nonsubscriberemail::all()->filter(function($nonsubscriberemail) use($input){
+            return $nonsubscriberemail->email === $input['email'];
+        });
+
+        //ensure at least one email is found
+        if($emails->first()){
+
+            event(new ResetPasswordRequestEvent($emails));
+
+            Session::flash('message', 'Password-reset email sent to:'.$emails->first()->email.' .');
+            return view('auth.login');
+
+        }else{
+
+            dd($emails);
+        }
     }
 
     /**

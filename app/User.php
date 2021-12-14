@@ -42,6 +42,11 @@ class User extends Authenticatable implements MustVerifyEmail
             ->withPivot(['order_by']);
     }
 
+    public function isStudent() : bool
+    {
+        return (bool)Student::find($this->id);
+    }
+
     /**
      * Member_Types that belong to $this
      */
