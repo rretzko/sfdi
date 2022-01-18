@@ -67,6 +67,7 @@ Login
 			</div>
 
 			<div class="form-group m-t-10 mb-0 row">
+                <!-- {{--
 				<div class="col-sm-7 m-t-20">
 					@if (Route::has('usernameRequest.edit') )
 					<a class="text-muted" href="{{ route('usernameRequest.edit') }}">
@@ -74,6 +75,7 @@ Login
 					</a>
 					@endif
 				</div>
+				--}} -->
 				<div class="col-sm-5 m-t-20 text-right">
 					@if (Route::has('register'))
 					<a class="text-muted" href="{{ route('register') }}">
@@ -87,7 +89,7 @@ Login
 				<div class="col-sm-7 m-t-0">
 					@if (Route::has('password.request'))
 					<a class="text-muted" href="{{ route('sfdi.password_request.create') }}">
-						<i class="mdi mdi-lock"></i> {{ __('Forgot Your Password?') }}
+						<i class="mdi mdi-lock"></i> {{ __('Forgot Your Password or Username?') }}
 					</a>
 					@endif
 				</div>
