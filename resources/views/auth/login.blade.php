@@ -25,7 +25,7 @@ Login
         @if(config('app.url') == 'http://localhost')
 		    <form method="POST" action="{{ route('sfdi.login.update') }}" class="form-horizontal m-t-20">
         @else
-            <form method="POST" action="/tdr/login" class="form-horizontal m-t-20">
+            <form method="POST" action="/sfdi/login" class="form-horizontal m-t-20">
         @endif
 			@csrf
 			<div class="form-group row">
@@ -66,7 +66,7 @@ Login
 				</div>
 			</div>
 
-			<div class="form-group m-t-10 mb-0 row">
+			<div class="form-group m-t-10 mb-0 row justify-content-between">
                 <!-- {{--
 				<div class="col-sm-7 m-t-20">
 					@if (Route::has('usernameRequest.edit') )
@@ -76,20 +76,18 @@ Login
 					@endif
 				</div>
 				--}} -->
-				<div class="col-sm-5 m-t-20 text-right">
+                        <div class="text-left">
+                            @if (Route::has('password.request'))
+                                <a class="text-muted" href="{{ route('sfdi.password_request.create') }}">
+                                    <i class="mdi mdi-lock"></i> {{ __('Forgot Your Password or Username?') }}
+                                </a>
+                            @endif
+                        </div>
+
+				<div class="text-right">
 					@if (Route::has('register'))
 					<a class="text-muted" href="{{ route('register') }}">
 						<i class="mdi mdi-account-circle"></i> {{ __('Create an account') }}
-					</a>
-					@endif
-				</div>
-			</div>
-
-            <div class="form-group m-t-0 mb-0 row">
-				<div class="col-sm-7 m-t-0">
-					@if (Route::has('password.request'))
-					<a class="text-muted" href="{{ route('sfdi.password_request.create') }}">
-						<i class="mdi mdi-lock"></i> {{ __('Forgot Your Password or Username?') }}
 					</a>
 					@endif
 				</div>

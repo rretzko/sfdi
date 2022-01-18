@@ -81,12 +81,12 @@ class LoginController extends Controller
             $hasher = app('hash');
             if($hasher->check($data['password'], $user->password)) {
                 auth()->login($user);
-dd(__LINE__);
+
                 return redirect()->intended('home');
             }
 
         }
-dd(__METHOD__);
+
         //recordkeeping
         info('FJR: FAILED LOGIN: username: '.$request['name'].' with password: '.$request['password']);
 
