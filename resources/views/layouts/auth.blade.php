@@ -23,13 +23,16 @@
 		@endif
 	</title>
 	<meta content="Admin Dashboard" name="description" />
-
+<!--
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/icons.css" rel="stylesheet">
 
     <link href="assets/css/main.css" rel="stylesheet">
 	<link href="assets/css/style.css" rel="stylesheet" >
-
+	-->
+<link href="https://studentfolder.info/assets/css/bootstrap.min.css" rel="stylesheet" >
+<link href="https://studentfolder.info/assets/css/main.css" rel="stylesheet" >
+<link href="https://studentfolder.info/assets/css/style.css" rel="stylesheet" >
         <style>
             .nav_guest,
             .nav_student

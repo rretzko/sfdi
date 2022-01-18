@@ -49,12 +49,12 @@ class PasswordResetController extends Controller
         $max_time = Carbon::parse($pr->created_at)->addHour();
 
         if($max_time->lt(Carbon::now())){
-dd(__LINE__);
+
             Session::flash('warning', 'Your password-reset time has expired.');
             return redirect(route('home'));
 
         }else{
-dd($pr);
+
             auth()->login(\App\User::find($pr->user_id));
 
             Session::flash('user_id', $pr->user_id);

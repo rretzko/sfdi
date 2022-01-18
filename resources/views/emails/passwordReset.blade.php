@@ -4,7 +4,7 @@
     <title>Password Reset Email</title>
   </head>
   <body>
-    <p>Hi, {{$person->first_name}}!</p>
+    <p>Hi, {{$person->first}}!</p>
     <p>You are receiving this email because we received a password reset request for your account at <a href="{{url('https://studentfolder.info')}}">StudentFolder.info</a>
         with the username: <b style="color: red;">{{ $person->user->username }}</b>.</p>
     <div>

@@ -8,7 +8,8 @@ class PasswordResets extends Model
 {
     protected $fillable = [
         'token',
-        'email'
+        'email',
+        'user_id',
     ];
 
     protected $primaryKey = 'email';
