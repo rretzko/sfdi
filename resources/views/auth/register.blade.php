@@ -29,12 +29,14 @@ Register
     </div>
 
 	<div class="p-2">
-
+<!-- {{--
         @if(config('app.url') === 'http://localhost')
 		    <form method="POST" action="{{ route('register') }}" class="form-horizontal m-t-20">
         @else
             <form method="POST" action="https://studentfolder.info/register" class="form-horizontal m-t-20">
         @endif
+--}} -->
+        <form method="POST" action="{{ route('register') }}" class="form-horizontal m-t-20">
 			@csrf
 			<div class="form-group row">
 				<div class="col-12">
@@ -59,6 +61,7 @@ Register
 				</div>
 			</div>
 
+            {{-- EMAIL ADDRESS --}}
 			<div class="form-group row">
 				<div class="col-12">
 					<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="{{ __('Email Address') }}" >
@@ -69,6 +72,69 @@ Register
 					@enderror
 				</div>
 			</div>
+
+            {{-- SCHOOL --}}
+            <div class="form-group row">
+                <div class="col-12">
+                    <input id="school" type="text" class="form-control @error('school') is-invalid @enderror" name="school" value="{{ old('school') }}" autocomplete="school" placeholder="{{ __('School Name') }}" >
+                    @error('school')
+                    <span class="invalid-feedback" role="alert">
+						<strong>{{ $message }}</strong>
+					</span>
+                    @enderror
+                </div>
+            </div>
+
+            {{-- TEACHER --}}
+            <div class="form-group row">
+                <div class="col-12">
+
+                    <div class="row">
+                        <div class="col-6 ">
+                            <input id="teacher_first" type="text" class="form-control @error('teacher_first') is-invalid @enderror" name="teacher_first" value="{{ old('teacher_first') }}" required autocomplete="teacher_first" placeholder="{{ __('Teacher First Name') }}" onblur="studentDuplicate();">
+                            @error('teacher_first')
+                            <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+
+                        <div class="col-6">
+                            <input id="teacher_last" type="text" class="form-control @error('teacher_last') is-invalid @enderror" name="teacher_last" value="{{ old('teacher_last') }}" required autocomplete="teacher_last" placeholder="{{ __('Teacher Last Name') }}">
+                            @error('teacher_last')
+                            <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {{-- GRADE --}}
+            <div class="form-group row">
+                <div class="col-12">
+                    <input id="grade" type="grade" class="form-control @error('grade') is-invalid @enderror" name="grade" value="{{ old('grade') }}" autocomplete="grade" placeholder="{{ __('Grade') }}" >
+                    @error('grade')
+                    <span class="invalid-feedback" role="alert">
+						<strong>{{ $message }}</strong>
+					</span>
+                    @enderror
+                </div>
+            </div>
+
+            {{-- VOICE PART --}}
+            <div class="form-group row">
+                <div class="col-12">
+                    <input id="voicepart" type="grade" class="form-control @error('voicepart') is-invalid @enderror" name="voicepart" value="{{ old('voicepart') }}" autocomplete="voicepart" placeholder="{{ __('Voice part') }}" >
+                    @error('voicepart')
+                    <span class="invalid-feedback" role="alert">
+						<strong>{{ $message }}</strong>
+					</span>
+                    @enderror
+                </div>
+            </div>
 
 			<div class="advisory d-none text-dark visible border border-danger p-2 m-5">
 				We found this email in the database.  There are generally two reasons for this:

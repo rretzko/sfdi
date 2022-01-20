@@ -57,7 +57,7 @@ class RegisterController extends Controller
     }
 
     public function verifyUser($token)
-    {
+    {dd(__METHOD__);
       $verifyUser = \App\VerifyUser::where('token', $token)->first();
 
       if(isset($verifyUser) ){//token is found
@@ -86,6 +86,11 @@ class RegisterController extends Controller
       return redirect('/login')->with('status', $status);
     }
 
+    public function showRegistrationForm()
+    {
+        return view('pages.sfdiauths.register');
+    }
+
 /** END OF PUBLIC EVENTS ******************************************************/
 
     /**
@@ -96,12 +101,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $user = User::create([
-            'username' => $this->createUserName($data['first_name'], $data['last_name']),
-            'password' => Hash::make($data['password']),
-        ]);
+        if($this->isDuplicateStudent($data)) {
 
-        if($user->id){
+            return route('duplicatestudent', ['data' => $data]);
+
+        }else{
+
+            $user = User::create([
+                'username' => $this->createUserName($data['first_name'], $data['last_name']),
+                'password' => Hash::make($data['password']),
+            ]);
+        }
+
+        if ($user->id) {
 
             $person = Person::create([
                 'user_id' => $user->id,
@@ -112,12 +124,12 @@ class RegisterController extends Controller
 
             //ensure a student object is available
             $student = Student::create([
-                    'user_id' => $user->id,
-                    'class_of' => self::SeniorYear()
-                ]);
+                'user_id' => $user->id,
+                'class_of' => self::SeniorYear()
+            ]);
 
             //EMAILS
-            if(strlen($data['email'])){
+            if (strlen($data['email'])) {
                 Nonsubscriberemail::create([
                     'user_id' => $user->id,
                     'emailtype_id' => Emailtype::where('descr', 'email_student_personal')->first()->id,
@@ -147,22 +159,21 @@ class RegisterController extends Controller
         //if(strlen($email_primary->email) &&
         //    (!$email_primary->is_verified())){
 
-       //     event(new \App\Events\NewRegistrationEvent($student));
+        //     event(new \App\Events\NewRegistrationEvent($student));
 
-       // }else{ //user is using an already verified email; i.e. family email
+        // }else{ //user is using an already verified email; i.e. family email
 
         //    $user->verified = 1;
-         //   $user->save();
+        //   $user->save();
         //}
 
         Auth::login($user);
 
         return $user;
-
     }
 
     private function email($search_email)
-    {
+    {dd(__METHOD__);
         $blind_index = self::BlindIndex($search_email);
 
         return (Email::where('blind_index', '=', $blind_index)->exists())
@@ -173,9 +184,28 @@ class RegisterController extends Controller
                 ]);
     }
 
-    protected function redirectTo()
+    /**
+     * Determine if student record exists by comparing student last name
+     * email, school, teacher, and grade against the database records
+     *
+     * @param array $data
+     */
+    private function isDuplicateStudent(array $data)
     {
-        return route('profile');
+        $strength = 0;
+        $inputemail = $data['email'];
+        $classof = ($this->SeniorYear() + (12 - $data['grade']));
+        $user_ids = Person::where('last', $data['last_name'])->pluck('user_id')->toArray();
+
+        //user_ids which match last name and classof
+        return Student::whereIn('user_id', $user_ids)
+            ->where('classof', $classof)
+            ->pluck('user_id')->count();
+    }
+
+    protected function redirectTo($data)
+    {
+        return route('duplicatestudent', ['data' => $data]);
     }
 
     protected function registered(Request $request, $user)
@@ -195,6 +225,11 @@ class RegisterController extends Controller
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255',],// 'unique:emails,blind_index'
+            'school' => ['required','string', 'min:4', 'max:255'],
+            'teacher_first' => ['required', 'string', 'min:1', 'max:255'],
+            'teacher_last' => ['required', 'string', 'min:1', 'max:255'],
+            'grade' => ['required','numeric','min:1','max:12'],
+            'voicepart' => ['required','string', 'min:6', 'max:36'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
