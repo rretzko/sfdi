@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\SfdiAuths;
 
+use App\Events\EmailDuplicateStudentNoticeEvent;
+use App\Events\ResetPasswordRequestEvent;
 use App\Http\Controllers\Controller;
+use App\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -13,9 +16,9 @@ class DuplicatestudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(array $emails)
     {
-        dd($request);
+        return view('pages.sfdiauths.currentstudentreset', ['emails' => $emails]);
     }
 
     /**
@@ -50,6 +53,8 @@ class DuplicatestudentController extends Controller
         $inputs = Session::get('inputs');
         Session::remove('inputs');
 
+        event(new EmailDuplicateStudentNoticeEvent($inputs));
+
         return view('pages.sfdiauths.duplicatestudent',
             [
                 'inputs' => $inputs,
@@ -58,14 +63,23 @@ class DuplicatestudentController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for resetting the specified resource's password.
      *
-     * @param  int  $id
+     * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($user_id)
     {
-        //
+        $student = Student::find($user_id);
+        $emails = [];
+
+        if(strlen($student->emailPersonal)){ $emails[] = $student->emailPersonal;}
+        if(strlen($student->getEmailSchool)){ $emails[] = $student->emailSchool;}
+
+        event(new ResetPasswordRequestEvent($student->nonsubscriberemails));
+
+        return $this->index($emails);
+
     }
 
     /**

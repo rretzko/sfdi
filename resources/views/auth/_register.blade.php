@@ -7,6 +7,8 @@ Register
 @endsection
 
 @section('content')
+    @livewire('register')
+    <!-- {{--
 <div class="card-body">
 
     <div style="border: 1px solid darkred; padding: .5rem;">
@@ -29,13 +31,7 @@ Register
     </div>
 
 	<div class="p-2">
-<!-- {{--
-        @if(config('app.url') === 'http://localhost')
-		    <form method="POST" action="{{ route('register') }}" class="form-horizontal m-t-20">
-        @else
-            <form method="POST" action="https://studentfolder.info/register" class="form-horizontal m-t-20">
-        @endif
---}} -->
+
         <form method="POST" action="{{ route('register') }}" class="form-horizontal m-t-20">
 			@csrf
 			<div class="form-group row">
@@ -61,7 +57,7 @@ Register
 				</div>
 			</div>
 
-            {{-- EMAIL ADDRESS --}}
+            {{-- EMAIL ADDRESS
 			<div class="form-group row">
 				<div class="col-12">
 					<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="{{ __('Email Address') }}" >
@@ -73,7 +69,7 @@ Register
 				</div>
 			</div>
 
-            {{-- SCHOOL --}}
+            {{-- SCHOOL
             <div class="form-group row">
                 <div class="col-12">
                     <input id="school" type="text" class="form-control @error('school') is-invalid @enderror" name="school" value="{{ old('school') }}" autocomplete="school" placeholder="{{ __('School Name') }}" >
@@ -85,7 +81,7 @@ Register
                 </div>
             </div>
 
-            {{-- TEACHER --}}
+            {{-- TEACHER
             <div class="form-group row">
                 <div class="col-12">
 
@@ -112,7 +108,7 @@ Register
                 </div>
             </div>
 
-            {{-- GRADE --}}
+            {{-- GRADE
             <div class="form-group row">
                 <div class="col-12">
                     <input id="grade" type="grade" class="form-control @error('grade') is-invalid @enderror" name="grade" value="{{ old('grade') }}" autocomplete="grade" placeholder="{{ __('Grade') }}" >
@@ -124,7 +120,7 @@ Register
                 </div>
             </div>
 
-            {{-- VOICE PART --}}
+            {{-- VOICE PART
             <div class="form-group row">
                 <div class="col-12">
                     <input id="voicepart" type="grade" class="form-control @error('voicepart') is-invalid @enderror" name="voicepart" value="{{ old('voicepart') }}" autocomplete="voicepart" placeholder="{{ __('Voice part') }}" >
@@ -196,6 +192,7 @@ Register
 
 		</form>
 	</div>
+    --}} -->
 </div>
 @push('scripts')
 	<script src="https://studentfolder.info/public/assets/js/tdr_main.js"></script>

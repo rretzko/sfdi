@@ -24,15 +24,15 @@ class EventServiceProvider extends ServiceProvider
             \App\Listeners\StoreNewRegistrationEmailListener::class,
         ],
         \App\Events\ParentAttachedEvent::class => [
-          \App\Listeners\StoreNewParentEmailListener::class,   
+          \App\Listeners\StoreNewParentEmailListener::class,
           \App\Listeners\SendNewParentEmailListener::class,
         ],
         \App\Events\RegistrantPaymentEvent::class => [
             \App\Listeners\SendEmailTeacherRegistrantPaymentListener::class,
         ],
         \App\Events\ResetPasswordRequestEvent::class => [
-          \App\Listeners\SendPasswordResetEmailListener::class, 
-          \App\Listeners\StorePasswordResetEmailListener::class, 
+          \App\Listeners\SendPasswordResetEmailListener::class,
+          \App\Listeners\StorePasswordResetEmailListener::class,
         ],
         \App\Events\StudentAddedSchoolEvent::class => [
             \App\Listeners\StoreEmailTeacherAboutNewStudentListener::class,
@@ -41,12 +41,15 @@ class EventServiceProvider extends ServiceProvider
  //           StudentRequestTeacher::class => [
   //              \App\Listeners\EmailTeacherNewStudent::class,
  //       ],
-        
+
             \App\Events\PrimaryEmailVerifiedEvent::class => [
             \App\Listeners\EmailStudentWelcomeListener::class,
         ],
         \App\Events\UsernameReminderEvent::class => [
             \App\Listeners\SendEmailUsernameReminderListener::class,
+        ],
+        \App\Events\EmailDuplicateStudentNoticeEvent::class => [
+            \App\Listeners\EmailDuplicateStudentNoticeListener::class,
         ],
         //Registered::class => [
         //    \App\Listeners\SendNewRegistrationEmailListener::class,
@@ -55,7 +58,7 @@ class EventServiceProvider extends ServiceProvider
             //SendEmailVerificationNotification::class,
             //\App\Listeners\SendEmailVerificationNotificationListener::class,
         //],
-        
+
     ];
 
     /**

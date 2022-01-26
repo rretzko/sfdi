@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Nonsubscriberemail;
 use App\Person;
 use App\Student;
+use App\Teacher;
 use App\User;
 use App\Traits\BlindIndex;
 use App\Traits\UserName;
@@ -57,7 +58,7 @@ class RegisterController extends Controller
     }
 
     public function verifyUser($token)
-    {dd(__METHOD__);
+    {
       $verifyUser = \App\VerifyUser::where('token', $token)->first();
 
       if(isset($verifyUser) ){//token is found
@@ -88,6 +89,12 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
+        $persons = Person::whereIn('user_id', Teacher::pluck('user_id')->toArray())
+            ->select('last','user_id')
+            ->get('last');
+        $teachers = Teacher::with('person')
+            ->get('user_id','person.last');
+
         return view('pages.sfdiauths.register');
     }
 

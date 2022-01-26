@@ -28,6 +28,8 @@ Route::post('sfdi/register', 'SfdiAuths\RegisterController@store')->name('sfdi.r
 
 /** DUPLICATE STUDENT */
 Route::get('duplicate/student', 'SfdiAuths\DuplicatestudentController@show')->name('sfdi.duplicatestudent');
+Route::get('current/student/{user_id}','SfdiAuths\DuplicatestudentController@edit')->name('sfdi.currentStudent');
+Route::get('current/student/reset','SfdiAuths\DuplicatestudentController@index')->name('sfdi.currentStudentReset');
 
 /** Guest Pitch Files */
 //Guest can access pitch files

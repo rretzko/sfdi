@@ -337,6 +337,11 @@ class Student extends Model
                 ->value('instrumentation_id') ?? false;
     }
 
+    public function nonsubscriberemails()
+    {
+        return $this->hasMany(Nonsubscriberemail::class, 'user_id', 'user_id');
+    }
+
     public function person()
     {
         return $this->belongsTo(Person::class, 'user_id');

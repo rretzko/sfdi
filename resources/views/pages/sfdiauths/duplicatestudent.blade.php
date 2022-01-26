@@ -56,7 +56,7 @@
                                 your previous teacher can look up your username and the email address in our records.
                             </li>
                             <li>
-                                Otherwise, please work with your teacher: {{ $inputs ? $inputs['teacher_first'].' '.$inputs['teacher_last'] : '' }}
+                                Otherwise, please work with your teacher, {{ $inputs ? $inputs['teacher_first'].' '.$inputs['teacher_last'] : '' }},
                                 to create a new record or to get your current username.
                             </li>
                         </ul>

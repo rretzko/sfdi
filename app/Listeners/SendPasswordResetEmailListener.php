@@ -30,17 +30,20 @@ class SendPasswordResetEmailListener
     {
         foreach($event->emails AS $email) {
 
-            $token = sha1(time());
+            if($email->email && strlen($email->email)) {
 
-            $user = User::find($email->user_id);
+                $token = sha1(time());
 
-            if ($user->isStudent()){
+                $user = User::find($email->user_id);
 
-                \Illuminate\Support\Facades\Mail::to($email->email)
-                    ->send(new \App\Mail\passwordResetEmail($user, $email->email, $token));
-            }else{
+                if ($user->isStudent()) {
 
-                dd(__METHOD__);
+                    \Illuminate\Support\Facades\Mail::to($email->email)
+                        ->send(new \App\Mail\passwordResetEmail($user, $email->email, $token));
+                } else {
+
+                    dd(__METHOD__);
+                }
             }
         }
 

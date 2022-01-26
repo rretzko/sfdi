@@ -61,8 +61,7 @@ class RegisterController extends Controller
             return redirect()->route('sfdi.duplicatestudent');
         }
 
-        //expected behavior
-        //go to profile page
+        dd($request);
     }
 
     /**

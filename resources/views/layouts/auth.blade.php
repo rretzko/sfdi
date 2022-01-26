@@ -30,6 +30,9 @@
     <link href="assets/css/main.css" rel="stylesheet">
 	<link href="assets/css/style.css" rel="stylesheet" >
 	-->
+
+    @livewireStyles
+
 <link href="https://studentfolder.info/assets/css/bootstrap.min.css" rel="stylesheet" >
 <link href="https://studentfolder.info/assets/css/main.css" rel="stylesheet" >
 <link href="https://studentfolder.info/assets/css/style.css" rel="stylesheet" >
@@ -107,6 +110,7 @@
 			</div>
 			<!-- end row -->
 		</div>
+
 	</div>
 
         <!--Start of Tawk.to Script-->
@@ -123,8 +127,9 @@
         </script>
         <!--End of Tawk.to Script-->
 
+    @livewireScripts
 
-	<!-- JavaScripts  -->
+    <!-- JavaScripts  -->
 	<script src="{{ asset('js/jquery.min.js') }}"></script>
 	<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 	<script src="{{ asset('js/jquery.slimscroll.js') }}"></script>

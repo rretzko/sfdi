@@ -21,6 +21,17 @@ class Teacher extends Model
         self::acceptStudent_Schools($student, $st_id);
     }
 
+    public static function findTeacherByLastnameSchool($lastname, $school)
+    {
+        $userids = Person::where('last', $lastname)
+            ->pluck('user_id')
+            ->toArray();
+
+        $teachers = Teacher::find( $userids);
+
+
+    }
+
     public function getEventsAttribute()
     {
         $a = [];
