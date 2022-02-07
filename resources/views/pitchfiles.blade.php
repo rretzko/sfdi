@@ -5,7 +5,7 @@
 <div style="margin-top: 6rem;">
     @section('title')
         Pitches, sheet music and accompaniments for
-        <strong>2021 NJ All-State Chorus</strong>
+        <strong>2022-23 NJ All-State Chorus</strong>
     @endsection
 
     @section('content')
@@ -19,7 +19,7 @@
 
                             <div class="card-header-title">
                                 Pitches, sheet music and accompaniments for
-                                <strong>2021 NJ All-state Chorus and CJMEA Region II Chorus</strong>
+                                <strong>2022-23 NJ All-State Chorus</strong>
                             </div>
 
                         </div>
