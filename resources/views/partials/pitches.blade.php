@@ -37,6 +37,9 @@
                     </li>
                 </ul>
             </li>
+
+            {{-- 2021-22 --}}
+        <!--
             <li>Shenandoah
                 <ul>
                     <li>
@@ -48,6 +51,21 @@
                     </li>
                 </ul>
             </li>
+        -->
+
+            {{-- 2022-23 --}}
+            <li>Deep River
+                <ul>
+                    <li>
+                        <label>Solo</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Soprano_I/soprano_i-solo-deepriver.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Soprano_I/soprano_i-solo-deepriver.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li>
+
             <li>Swan
                 <ul>
                     @include('partials.sheetmusic')
@@ -91,6 +109,8 @@
                         </audio>
                     </li>
                 </ul>
+            {{-- 2021-22 --}}
+        <!--
             <li>Shenandoah
                 <ul>
                     <li>
@@ -102,6 +122,20 @@
                     </li>
                 </ul>
             </li>
+        -->
+            {{-- 2022-23 --}}
+            <li>Deep River
+                <ul>
+                    <li>
+                        <label>Solo</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Soprano_I/soprano_ii-solo-deepriver.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Soprano_I/soprano_ii-solo-deepriver.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li>
+
             <li>Swan
                 <ul>
                     @include('partials.sheetmusic')
@@ -147,6 +181,8 @@
                     </li>
                 </ul>
             </li>
+            {{-- 2021-22 --}}
+        <!--
             <li>Shenandoah
                 <ul>
                     <li>
@@ -158,6 +194,21 @@
                     </li>
                 </ul>
             </li>
+        -->
+
+            {{-- 2022-23 --}}
+            <li>Deep River
+                <ul>
+                    <li>
+                        <label>Solo</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Alto_I/alto_i-solo-deepriver.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Alto_I/alto_i-solo-deepriver.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li>
+
             <li>Swan
                 <ul>
                     @include('partials.sheetmusic')
@@ -202,6 +253,9 @@
                     </li>
                 </ul>
             </li>
+
+            {{-- 2021-22 --}}
+        <!--
             <li>Shenandoah
                 <ul>
                     <li>
@@ -213,6 +267,22 @@
                     </li>
                 </ul>
             </li>
+        -->
+
+            {{-- 2022-23 --}}
+            <li>Deep River
+                <ul>
+                    <li>
+                        <label>Solo</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Alto_II/alto_ii-solo-deepriver.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Alto_II/alto_ii-solo-deepriver.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li>
+
+
             <li>Swan
                 <ul>
                     @include('partials.sheetmusic')
