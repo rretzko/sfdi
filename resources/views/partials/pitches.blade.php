@@ -129,8 +129,8 @@
                     <li>
                         <label>Solo</label>
                         <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Soprano_I/soprano_ii-solo-deepriver.mp3" type="audio/mpeg">
-                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Soprano_I/soprano_ii-solo-deepriver.mp3" type="audio/ogg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Soprano_II/soprano_ii-solo-deepriver.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Soprano_II/soprano_ii-solo-deepriver.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
