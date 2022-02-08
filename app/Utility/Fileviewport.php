@@ -51,13 +51,23 @@ class Fileviewport extends Model
     }
     private function init()
     {
-        $server_id = Fileupload::where('registrant_id', $this->registrant->id)
-            ->where('filecontenttype_id', $this->filecontenttype->id)
-            ->value('server_id');
+        //early exit for backwards compatibility
+        if($this->registrant->id > 709999){ //2022 NJ All-State
 
-        $assets = $this->getSproutvideoAssets($server_id);
+            $fileviewport = new \App\Utility\FileviewportInternal($this->registrant, $this->filecontenttype);
 
-        $this->viewport = $this->embedCodeEdits($assets['embed_code']);
+            $this->viewport = $fileviewport->viewport;
+
+        }else {
+
+            $server_id = Fileupload::where('registrant_id', $this->registrant->id)
+                ->where('filecontenttype_id', $this->filecontenttype->id)
+                ->value('server_id');
+
+            $assets = $this->getSproutvideoAssets($server_id);
+
+            $this->viewport = $this->embedCodeEdits($assets['embed_code']);
+        }
     }
 
     private function getSproutvideoAssets($server_id)

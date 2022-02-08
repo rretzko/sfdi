@@ -70,6 +70,10 @@ Route::get('/videoserver/confirmation/{registrant}/{videotype}/{user}', 'Videos\
 Route::get('accepted/{student}/{teacher}', 'Signeds\StudentacceptedController')->name('studentaccepted');
 Route::get('rejected/{student}/{teacher}', 'Signeds\StudentrejectedController')->name('studentrejected');
 
+/** MEDIA UPLOADS */
+Route::post('/registrant/mediaupload/{registrant}/{filecontenttype}', [App\Http\Controllers\Registrants\MediauploadController::class, 'update'])
+    ->name('registrant.mediaupload.update');
+
 /** UTILITIES */
 Route::get('verifyEmailApi/{token}', 'EmailVerificationController@update');
 Route::post('resetRequest', 'PasswordResetRequestController@store')->name('resetRequest');

@@ -195,7 +195,7 @@ class Registrant extends Model
 
     public function hasApplication() : bool
     {
-        return (bool)Application::where('registrant_id', $this->id)->get();
+        return (bool)Application::where('registrant_id', $this->id)->count();
     }
 
     public function hasFileUploaded(Filecontenttype $filecontenttype): bool
