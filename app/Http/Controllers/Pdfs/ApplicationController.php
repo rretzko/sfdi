@@ -26,13 +26,14 @@ class ApplicationController extends Controller
         $registrantfullname = $registrant->student->person->fullName;
         $registrantfirstname = $registrant->student->person->first;
 
-        //ex. pages.pdfs.applications.12.64.application
-        $pdf = \Barryvdh\DomPDF\Facade::loadView('pages.pdfs.applications.'//9.65.2021_22_application',
+        $resource = 'pages.pdfs.applications.'//9.65.2021_22_application',
             . $eventversion->event->id
             .'.'
             . $eventversion->id
-            . '.application',
-            //.applicationTest',
+            . '.application';
+
+        //ex. pages.pdfs.applications.12.64.application
+        $pdf = \Barryvdh\DomPDF\Facade::loadView($resource,
             compact('registrant','eventversion', 'teacher', 'school','me','schoolname',
             'registrantfirstname','registrantfullname'));
 
@@ -42,24 +43,12 @@ class ApplicationController extends Controller
             'updated_by' => auth()->id(),
         ]);
 
+
         //update registrant status
         $registrant->resetRegistrantType('applied');
 
         return $pdf->download($filename);
-        /*
-        $eventversion = $registrant->eventversion;
-        $filename = self::build_Filename($eventversion, $registrant);
-        $teacher = $registrant->student->teachers->first();
-        $school = $registrant->school()->name;
 
-        //ex. pages.pdfs.applications.12.64.application
-        $pdf = PDF::loadView('pages.pdfs.applications.'
-                . self::default_Or_Id($eventversion)
-                . '.application',
-                compact('registrant','eventversion','teacher','school'));
-
-        return $pdf->download($filename);
-        */
     }
 
 /** END OF PUBLIC FUNCTIONS ***************************************************/
