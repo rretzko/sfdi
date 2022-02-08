@@ -76,16 +76,18 @@
                                     >
 
                                         @csrf
-
+<!-- {{--
                                         <input type="hidden" name="token"
                                                value="{{ $fileserver->token($filecontenttype, $eventversion) }}"/>
+--}} -->
                                         <input type="hidden" name="download_sd" value="true"/>
                                         <input type="hidden" name="download_hd" value="true"/>
                                         <input type="hidden" name="title"
                                                value="{{ $filename.$filecontenttype->descr}}.mp3"/>
+<!-- {{--
                                         <input type="hidden" name="folder_id"
                                                value="{{ $folders->where('filecontenttype_id',$filecontenttype->id)->first()->folder_id }}">
-
+--}} -->
                                         <div class="form-group">
                                             <input type="file"
                                                    id="filecontenttype_{{ $filecontenttype->id }}"

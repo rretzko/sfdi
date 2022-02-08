@@ -8,16 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Eventversionteacherconfig extends Model
 {
     protected $primaryKey = ['user_id', 'school_id', 'eventversion_id'];
-    
+
     protected $guarded = [];
-    
+
     public $incrementing = false;
-    
+
     public function eventversion()
     {
         return $this->hasOne(Eventversion::class());
     }
-    
+
     protected function setKeysForSaveQuery(Builder $query)
     {
         return $query

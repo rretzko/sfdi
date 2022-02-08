@@ -181,14 +181,11 @@ class Teacher extends Model
     {
         $paypal = 0;
 
+        //early exit
+        if(! $eventversion->eventversionconfig->paypalstudent){ return false;};
+
         foreach($schools AS $school){
 
-            /*$paypal += DB::table('eventversionteacherconfigs')
-                ->where('user_id', $this->user_id)
-                ->where('eventversion_id', $eventversion->id)
-                ->where('school_id', $school->id)
-                ->value('paypalstudent') ?? 0;
-*/
             foreach( Eventversionteacherconfig::where([
                 'user_id' => $this->user_id,
                 'school_id' => $school->id,

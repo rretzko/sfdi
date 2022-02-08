@@ -94,9 +94,15 @@ class RegistrantController extends Controller
                 4 => 'The Silver Swan',
                 5 => 'Shenandoah',
             ],
+            71 => [
+                1 => 'Scales',
+                4 => 'The Silver Swan',
+                5 => 'Deep River',
+            ],
         ];
 
         //2021-08-28
+        /*
         $folder_id = \App\Fileuploadfolder::where('eventversion_id', $eventversion->id)
                 ->where('instrumentation_id', $registrant->primaryAuditionVoicingId)
                 ->first()->id ?? 0;
@@ -105,7 +111,7 @@ class RegistrantController extends Controller
                 ->get() ?? [];
 
         $fileserver = new Fileserver($registrant);
-
+        */
         //sprout video folder id
         /*$folder_id = \App\Sv_folder::where('eventversion_id', $eventversion->id)
                 ->where('instrumentation_id', $registrant->primaryAuditionVoicingId)
@@ -155,13 +161,13 @@ class RegistrantController extends Controller
             'select_jrsr' => ($eventversion->id !== 62) ? 'SELECTED' : '',
             'payment_hints' => '('.$registrant->auditionnumber.')',
             'isRegistered' => $isRegistered,
-            'folder_id' => $folder_id,
-            'folders' => $folders,
+            'folder_id' => '', //$folder_id,
+            'folders' => '', //$folders,
             'self_registration_open_date' => $self_registration_open_date,
             'self_registration_close_date' => $self_registration_close_date,
             'video_close_date' => $video_close_date,
-            'fileserver' => $fileserver,
-            'filename' => $fileserver->buildFilename($registrant),
+            'fileserver' =>  '', //$fileserver,
+            'filename' => '', //$fileserver->buildFilename($registrant),
             'iseapplication' => $iseapplication,
             'test' => $sjcdaapplicationclosed,
             'sjacdaapplicationclosed' => $sjcdaapplicationclosed,
