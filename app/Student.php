@@ -91,7 +91,6 @@ class Student extends Model
         foreach($this->teachers AS $teacher){
           //  if($teacher->user_id === 8708){echo $teacher->user_id.'<br />';}
         }
-        //dd($this->teachers);
 
     foreach ($this->teachers as $teacher) {
 
