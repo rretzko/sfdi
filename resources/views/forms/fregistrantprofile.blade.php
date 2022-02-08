@@ -463,9 +463,9 @@
     <!-- END PAYPAL -->
 
     <!-- BEGIN PITCH FILES -->
-    <div class="text-black" style="margin-top: 1rem;border: 1px solid darkgrey; padding: .5rem;">
+    <div class="text-black" style="margin-top: 1rem;border: 1px solid darkgrey; padding: .5rem; text-align: center;">
         <button class="btn btn-primary waves-effect waves-light">
-            @if(($eventversion->id === 69) || ($eventversion->id === 71)) {{-- NJ ALl-Shore Chorus 2021-22, 2022-23 --}}
+            @if($eventversion->id === 69) {{-- NJ ALl-Shore Chorus 2021-22 --}}
                 <a href="https://www.allshorechorusnj.com/auditions" target="_blank" style="color: white;"> Pitch files for this year's auditions can be found here!</a>
             @else
                 <a href="{{ route('pitchfiles',[$eventversion]) }}" style="color: white;"> Pitch files for this year's auditions can be found here!</a>
