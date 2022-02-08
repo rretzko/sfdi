@@ -296,7 +296,7 @@
         <td >
             HS PRINCIPAL SIGNATURE: ____________________________________________________
         </td>
-        <td style="width: 20%;" >
+        <td style="width: 25%;" >
             DATE: _________________
         </td>
     </tr>
