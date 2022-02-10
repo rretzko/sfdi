@@ -58,6 +58,24 @@ class Registrant extends Model
         */
     }
 
+    /**
+     * Return a unique id based on eventversion $id
+     * @return int
+     */
+    public function createId($id) : int
+    {
+        $min = ($id * 10000);
+        $max = ($min + 9999);
+        $testid = rand($min, $max);
+
+        while(\App\Registrant::find($testid)){
+
+            $testid = rand($min,$max);
+        }
+
+        return $testid;
+    }
+
     public function due() : float
     {
         return $this->registration_Fee()- $this->paid();

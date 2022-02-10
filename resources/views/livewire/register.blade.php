@@ -30,6 +30,7 @@
 
                     {!! $duplicates !!}
 
+                    {{-- FIRST & LAST NAME --}}
                     <div class="form-group row">
                         <div class="col-6">
                             <input wire:model.lazy="first" id="first" type="text" class="form-control @error('first') is-invalid @enderror" value="{{ old('first') }}" required autocomplete="first" autofocus placeholder="{{ __('First Name') }}">
@@ -108,7 +109,12 @@
             {{-- GRADE --}}
             <div class="form-group row">
                 <div class="col-12">
-                    <input id="grade" type="grade" class="form-control @error('grade') is-invalid @enderror" name="grade" value="{{ old('grade') }}" autocomplete="grade" placeholder="{{ __('Grade') }}" >
+                    <!-- {{-- <input wire:model="grade" id="grade" type="grade" class="form-control @error('grade') is-invalid @enderror" name="grade" value="{{ old('grade') }}" autocomplete="grade" placeholder="{{ __('Grade') }}" > --}} -->
+                    <select wire:model="grade" id="grade" class="form-control @error('grade') is-invalid @enderror">
+                        @for($i=12;$i>3;$i--)
+                            <option value="{{ $i }}">Grade: {{ $i }}</option>
+                        @endfor
+                    </select>
                     @error('grade')
                     <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -120,7 +126,7 @@
             {{-- VOICE PART --}}
             <div class="form-group row">
                 <div class="col-12">
-                    <input id="voicepart" type="grade" class="form-control @error('voicepart') is-invalid @enderror" name="voicepart" value="{{ old('voicepart') }}" autocomplete="voicepart" placeholder="{{ __('Voice part') }}" >
+                    <input wire:model="voicepart" id="voicepart" type="text" class="form-control @error('voicepart') is-invalid @enderror" name="voicepart" value="{{ old('voicepart') }}" autocomplete="voicepart" placeholder="{{ __('Voice part') }}" >
                     @error('voicepart')
                     <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
