@@ -202,6 +202,11 @@ class Register extends Component
 
     private function translateInstrumentation($descr)
     {
-        return Instrumentation::where('descr', 'LIKE', $descr)->first()->id ?? Instrumentation::where('descr', 'Soprano I');
+        $romans1 = str_replace(1,'I', $descr);
+        $romans2 = str_replace(2,'II', $romans1);
+
+        return (Instrumentation::where('descr', 'LIKE', $romans2)->exists())
+            ? Instrumentation::where('descr', 'LIKE', $romans2)->first()->id
+            : Instrumentation::where('descr', 'Soprano I')->first()->id;
     }
 }
