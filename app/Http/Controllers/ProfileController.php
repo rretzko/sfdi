@@ -258,6 +258,7 @@ class ProfileController extends Controller
         }
 
         return [
+                'age' => $student->age(),
                 'geostates' => \App\Geostate::all(),
                 'grades_class_ofs' => $grades_class_ofs->structure(),
                 'user' => $user,

@@ -114,7 +114,7 @@ Profile
                             @if($errors->has('birthday'))
                                 <p class="help text-danger">{{$errors->first('birthday')}}</p>
                             @endif
-                            <span class="font-13 text-muted age_result" style="display: block; margin: 7px 2px 0; ">Around <span>18 years</span></span>
+                            <span class="font-13 text-muted age_result" style="display: block; margin: 7px 2px 0; ">@if($age) Around <span>{{ $age }} years old</span> @endif </span>
                         </div>
                     </div>
                     <div class="form-group row">

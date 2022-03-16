@@ -154,6 +154,7 @@ class HomeController extends Controller
         $table_parents = new Table_Parents($student);
 
         return [
+            'age' => $student->age(),
             'geostates' => \App\Geostate::all(),
             'grades_class_ofs' => $grades_class_ofs->structure(),
             'user' => $user,

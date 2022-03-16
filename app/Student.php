@@ -6,6 +6,7 @@ use App\Instrumentation;
 use App\School;
 use App\Teacher;
 use App\Traits\SeniorYear;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\DB;
@@ -25,6 +26,11 @@ class Student extends Model
     protected $primaryKey = 'user_id';
 
     public $incrementing = false;
+
+    public function age()
+    {
+        return Carbon::parse($this->birthday)->age;
+    }
 
     public function findaddress($type)
     {

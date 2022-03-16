@@ -280,7 +280,7 @@
             <b>{{ $registrant->student->person->first }}</b> is a qualified candidate in good
             standing in {{ $registrant->student->person->pronoun->possessive }} Choral Department and is presently
             enrolled in grade {{ $registrant->student->gradeClassof }} at {{ $registrant->student->person->user->schools->first()->name }}.
-            We understand that <b>{{ $me->person->fullname }}</b>, who is sponsoring <b>{{ $registrant->student->person->fullName }}</b>,
+            We understand that <b>{{ $registrant->student->currentTeachername }}</b>, who is sponsoring <b>{{ $registrant->student->person->fullName }}</b>,
             is a current (paid) member of the National Association for Music Educators (NAfME), and is required to
             participate as a JUDGE FOR ONLINE AUDITIONS, as described in the Directors's Packet, from April 28-30, 2022.
             <br />
