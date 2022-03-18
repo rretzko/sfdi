@@ -36,6 +36,11 @@ class Register extends Component
     public $teacherlast;
     public $teachers;
     public $voicepart;
+    //emergency contacts
+    public $parentcell='';
+    public $parentemail='';
+    public $parentfirst='';
+    public $parentlast='';
 
     public function mount()
     {
@@ -59,6 +64,11 @@ class Register extends Component
             'teacherandschool' => ['required', 'string'],
             'password' => ['required', 'min:8', 'max:255', 'same:passwordconfirmation'],
             'voicepart' => ['required', 'string', 'min:2', 'max:255'],
+            //emergency contact info
+            'parentfirst' => ['required', 'string', 'min:2', 'max:255'],
+            'parentlast' => ['required', 'string', 'min:2', 'max:255'],
+            'parentemail' => ['required', 'email', 'min:8', 'max:255'],
+            'parentcell' => ['required', 'string', 'min:10', 'max:24'],
         ]);
 
         if($this->teacheruserid && $this->schoolid) {
@@ -116,6 +126,51 @@ class Register extends Component
 
                 $registrant->instrumentations()->sync($instrumentationid);
             }
+
+            //Emergency Contacts
+            $guardianuser = User::create([
+                'username' => $this->createUserName($this->first,$this->last),
+                'password' => bcrypt('Password1!'),
+            ]);
+
+            $guardianuser->fresh();
+
+            //add guardian-person
+            \App\Person::create(
+                [
+                    'user_id' => $guardianuser->id,
+                    'first' => $this->parentfirst,
+                    'last' => $this->parentlast,
+                    'pronoun_id' => 1, //she/her/etc.
+                    'honorific_id' => 1, //Ms.
+                ]
+            );
+
+            //add guardian-email
+            \App\Nonsubscriberemail::create(
+                [
+                    'user_id' => $guardianuser->id,
+                    'emailtype_id' => 7, //email_guardian_primary
+                    'email' => $this->parentemail,
+                ]
+            );
+
+            //add guardian-cell
+            \App\Phone::create(
+                [
+                    'user_id' => $guardianuser->id,
+                    'phonetype_id' => 6, //phone_guardian_mobile
+                    'phone' => $this->parentcell,
+                ]
+            );
+
+            //Guardian
+            \App\Guardian::create(['user_id' => $guardianuser->id]);
+            $guardian = \App\Guardian::find($guardianuser->id);
+
+            $guardiansync[$guardian->user_id] = ['guardiantype_id' => 1];
+
+            $student->guardians()->sync($guardiansync);
         }
 
         Auth::login($user);

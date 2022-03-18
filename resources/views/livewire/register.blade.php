@@ -152,6 +152,91 @@
                 </ol>
             </div>
 
+            {{-- EMERGENCY CONTACT --}}
+            <div id="emergency-contact" style="font-size: 1rem;padding-top: 0.25rem; padding-bottom: 0.25rem; border-top: 1px solid darkred; border-bottom: 1px solid darkred; margin-bottom: 1rem;">
+                <div style="padding-top: .25rem;">
+                    <header style="color: darkred; ">Emergency Contact Information</header>
+                </div>
+
+                <div class="flex mb-2 relative pt-2">
+
+                    <label for="parent-first" class="block text-sm font-medium leading-5 text-gray-700 pt-2"
+                           style="width: 8rem;">
+                        Parent Name
+                    </label>
+
+                    <div id="parent-names" class="flex flex-col">
+                        <div class="mt-1 relative rounded-md">
+                            <input wire:model.lazy="parentfirst" class="rounded" type="text" id="parentfirst" value=""
+                                   style="border: 1px solid lightgrey; width: 100%;"
+                                   placeholder="First"
+                                   required
+                            />
+
+                            @error('parentfirst')
+                            <p class="mt-2 text-sm text-red-600" id="parentfirst-error">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+
+                        <div class="mt-1 relative rounded-md">
+                            <input wire:model.lazy="parentlast" class="rounded" type="text" id="parentlast" value=""
+                                   style="border: 1px solid lightgrey; width: 100%;"
+                                   placeholder="Last"
+                                   required
+                            />
+
+                            @error('parentlast')
+                            <p class="mt-2 text-sm text-red-600" id="parentlast-error">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex mb-2 relative pt-2">
+
+                    <label for="parentemail" class="block text-sm font-medium leading-5 text-gray-700 pt-2"
+                           style="width: 8rem;">
+                        Parent Email
+                    </label>
+
+                    <div class="mt-1 relative rounded-md ">
+                        <input wire:model.lazy="parentemail" class="rounded" type="email" id="parentemail" value=""
+                               style="border: 1px solid lightgrey; width: 100%;"
+                               required
+                        />
+
+                        @error('parentemail')
+                        <p class="mt-2 text-sm text-red-600" id="parentemail-error">
+                            {{ $message }}
+                        </p>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="flex mb-2 relative pt-2">
+                    <label for="parentcell" class="block text-sm font-medium leading-5 text-gray-700 pt-2"
+                           style="width: 8rem;">Parent Cell</label>
+
+                    <div class="mt-1 relative rounded-md">
+                        <input wire:model="parentcell" class="rounded" type="text" id="parentcell" value=""
+                               style="border: 1px solid lightgrey; width: 100%;"
+                               required
+                        />
+
+                        @error('parentcell')
+                        <p class="mt-2 text-sm text-red-600" id="parentcell-error">
+                            {{ $message }}
+                        </p>
+                        @enderror
+                    </div>
+                </div>
+            </div>
+
+            {{-- PASSWORD --}}
             <div class="form-group row">
                 <div class="col-12">
                     <input wire:model="password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="{{ __('Password') }}">
