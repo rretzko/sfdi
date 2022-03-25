@@ -114,7 +114,7 @@
 
             <!-- ADVISORY -->
          <div class="border border-danger text-center text-danger">
-                @if($self_registration_open) Applications will be accepted through midnight {{ $self_registration_close_date }}.
+                @if($self_registration_open) Applications will be accepted through 5 p.m. {{ $self_registration_close_date }}.
                 @else Self-registration is closed for {{ $eventversion->name }}.
                 @endif
             </div>
@@ -476,7 +476,7 @@
 
     <!-- BEGIN VIDEO REVIEWS -->
     <div id="advisory" class="text-center border border-lite bg-info text-white mb-2" style="margin: 1rem 0;">
-        Student video collection ends at midnight on {{ $video_close_date }}.
+        Student video collection ends at 5 p.m. on {{ $video_close_date }}.
     </div>
 
     @include('forms.fileuploadviewports')
