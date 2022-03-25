@@ -476,7 +476,7 @@
 
     <!-- BEGIN VIDEO REVIEWS -->
     <div id="advisory" class="text-center border border-lite bg-info text-white mb-2" style="margin: 1rem 0;">
-        Student video collection ends at 5 p.m. on {{ $video_close_date }}.
+        Student media file collection ends at 5 p.m. on {{ $video_close_date }}.
     </div>
 
     @include('forms.fileuploadviewports')
