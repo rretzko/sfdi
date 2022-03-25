@@ -81,16 +81,25 @@ class PasswordController extends Controller
         });
 
         //ensure at least one email is found
-        if($emails->first()){
+        if($emails->first()) {
 
             event(new ResetPasswordRequestEvent($emails));
 
-            Session::flash('message', 'Password-reset email sent to:'.$emails->first()->email.' .');
+            Session::flash('message', 'Password-reset email sent to:' . $emails->first()->email . ' .');
+            return view('auth.login');
+
+        }elseif(! $emails->count()){
+
+            Session::flash('message', '"'.$input['email'].'" was not found. Do you use another email address?');
             return view('auth.login');
 
         }else{
 
-            dd($emails);
+            mail('rick@mfrholdings.com', 'Password reset: bad email', 'The following email was used
+            to attempt a password-reset: '.$input['email'].' @ '.__CLASS__.': '.__METHOD__.': '.__LINE__.' ('.date('Y-M-d G:i:s', strtotime('NOW')).')');
+            Session::flash('message', 'An unexpected error has occurred and the system administrator has been notified');
+            return view('auth.login');
+
         }
     }
 
