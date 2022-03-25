@@ -52,6 +52,8 @@
                         @endif
                     </h3>
 
+                    <div>Maximum file size: {{ ini_get('upload_max_filesize') }}</div>
+
                     @if($registrant->hasFileUploaded($filecontenttype))
                         {{-- START VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT --}}
                         <div class="w-full">
