@@ -33,10 +33,15 @@ Registration Profile
                             @else
 
                                 <div class="text-black">
+                                    <!-- {{--
                                    {{ $self_registration_open }} Self-registration for {{ $eventversion->name }} will
                                     open on {{ $self_registration_open_date }}.<br />
+                                    --}} -->
                                     @if($eventversion->id === 69) {{-- NJ All-Shore Chorus --}}
                                         Pitch files for this year's auditions can be found <a href="https://allshorechorusnj.com/auditions" target="_BLANK">here</a>!
+                                    @elseif($eventversion->id === 71){{-- NJ All-State Chorus --}}
+                                        Student self-registration is closed.  You may still request to register for this year's
+                                        NJ All-State Chorus through your Choral Director.
                                     @else
                                         Pitch files for this year's auditions can be found <a href="{{ route('pitchfiles',[$eventversion]) }}">here</a>!
                                     @endif
