@@ -45,6 +45,8 @@
                                     @include('partials.12.66.pitches')
                                 @elseif($eventversion->id === 67)
                                     @include('partials.11.67.pitches')
+                                @elseif($eventversion->id === 73)
+                                    @include('partials.25.73.pitches')
                                 @else
                                     @include('partials.pitches')
                                 @endif
