@@ -240,6 +240,6 @@ class RegistrantController extends Controller
     {
         $instrumentationids = [5,1,72,73,63,64,65,66,67,68,69,70];
 
-        return Instrumentation::find($instrumentationids);
+        return \App\Instrumentation::find($instrumentationids);
     }
 }
