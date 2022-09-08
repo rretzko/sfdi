@@ -41,8 +41,8 @@
                                     <div class="flex text-xl my-4" >
 
                                         <div class="justify-self-center w-full">
-                                            <div class="font-bold text-center">Morris Area Honor Choir - Middle and High School</div>
-                                            <div class="text-center">{{ $eventversion->name }}</div>
+                                            <div class="font-bold text-center" style="font-size: 1.5rem;">Morris Area Honor Choir - Middle and High School</div>
+                                            <div class="text-center" style="font-size: 1rem;" >{{ $eventversion->name }}</div>
 
                                             <div class="text-center text-sm">
                                                 eApplications are accepted through: <span color="red">Friday, Nov 04,2022 11:59:59 PM</span>
