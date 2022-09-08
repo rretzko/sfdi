@@ -6,6 +6,8 @@ use App\Eventversion;
 use App\Http\Controllers\Controller;
 use App\Userconfig;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 use function PHPUnit\Framework\directoryExists;
 
 class MediauploadController extends Controller
@@ -101,6 +103,22 @@ class MediauploadController extends Controller
                         'uploaded_by' => auth()->id(),
                     ]
                 );
+            }else{
+
+                $fileextension = $request->{$filecontenttype->descr}->guessExtension();
+                $filecontenttypedescr = $filecontenttype->descr;
+                $errortype = 'error-'.$filecontenttypedescr;
+
+                $mssg = 'Bad Extension: '.$fileextension
+                    . ' ('.$filecontenttypedescr.') for: '.$registrant->id
+                    . ' ('.$registrant->student->person->fullName.' of '.$registrant->student->currentSchoolname.') @ '.$eventversion->name.'.';
+
+                Log::info('Bad File Extension: '.$mssg);
+
+                $flash = 'The '.$filecontenttypedescr.' file submitted has an "'.$fileextension.'" file extension.<br /><b>ONLY</b> mp3 files are accepted.';
+
+                session()->flash($errortype, $flash);
+
             }
 
             return back();
