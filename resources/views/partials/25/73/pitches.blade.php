@@ -27,12 +27,28 @@
                                 </audio>
                             </li>
                             <li>
-                                Low Scale
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/s/s-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/s/s-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        Solo: Velvet Shoes
+                        <label>Solo</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/s/s-solo-velvet-shoes.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/s/s-solo-velvet-shoes.mp3"
+                                type="audio/ogg">
+                        </audio>
                     </li>
                 </ul>
             </li>
