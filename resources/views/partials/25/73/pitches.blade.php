@@ -13,17 +13,25 @@
             <li>Scales
                 <ul>
                     <li>
-                        <label>High</label>
+                        <label>High Scale</label>
                         <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/12/66/scales/si/soprano_i-scales-high-bb.mp3" type="audio/mpeg">
-                            <source src="https://studentfolder.info/assets/pitchfiles/12/66/scales/si/soprano_i-scales-high-bb.mp3" type="audio/ogg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/s/s-scales-high-scale.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/s/s-scales-high-scale.mp3"
+                                type="audio/ogg">
                         </audio>
                     </li>
                     <li>
-                        <label>Low</label>
+                        <label>Low Scales</label>
                         <audio controls>
-                            <source src="https://studentfolder.info/assets/pitchfiles/12/66/scales/si/soprano_i-scales-low-e.mp3" type="audio/mpeg">
-                            <source src="https://studentfolder.info/assets/pitchfiles/12/66/scales/si/soprano_i-scales-low-e.mp3" type="audio/ogg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/s/s-scales-low-scale.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/s/s-scales-low-scale.mp3"
+                                type="audio/ogg">
                         </audio>
                     </li>
                     <li>
