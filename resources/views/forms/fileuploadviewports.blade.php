@@ -71,7 +71,12 @@
                                 </div>
                     {{-- END VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT VIEWPORT --}}
                     @else
-
+                        
+                        @if(session('error-solo')) <div style="color: red; border: 1px solid red; padding:0.25rem;">{!! session('error-solo') !!}</div> @endif
+                        @if(session('error-scales')) <div style="color: red; border: 1px solid red; padding:0.25rem;">{!! session('error-scales') !!}</div> @endif
+                        @if(session('error-quartet')) <div style="color: red; border: 1px solid red; padding:0.25rem;">{!! session('error-quartet') !!}</div> @endif
+                        @if(session('error-quintet')) <div style="color: red; border: 1px solid red; padding:0.25rem;">{!! session('error-quintet') !!}</div> @endif
+                        
                         <x-mediauploads.digitalocean
                             filename="$filename"
                             videosubmissionclosed="0"
