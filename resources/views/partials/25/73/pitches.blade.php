@@ -39,7 +39,7 @@
                         </ul>
                     </li>
                     <li>
-                        <label>Solo</label>
+                        <label>Solo: Velvet Shoes</label>
                         <audio controls>
                             <source
                                 src="https://studentfolder.info/assets/pitchfiles/25/73/solos/s/s-solo-velvet-shoes.mp3"
@@ -93,6 +93,91 @@
                     </li>
                 </ul>
             </li><!-- end of Alto -->
+            
+            <li>High Baritone
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/hb/hb-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/hb/hb-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/hb/hb-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/hb/hb-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>Solo: Velvet Shoes</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/hb/hb-solo-velvet-shoes.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/hb/hb-solo-velvet-shoes.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li><!-- end of High Baritone -->
+            
+            <li>Low Baritone
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/lb/lb-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/lb/lb-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/lb/lb-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/lb/lb-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>Solo: Velvet Shoes</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/lb/lb-solo-velvet-shoes.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/lb/lb-solo-velvet-shoes.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li><!-- end of Low Baritone -->
+            
         </ul>
     </li><!-- end of Middle School -->
     
