@@ -41,14 +41,18 @@
                                     <div class="flex text-xl my-4" >
 
                                         <div class="justify-self-center w-full">
-                                            <div class="font-bold text-center">SOUTH JERSEY Jr. & SR. HIGH CHORUS APPLICATION</div>
+                                            <div class="font-bold text-center">Morris Area Honor Choir - Middle and High School</div>
                                             <div class="text-center">{{ $eventversion->name }}</div>
-                                            <!--
+
                                             <div class="text-center text-sm">
-                                                All signatures must be written clearly in ink and every category must
-                                                be filled or the student will not be permitted to audition.
+                                                eApplications are accepted through: <span color="red">Friday, Nov 04,2022 11:59:59 PM</span>
                                             </div>
-                                            -->
+
+                                            <div class="text-center text-sm">
+                                                PLEASE NOTE: Morris Area Choral Directors Association reserved the right
+                                                to require masks at any time, based on current health guidelines and
+                                                host school requirements.
+                                            </div>
                                         </div>
 
                                     </div>
@@ -118,6 +122,10 @@
                                             Choral Director Information
                                         </div>
                                         <div class="detail-row">
+                                            <label>School:</label>
+                                            <div class="data">{{ $registrant->student->currentSchoolname }}</div>
+                                        </div>
+                                        <div class="detail-row">
                                             <label>Choral Director:</label>
                                             <div class="data">{{ auth()->user()->person->fullName }}</div>
                                         </div>
@@ -147,64 +155,222 @@
                                         </div>
                                     </div>
 
-                                    {{-- ENDORSEMENT --}}
+                                    {{-- PAYMENT INFORMATION --}}
                                     <div class="mb-4">
                                         <div class="sectionheader" >
-                                            Endorsements - Signatures Required
+                                            Payment Record
                                         </div>
-                                        <div class=" justify-self-stretch mx-4 mb-4">
-                                            We, the undersigned, recommend <b>{{ $registrant->student->person->fullName }}</b>
-                                            to audition for the {{ $eventversion->name }}.  <b>{{ $registrant->student->person->first }}</b>
-                                            is aware of the fact that {{ $registrant->student->person->pronoun->personal }}
-                                            must remain an active member in good standing of the school performing group
-                                            throughout {{ $registrant->student->person->pronoun->possessive }} South
-                                            Jersey experience.  {{ ucwords($registrant->student->person->pronoun->personal) }}
-                                            is a qualified student, and is now enrolled in Grade {{ $registrant->student->grade }}
-                                            at <b>{{ $registrant->student->currentSchoolname }}</b>.
-                                            In the event that <b>{{ $registrant->student->person->fullName }}</b> is
-                                            accepted for membership in this chorus, we will use our influence to see that
-                                            {{ $registrant->student->person->pronoun->personal }} is properly prepared,
-                                            and all whose signatures appear on this application will adhere to the Rules
-                                            and Regulations of the South Jersey Chorus.  We agree to the stated
-                                            attendance policy and all relevant policies stated in the SJCDA Choral
-                                            auditions packet.  Students will be removed from the chorus at any time if a
-                                            jury of choral directors selected by the Festival Coordinator determines the
-                                            student cannot capably perform their music, or if the student failes to meet
-                                            the requirements outlined in this packet.
+                                        <div class="detail-row" style="display: flex; flex-direction: column;">
+                                            <div class="data" style="font-weight: normal;">
+                                                An audition fee of $15.00 per student will be charged.  In addition, chorus
+                                                students accepted will be assessed a participation fee of $30.00.  The
+                                                music will be theirs to keep.
+                                            </div>
+                                            <div style="display: flex; flex-direction: row;">
+                                                <label>Payment Method: </label>
+                                                <div class="data">
+                                                    TBD
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {{-- REHEARSAL SCHEDULE --}}
+                                    <div class="mb-4">
+                                        <div class="sectionheader" >
+                                            Morris Area Honor Choir Schedule
+                                        </div>
+                                        <div style="font-size: small; text-align: center;">
+                                            ** All students will be given learning tracks and will be expected to learn
+                                            their music before the first rehearsal **
+                                        </div>
+                                        <div>
+                                            <style>
+                                                .date{width: 12rem;}
+                                                .time{width: 9rem; text-align: center;}
+                                            </style>
+                                            <div class="schedule">
+                                                <header style="display: flex; flex-direction: row;">
+                                                    <div class="date font-bold">Date</div>
+                                                    <div class="time font-bold">Middle School</div>
+                                                    <div class="time font-bold">High School</div>
+                                                    <div class="type font-bold">Event</div>
+                                                </header>
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="date">Thursday, January 5th</div>
+                                                    <div class="time">4:00 - 8:00pm</div>
+                                                    <div class="time">4:00 - 8:15pm</div>
+                                                    <div class="type">Rehearsal</div>
+                                                </div>
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="date">Monday, January 9th</div>
+                                                    <div class="time">4:00 - 8:00pm</div>
+                                                    <div class="time">4:00 - 8:15pm</div>
+                                                    <div class="type">Rehearsal</div>
+                                                </div>
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="date">Tuesday, January 10th</div>
+                                                    <div class="time">4:00 - 8:00pm</div>
+                                                    <div class="time">4:00 - 8:15pm</div>
+                                                    <div class="type">SNOW DATE</div>
+                                                </div>
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="date">Wednesday, January 11th</div>
+                                                    <div class="time">4:00 - 8:00pm</div>
+                                                    <div class="time">4:00 - 8:15pm</div>
+                                                    <div class="type">Rehearsal</div>
+                                                </div>
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="date">Friday, January 13th</div>
+                                                    <div class="time">9:00am - 3:00pm</div>
+                                                    <div class="time">9:00am - 3:00pm</div>
+                                                    <div class="type">All-Day Rehearsal</div>
+                                                </div>
+                                                <br />
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="date">Saturday, January 14th</div>
+                                                    <div class="time">1:00 - 4:00pm</div>
+                                                    <div class="time">1:00 - 4:00pm</div>
+                                                    <div class="type">Rehearsal</div>
+                                                </div>
+                                                </header>
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="date">Saturday, January 14th</div>
+                                                    <div class="time">4:00 pm</div>
+                                                    <div class="time">4:00 pm</div>
+                                                    <div class="type">Concert</div>
+                                                </div>
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="date">Sunday, January 15th</div>
+                                                    <div class="time">1:00pm </div>
+                                                    <div class="time">1:00pm </div>
+                                                    <div class="type">Call</div>
+                                                </div>
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="date">Sunday, January 15th</div>
+                                                    <div class="time">4:00pm</div>
+                                                    <div class="time">4:00pm</div>
+                                                    <div class="type">SNOW DATE</div>
+                                                </div>
                                         </div>
 
                                     </div>
 
-                                    {{-- SIGNATURES --}}
-                                    <div class="w-4/12 mx-auto">
-                                        @if(config('app.url') === 'http://localhost')
-                                            <form method="post" action="{{ route('registrant.eapplication', ['registrant' => $registrant]) }}">
-                                        @else
-                                            <form method="post" action="https://studentfolder.info/registrant/{{ $registrant->id }}/eapplication">
-                                        @endif
-                                            @csrf
-                                            <div class="input-group">
-                                                <input type="checkbox" name="signaturestudent" value="1"
-                                                    {{ $eapplication && $eapplication->signaturestudent == 1 ? 'CHECKED' : ''  }}
-                                                >
-                                                <label style="margin-left: .5rem;" for="student">{{ $registrant->student->person->fullName }} Signature</label>
+                                        {{-- EXPECTATIONS AND POLICIES --}}
+                                        <div class="mb-4">
+                                            <div class="sectionheader" >
+                                                Ensemble Expectations and Policies
                                             </div>
-                                            <div class="input-group">
-                                                <input type="checkbox" name="signatureguardian" value="1"
-                                                    {{ $eapplication && $eapplication->signatureguardian == 1 ? 'CHECKED' : ''  }}
-                                                >
-                                                <label style="margin-left: .5rem;" for="student">Parent/Guardian Signature</label>
+                                            <div class=" justify-self-stretch mx-4 mb-4">
+                                                <ol style="margin-left: 1rem; list-style-type: decimal; font-size: smaller;">
+                                                    <li style="margin-bottom: 0.5rem;">
+                                                        Participants are required to attend all rehearsals and performances for their full duration.
+                                                    </li>
+                                                    <li style="margin-bottom: 0.5rem;">
+                                                        A single absence due to illness may be allowed, provided such absence
+                                                        is explained to the satisfaction of the student's director, who in
+                                                        turn will notify the chorus manager as to the nature of the absence.
+                                                        Absence for other extenuating circumstances of a serious nature,
+                                                        beyond the student's control, will be permitted provided the absence
+                                                        is approved by BOTH the student's school director and the chorus manager.
+                                                        In any event, only ONE evening absence for whatever reason may be
+                                                        excused. (If either the director or manager finds the absence unexcused,
+                                                        the student's membership will be terminated.)
+                                                    </li>
+                                                    <li style="margin-bottom: 0.5rem;">
+                                                        Any student who misses more than one evening rehearsal for ANY reason,
+                                                        or who misses the all-day rehearsal before the concert (Friday, January 13th)
+                                                        or rehearsal the morning of the concert (Saturday, January 14th) will
+                                                        not be allowed to participate.
+                                                    </li>
+                                                    <li style="margin-bottom: 0.5rem;">
+                                                        An audition fee of $15.00 per student will be charged.  In addition,
+                                                        chorus students accepted will be assessed a participation fee of $30.00.
+                                                        The music will be theirs to keep.
+                                                    </li>
+                                                </ol>
                                             </div>
-                                            <div class="input-group mt-8">
+                                        </div>
 
-                                                <input type="submit" name="submit" value="Submit"
-                                                       style="background-color: black; color: white; border-radius: .5rem;  padding:.25rem .5rem;"
-                                                />
+                                        {{-- ENDORSEMENTS --}}
+                                        <div class="mb-4">
+                                            <div class="sectionheader" >
+                                                Endorsements - Checkmarks Required
+                                            </div>
+                                            @if(config('app.url') === 'http://localhost')
+                                                <form method="post" action="{{ route('registrant.eapplication', ['registrant' => $registrant]) }}">
+                                            @else
+                                                <form method="post" action="https://studentfolder.info/registrant/{{ $registrant->id }}/eapplication">
+                                            @endif
+                                                @csrf
+                                            <div>
+                                                <div class=" justify-self-stretch mx-4 mb-4" style="display: flex; flex-direction: row;">
+                                                    <label style="width: 24rem;">Student Certification:</label>
+
+                                                    <div style="display: flex; flex-direction: row;">
+                                                        <div class="data" style="margin-left: 0.5rem;">
+                                                            I certify that I will accept the decisions of the judges and
+                                                            conductors as binding and if selected will accept membership in this
+                                                            organization. I understand that membership in this organization will be terminated
+                                                            if I fail to perform satisfactorily within my own school group or if I
+                                                            fail to adhere to the rules set forth above. (Please check the box below.)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" justify-self-stretch mx-4 mb-4" style="display: flex; flex-direction: row;">
+                                                    <div style="display: flex; flex-direction: row;">
+                                                        <label style="width: 7rem;"></label>
+                                                        <input type="checkbox" name="signaturestudent" value="1" style="margin-top: 0.25rem; "
+                                                            {{ $eapplication && $eapplication->signaturestudent == 1 ? 'CHECKED' : ''  }}
+                                                        />
+                                                        <div style="margin-left: 1rem; font-weight: bold;">
+                                                            {{ $registrant->student->person->fullname }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <div class=" justify-self-stretch mx-4 mb-4" style="display: flex; flex-direction: row;">
+                                                    <label style="width: 24rem;">Parent or Guardian Endorsement:</label>
+
+                                                    <div style="display: flex; flex-direction: row;">
+                                                        <div class="data" style="margin-left: 0.5rem;">
+                                                            As parent or legal guardian of <b>{{ $registrant->student->person->fullname }}</b>,
+                                                            I give my permission for {{ $registrant->student->person->pronoun->possessive }}
+                                                            to be an applicant for this organization.  I understand that neither
+                                                            {{ $registrant->student->currentSchoolname }} nor {{ $eventversion->event->organization->name }} assumes responsibility
+                                                            for illness or accident.  I further attest the statement signed by
+                                                            <b>{{ $registrant->student->person->fullname }}</b> and will assist
+                                                            {{ $registrant->student->person->pronoun->possessive }} in fulfilling
+                                                            the obligations incurred. (Please check the box below.)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" justify-self-stretch mx-4 mb-4" style="display: flex; flex-direction: row;">
+                                                    <div style="display: flex; flex-direction: row;">
+                                                        <label style="width: 7rem;"></label>
+                                                        <input type="checkbox" name="signatureguardian" value="1" style="margin-top: 0.25rem; "
+                                                            {{ $eapplication && $eapplication->signatureguardian == 1 ? 'CHECKED' : ''  }}
+                                                        />
+                                                        <div style="margin-left: 1rem; font-weight: bold;">
+                                                            {{ $registrant->student->guardians->first()->person->fullname }}
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                {{-- SUBMIT --}}
+                                                <div class="input-group mt-8" >
+                                                    <input type="submit" name="submit" value="Submit"
+                                                           style="background-color: black; color: white; border-radius: .5rem;  padding:.25rem .5rem; margin-left: 8rem;"
+                                                    />
+                                                </div>
                                             </div>
                                         </form>
-                                    </div>
 
-                                </div>
+                                
                             </div>
                         </div>
 
