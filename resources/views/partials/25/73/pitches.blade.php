@@ -8,7 +8,6 @@
     .pitches li ul li ul li audio{min-width: 54%;}
 </style>
 <ul class="pitches">
-    <ul class="pitches">
     <li style="font-size: larger; text-transform: uppercase;">Middle School
         <ul>
             <li>Soprano
@@ -51,9 +50,54 @@
                         </audio>
                     </li>
                 </ul>
-            </li>
+            </li><!-- end of Soprano -->
+            
+            <li>Alto
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/a/a-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/a/a-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/a/a-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/a/a-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>Solo: Velvet Shoes</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/a/a-solo-velvet-shoes.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/a/a-solo-velvet-shoes.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li><!-- end of Alto -->
         </ul>
-    </li>
+    </li><!-- end of Middle School -->
+    
     <li style="font-size: larger; text-transform: uppercase;">High School
-    </li>
-</ul>
+    
+    </li><!-- end of High School -->
+    
+</ul><!-- end of pitches -->
