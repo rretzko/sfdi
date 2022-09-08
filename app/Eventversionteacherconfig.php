@@ -18,7 +18,7 @@ class Eventversionteacherconfig extends Model
         return $this->hasOne(Eventversion::class());
     }
 
-    protected function setKeysForSaveQuery(Builder $query)
+    protected function setKeysForSaveQuery($query) //Remove Builder typehint
     {
         return $query
             ->where('user_id', $this->getAttribute('user_id'))
