@@ -99,6 +99,10 @@ class RegistrantController extends Controller
                 4 => 'The Silver Swan',
                 5 => 'Deep River',
             ],
+            73 => [
+                1 => 'Scales',
+                5 => 'Velvet Shoes (MS)/Ash Grove (HS)',
+            ],
         ];
 
         //2021-08-28
@@ -138,7 +142,8 @@ class RegistrantController extends Controller
             'eventversion' => $eventversion,
             'page_title' => $registrant->student->person->full_Name.' information for '.$eventversion->name,
             'shirt_sizes' => \App\Shirtsize::all(),
-            'chorals' => $registrant->eventversion->eventensembles[0]->instrumentations(),
+            'chorals' => ($registrant->eventversion->id == 73) ? $this->MAHC_instrumentations() : $registrant->eventversion->eventensembles[0]->instrumentations() ,
+            //'chorals' => $registrant->eventversion->eventensembles[0]->instrumentations(),
             //'chorals' => $eventversion->event->ensembletypes->first()->instrumentations,//\App\Instrumentation::orderBy('descr')->where('branch', 'choral')->get(),
             'registrant_chorals' => $registrant->chorals(),
             'choral' => $eventversion->event->isChoral(),
@@ -225,5 +230,16 @@ class RegistrantController extends Controller
     public function destroy(Registrant $registrant)
     {
         //
+    }
+    
+    /**
+     * Workaround to return instrumentations for all Morris Area Honor Choirs
+     * @return Collection
+     */
+    private function MAHC_instrumentations()
+    {
+        $instrumentationids = [5,1,72,73,63,64,65,66,67,68,69,70];
+
+        return Instrumentation::find($instrumentationids);
     }
 }
