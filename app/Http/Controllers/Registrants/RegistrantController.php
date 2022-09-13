@@ -142,7 +142,7 @@ class RegistrantController extends Controller
             'eventversion' => $eventversion,
             'page_title' => $registrant->student->person->full_Name.' information for '.$eventversion->name,
             'shirt_sizes' => \App\Shirtsize::all(),
-            'chorals' => ($registrant->eventversion->id == 73) ? $this->MAHC_instrumentations() : $registrant->eventversion->eventensembles[0]->instrumentations() ,
+            'chorals' => $this->chorals($registrant),
             //'chorals' => $registrant->eventversion->eventensembles[0]->instrumentations(),
             //'chorals' => $eventversion->event->ensembletypes->first()->instrumentations,//\App\Instrumentation::orderBy('descr')->where('branch', 'choral')->get(),
             'registrant_chorals' => $registrant->chorals(),
@@ -230,6 +230,15 @@ class RegistrantController extends Controller
     public function destroy(Registrant $registrant)
     {
         //
+    }
+    
+/** END OF PUBLIC FUNCTIONS **************************************************/
+
+    private function chorals(Registrant $registrant)
+    {
+        return ($registrant->eventversion->id == 73)
+            ? $this->MAHC_instrumentations()
+            : $registrant->eventversion->event->eventensembles()[0]->instrumentations();
     }
     
     /**
