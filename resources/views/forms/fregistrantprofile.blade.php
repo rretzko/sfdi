@@ -453,7 +453,7 @@
                         </script>
                 @endif
 
-                @if($eventversion === 73) {{-- MORRIS AREA HONOR CHOIRS --}}
+                @if($eventversion->id === 73) {{-- MORRIS AREA HONOR CHOIRS --}}
                     PayPal Button
                 @endif
                 
