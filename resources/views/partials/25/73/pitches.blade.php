@@ -10,6 +10,13 @@
 <ul class="pitches">
     <li style="font-size: larger; text-transform: uppercase;">Middle School
         <ul>
+            <li style="padding: 0.5rem;">
+                Solo
+                <a href="{{ asset('assets/pitchfiles/25/73/pdfs/velvet_shoes.pdf') }}" target="_NEW" style="font-size: larger;">
+                    Velvet Shoes PDF
+                </a>
+            </li>
+
             <li>Soprano
                 <ul>
                     <li>Scales
@@ -183,6 +190,14 @@
 
     <li style="font-size: larger; text-transform: uppercase;">High School
         <ul>
+
+            <li style="padding: 0.5rem;">
+                Solo
+                <a href="{{ asset('assets/pitchfiles/25/73/pdfs/ash_grove.pdf') }}" target="_NEW" style="font-size: larger;">
+                    Ash Grove PDF
+                </a>
+            </li>
+
             <li>Soprano I
                 <ul>
                     <li>Scales
