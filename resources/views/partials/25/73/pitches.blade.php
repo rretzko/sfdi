@@ -182,50 +182,344 @@
     </li><!-- end of Middle School -->
 
     <li style="font-size: larger; text-transform: uppercase;">High School
-
-    <li>Soprano I
         <ul>
-            <li>Scales
-                <ul style="margin-left:-10rem;">
-                    <li>
-                        <label>High Scale</label>
-                        <audio controls>
-                            <source
-                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_i-scales-high-scale.mp3"
-                                type="audio/mpeg">
-                            <source
-                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_1-scales-high-scale.mp3"
-                                type="audio/ogg">
-                        </audio>
+            <li>Soprano I
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_i-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_i-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_i-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_i-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <label>Low Scale</label>
+                        <label>Solo: Ash Grove</label>
                         <audio controls>
                             <source
-                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_1-scales-low-scale.mp3"
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/si/s_i-solo-ash-grove.mp3"
                                 type="audio/mpeg">
                             <source
-                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_i-scales-low-scale.mp3"
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/si/s_i-solo-ash-grove.mp3"
                                 type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <label>Solo: Ash Grove</label>
-                <audio controls>
-                    <source
-                        src="https://studentfolder.info/assets/pitchfiles/25/73/solos/si/s_i-solo-ash-grove.mp3"
-                        type="audio/mpeg">
-                    <source
-                        src="https://studentfolder.info/assets/pitchfiles/25/73/solos/si/s_i-solo-ash-grove.mp3"
-                        type="audio/ogg">
-                </audio>
-            </li>
+            </li><!-- end of Soprano I -->
+
+            <li>Soprano II
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/sii/s_ii-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/sii/s_ii-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/sii/s_ii-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/sii/s_ii-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>Solo: Ash Grove</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/sii/s_ii-solo-ash-grove.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/sii/s_ii-solo-ash-grove.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li><!-- end of Soprano II -->
+
+            <li>Alto I
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/ai/a_i-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/ai/a_i-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/ai/a_i-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/ai/a_i-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>Solo: Ash Grove</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/ai/a_i-solo-ash-grove.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/ai/a_i-solo-ash-grove.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li><!-- end of Alto I -->
+
+            <li>Alto II
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/aii/a_ii-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/aii/a_ii-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/aii/a_ii-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/aii/a_ii-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>Solo: Ash Grove</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/aii/a_ii-solo-ash-grove.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/aii/a_ii-solo-ash-grove.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li><!-- end of Alto II -->
+
+            <li>Tenor I
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/ti/t_i-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/ti/t_i-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/ti/t_i-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/ti/t_i-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>Solo: Ash Grove</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/ti/t_i-solo-ash-grove.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/ti/t_i-solo-ash-grove.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li><!-- end of Tenor I -->
+
+            <li>Tenor II
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/tii/t_ii-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/tii/t_ii-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/tii/t_ii-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/tii/t_ii-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>Solo: Ash Grove</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/tii/t_ii-solo-ash-grove.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/tii/t_ii-solo-ash-grove.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li><!-- end of Tenor II -->
+
+            <li>Bass I
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/bi/b_i-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/bi/b_i-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/bi/b_i-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/bi/b_i-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>Solo: Ash Grove</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/bi/b_i-solo-ash-grove.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/bi/b_i-solo-ash-grove.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li><!-- end of Bass I -->
+
+            <li>Bass II
+                <ul>
+                    <li>Scales
+                        <ul style="margin-left:-10rem;">
+                            <li>
+                                <label>High Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/bii/b_ii-scales-high-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/bii/b_ii-scales-high-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                            <li>
+                                <label>Low Scale</label>
+                                <audio controls>
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/bii/b_ii-scales-low-scale.mp3"
+                                        type="audio/mpeg">
+                                    <source
+                                        src="https://studentfolder.info/assets/pitchfiles/25/73/scales/bii/b_ii-scales-low-scale.mp3"
+                                        type="audio/ogg">
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>Solo: Ash Grove</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/bii/b_ii-solo-ash-grove.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/solos/bii/b_ii-solo-ash-grove.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li><!-- end of Bass II -->
+
         </ul>
-    </li><!-- end of Soprano I -->
-
-
     </li><!-- end of High School -->
 
 </ul><!-- end of pitches -->
