@@ -51,7 +51,7 @@
                     </li>
                 </ul>
             </li><!-- end of Soprano -->
-            
+
             <li>Alto
                 <ul>
                     <li>Scales
@@ -93,7 +93,7 @@
                     </li>
                 </ul>
             </li><!-- end of Alto -->
-            
+
             <li>High Baritone
                 <ul>
                     <li>Scales
@@ -135,7 +135,7 @@
                     </li>
                 </ul>
             </li><!-- end of High Baritone -->
-            
+
             <li>Low Baritone
                 <ul>
                     <li>Scales
@@ -177,12 +177,55 @@
                     </li>
                 </ul>
             </li><!-- end of Low Baritone -->
-            
+
         </ul>
     </li><!-- end of Middle School -->
-    
+
     <li style="font-size: larger; text-transform: uppercase;">High School
-    
+
+    <li>Soprano I
+        <ul>
+            <li>Scales
+                <ul style="margin-left:-10rem;">
+                    <li>
+                        <label>High Scale</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_i-scales-high-scale.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_1-scales-high-scale.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                    <li>
+                        <label>Low Scale</label>
+                        <audio controls>
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_1-scales-low-scale.mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="https://studentfolder.info/assets/pitchfiles/25/73/scales/si/s_i-scales-low-scale.mp3"
+                                type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label>Solo: Ash Grove</label>
+                <audio controls>
+                    <source
+                        src="https://studentfolder.info/assets/pitchfiles/25/73/solos/si/s_i-solo-ash-grove.mp3"
+                        type="audio/mpeg">
+                    <source
+                        src="https://studentfolder.info/assets/pitchfiles/25/73/solos/si/s_i-solo-ash-grove.mp3"
+                        type="audio/ogg">
+                </audio>
+            </li>
+        </ul>
+    </li><!-- end of Soprano I -->
+
+
     </li><!-- end of High School -->
-    
+
 </ul><!-- end of pitches -->

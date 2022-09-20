@@ -11,7 +11,7 @@
         "php": "^7.3|^8.0",
         "barryvdh/laravel-dompdf": "dev-master",
         "coconutcraig/laravel-postmark": "^2.11",
-        "doctrine/dbal": "v2.10.1",
+        "doctrine/dbal": "v2.*",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3",
@@ -23,7 +23,7 @@
         "maatwebsite/excel": "^3.1.0",
         "nesbot/carbon": "dev-master",
         "php-parallel-lint/php-console-color": "^0.2.0",
-        "phpoffice/phpspreadsheet": "1.14.1",
+        "phpoffice/phpspreadsheet": "1.*",
         "sproutvideo/sproutvideo": "dev-master",
         "twilio/sdk": "^6.10.0"
     },
