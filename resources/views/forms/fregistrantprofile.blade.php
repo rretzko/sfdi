@@ -234,7 +234,9 @@
 
                     <div class="descr m-b-5">
                         You can use PayPal to directly process your ${{ number_format($registration_fee,2) }} application fee.<br />
-                        <b>Confirm that the select box below displays the correct option!</b>
+                        {{-- <b>Confirm that the select box below displays the correct option!</b> --}}
+                        <b>Please note: PayPal payments are confirmed within 24-hours during the work week and by
+                        Monday noon over the weekend.</b>
                     </div>
 
                     <!-- start code directly from PayPal -->
@@ -454,9 +456,29 @@
                 @endif
 
                 @if($eventversion->id === 73) {{-- MORRIS AREA HONOR CHOIRS --}}
-                    PayPal Button
+                    <div  style="margin: auto; width: 12rem;">
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" >
+                            <!-- Identify your business so that you can collect the payments. -->
+                            <input type="hidden" name="business" value="morrisareahonorchoir@gmail.com" >
+                            <input type="hidden" name="notify_url" value="https://thedirectorsroom.com/update_account" >
+                            <input type="hidden" name="custom" value="{{ $eventversion->id.'.'.auth()->id().'.15.'.$registrant->id.'.' }}" >
+                            <!-- Specify a subscribe button -->
+                            <input type="hidden" name="cmd" value="_xclick" >
+                            <!-- Identify the registrant -->
+                            <input type="hidden" name="item_name" value="{{ $eventversion->name }}" >
+                            <input type="hidden" name="item_number" value="{{ $eventversion->id.'.'.auth()->id().'.15.'.$registrant->id.'.' }}" >
+                            <input type="hidden" name="on0" value="{{ auth()->user()->name }}" >
+                            <input type="hidden" name="email" value="{{ auth()->user()->email }}" >
+                            <input type="hidden" name="currency_code" value="USD" >
+                            <input type="hidden" name="amount" value="15" >{{-- $amountduenet --}}
+                            <!-- display the payment button -->
+                            <input class="rounded-full" type="image" name="submit" src="/assets/images/pp.png">
+
+                        </form>
+
+                    </div>
                 @endif
-                
+
                 <!-- end code directly from PayPal -->
 
                 </div>
