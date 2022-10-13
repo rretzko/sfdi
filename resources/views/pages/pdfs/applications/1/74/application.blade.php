@@ -48,7 +48,7 @@
         <td style="width: 72%;">
             <div style="font-weight: bold;">
                 <div style="text-align: right;">{{ $eventversion->short_name }}</div>
-                <div style=" text-align: right;">2022 Student Application</div>
+                <div style=" text-align: right;">Student Application</div>
             </div>
         </td>
     </tr>
@@ -63,7 +63,7 @@
     </tr>
     <tr>
         <th style="text-align: center;">
-            GIVE THE SIGNED ENDORSEMENT TO YOUR TEACHER.
+            GIVE THE SIGNED ENDORSEMENT TO YOUR DIRECTOR.
         </th>
     </tr>
     <tr>
@@ -176,7 +176,7 @@
 <table class="endorsements" >
     <tr>
         <th style="text-align: left;">
-            <span style="text-decoration: underline;">PARENT ENDORSEMENT</span>
+            <span style="text-decoration: underline;">PARENT/GUARDIAN ENDORSEMENT</span>
         </th>
     </tr>
     <tr>
@@ -186,13 +186,13 @@
             for illness or accident.  I further attest to the statement signed by {{$registrantfullname}} and will assist
             {{$registrantfirstname}} in fulfilling the obligation incurred.  I will encourage and assist {{$registrantfirstname}}
             in complying with the attendance policy as set forth in this document.  I also give permission to CJMEA to
-            use {{$registrantfirstname}}'s photograph for publicity publication in print and online
+            use {{$registrantfirstname}}'s photograph for publicity publication in print and online.
         </td>
     </tr>
     <tr>
         <td style="text-align: justify;">
-            I have read and acknowledged the rehearsal and concert schedule and I will make arrangements to pick up
-            {{ $registrantfirstname }} on or within twenty-minutes after posted rehearsal dismissal time.
+            I have read and acknowledged the rehearsal and concert schedule and <b>I will make arrangements to pick up
+                {{ $registrantfirstname }} on or within twenty-minutes after posted rehearsal dismissal time.</b>
         </td>
     </tr>
     <tr>
@@ -200,7 +200,7 @@
             <table>
                 <tr>
                     <td style="padding-top: .5rem;">
-                        Parent Signature ______________________________________
+                        Parent/Guardian Signature ______________________________________
                     </td>
                     <td style="padding-top: .5rem;">
                         Date: _________________
@@ -223,12 +223,12 @@
         <td style="text-align: justify;">
             We, the undersigned, recommend {{$registrantfullname}} for participation in the CJMEA sponsored activity.
             {{$registrantfirstname}} is a qualified candidate for this activity and is presently enrolled in grade
-            {{$registrant->student->grade}} at {{$schoolname}}.  We understand, in order to audition, that {{$registrantfirstname}}:
+            {{$registrant->student->gradeClassof}} at {{$schoolname}}.  We understand, in order to audition, that {{$registrantfirstname}}:
             <ol>
                 <li>
                     is a member of {{$schoolname}}'s musical performing organization.  By this we mean that a student
                     auditioning for chorus must be a member of the {{$schoolname}} choral program, and a student auditioning
-                    for band or orchestra must be a member of {{$schoolname}} instrumental program.<br />
+                    for band or orchestra must be a member of {{$schoolname}}'s instrumental program.<br />
             OR
                 </li>
                 <li>
@@ -238,8 +238,8 @@
             </ol>
             <p style="text-align: justify;">
             A CJMEA Region II Chorus member must remain an active member, in good standing, of the school performing
-            organization throughout the CJMEA Region I Chorus experience.  We understand that
-            {{$registrant->student->currentTeachername}} sponsoring this student is a paid member of NAfME and will be
+            organization throughout the CJMEA Region II Chorus experience.  We understand that Director
+            {{$registrant->student->currentTeachername}} sponsoring this student is a current member of NAfME and will be
             present on the day of auditions and will serve and complete the assignment given to them by the audition
             chairperson.  We also understand that we will review this application to be sure that all parts are completed
             correctly.  In the event that {{$registrantfullname}} is accepted into the group, we will use our influence
@@ -276,7 +276,7 @@
         <td style="width: 72%;">
             <div style="font-weight: bold;">
                 <div style="text-align: right;">{{ $eventversion->short_name }}</div>
-                <div style=" text-align: right;">2022 Student Application</div>
+                <div style=" text-align: right;">Student Application</div>
             </div>
         </td>
     </tr>
@@ -291,7 +291,7 @@
     </tr>
     <tr>
         <th style="text-align: center;">
-            GIVE THE SIGNED ENDORSEMENT TO YOUR TEACHER.
+            GIVE THE SIGNED ENDORSEMENT TO YOUR DIRECTOR.
         </th>
     </tr>
     <tr>
@@ -380,8 +380,8 @@
     </tr>
     <tr>
         <td style="text-align: justify;">
-            All students who successfully audition will be charged a $20 acceptance fee which must be paid in full at
-            or before the first rehearsal.  This fee will cover the cost involved in the purchase of music.  All fees must
+            Upon acceptance, students will be charged a $20 acceptance fee which must be paid in full at
+            the first rehearsal.  This fee will cover the purchase cost of music.  This fee must
             be paid in cash or by a School or Director's check only.  No parent/guardian checks will be accepted.
         </td>
     </tr>
@@ -397,7 +397,7 @@
     <tr>
         <td style="text-align: justify;">
             Please read the special Home School Instructions included in the information section of the Director's Packet
-            BEFORE you complete this form.
+            BEFORE you complete this application.
         </td>
     </tr>
 </table>
