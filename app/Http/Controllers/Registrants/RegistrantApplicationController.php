@@ -8,7 +8,7 @@ use App\Eapplication;
 use App\Eventversion;
 use App\Registrant;
 use App\Teacher;
-use Barryvdh\DomPDF\Facade AS PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -70,7 +70,7 @@ class RegistrantApplicationController extends Controller
         $me = auth()->user();
 
         //ex. pages.pdfs.applications.12.64.application
-        $pdf = PDF::loadView('pdfs.applications.'//9.65.2021_22_application',
+        $pdf = Pdf::loadView('pdfs.applications.'//9.65.2021_22_application',
             . $eventversion->event->id
             .'.'
             . $eventversion->id

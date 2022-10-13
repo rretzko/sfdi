@@ -7,8 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Applicationpplication;
 use App\Teacher;
 use App\Registrant;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\DB;
-use PDF;
 
 class ApplicationController extends Controller
 {
@@ -33,7 +33,7 @@ class ApplicationController extends Controller
             . '.application';
 
         //ex. pages.pdfs.applications.12.64.application
-        $pdf = \Barryvdh\DomPDF\Facade::loadView($resource,
+        $pdf = Pdf::loadView($resource,
             compact('registrant','eventversion', 'teacher', 'school','me','schoolname',
             'registrantfirstname','registrantfullname'));
 
