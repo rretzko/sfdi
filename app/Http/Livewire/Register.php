@@ -196,10 +196,11 @@ class Register extends Component
             ->join('school_user', 'teachers.user_id', '=', 'school_user.user_id')
             ->join('schools','school_user.school_id','=','schools.id')
             ->where('people.last','LIKE','%'.$this->teacherlast.'%')
+            ->where('schools.name','NOT LIKE', '%Studio%')
             ->distinct()
             ->orderBy('people.last')
             ->select('teachers.user_id','people.first','people.last', 'schools.id','schools.name','schools.postalcode')
-            ->limit(10)
+            ->limit(20)
             ->get();
     }
 
