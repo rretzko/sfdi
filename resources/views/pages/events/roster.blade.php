@@ -43,7 +43,7 @@ Profile
 <p>If an expected event is not listed, please ask your Director to check their 'Auditions' page
 at TheDirectorsRoom.com.  If your name is listed on their page, return here and you should find 
 the appropriate Event botton.
-<\p>
+</p>
 <p>If this does not work, please reach out using the green chat button at the bottom-right-hand corner of this page.
 </p>
 </div>
