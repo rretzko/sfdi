@@ -502,7 +502,9 @@
 
     <!-- BEGIN VIDEO REVIEWS -->
     <div id="advisory" class="text-center border border-lite bg-info text-white mb-2" style="margin: 1rem 0;">
+    @if($eventversion->id == 73)
         Student media file collection ends at 5 p.m. on {{ $video_close_date }}.
+    @endif
     </div>
 
     @include('forms.fileuploadviewports')
