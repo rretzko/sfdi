@@ -127,11 +127,11 @@
                                         </div>
                                         <div class="detail-row">
                                             <label>Choral Director:</label>
-                                            <div class="data">{{ auth()->user()->person->fullName }}</div>
+                                            <div class="data">{{ $registrant->student->currentTeachername }}</div>
                                         </div>
                                         <div class="detail-row">
                                             <label>Phones:</label>
-                                            <div class="data">{{ auth()->user()->person->subscriberPhoneCsv }}</div>
+                                            <div class="data">_____________</div>
                                         </div>
                                     </div>
 
