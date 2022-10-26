@@ -45,6 +45,7 @@ at TheDirectorsRoom.com.  If your name is listed on their page, return here and 
 the appropriate Event botton.
 </p>
 <p>If this does not work, please reach out using the green chat button at the bottom-right-hand corner of this page.
+Please include your name, school, and your Director's name in the Chat message.
 </p>
 </div>
 
