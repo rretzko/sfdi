@@ -23,6 +23,10 @@ Route::get('sfdi/password_request', 'SfdiAuths\PasswordController@create')->name
 Route::post('sfdi/password_request/update', 'SfdiAuths\PasswordController@update')->name('sfdi.password_request.update');
 Route::get('sfdi/resetPassword/{token}', 'SfdiAuths\PasswordResetController@store')->name('sfdi.resetPassword');
 
+/** STUDENT PARTICIPATION FEE */
+Route::get('sfdi/participationfee/{eventversion}', 'ParticipationFees\ParticipationFeeController@show')
+    ->name('participationfee.show');
+
 /** STUDENT REGISTRATION */
 Route::post('sfdi/register', 'SfdiAuths\RegisterController@store')->name('sfdi.register');
 

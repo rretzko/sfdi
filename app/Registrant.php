@@ -258,6 +258,16 @@ class Registrant extends Model
             ->get()->sum('amount');
     }
 
+    public function participationFeePaid(): bool
+    {
+        $participation_fee = $this->eventversion->eventversionconfig->participation_fee_amount;
+        $payment_amount = Payment::where('registrant_id', $this->id)
+            ->where('paymentcategory_id', PaymentCategory::PARTICIPATION)
+            ->sum('amount') ?? 0;
+
+        return ($payment_amount >= $participation_fee);
+    }
+
     public function payments()
     {
         return $this->hasMany(Payment::class);

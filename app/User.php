@@ -36,10 +36,45 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Return Registrant object based on user's registration record for $eventversion
+     * @param Eventversion $eventversion
+     * @return \App\Registrant
+     */
+    public function currentRegistrant(Eventversion $eventversion): Registrant
+    {
+        return Registrant::where('eventversion_id', $eventversion->id)
+            ->where('user_id', $this->id)
+            ->where('registranttype_id', Registranttype::REGISTERED)
+            ->first();
+    }
+
+    /**
+     * Return School object based on user's registration record for $eventversion
+     * @param Eventversion $eventversion
+     * @return \App\School
+     */
+    public function currentSchool(Eventversion $eventversion): School
+    {
+        return School::find($this->currentRegistrant($eventversion)->school_id);
+    }
+
     public function instrumentations()
     {
         return $this->belongsToMany(Instrumentation::class)
             ->withPivot(['order_by']);
+    }
+
+    public function isAccepted(Eventversion $eventversion) : bool
+    {
+        $not_accepteds = ['inc','na','n/a','pend'];
+
+        $registrant = Registrant::where('user_id', $this->id)
+            ->where('eventversion_id', $eventversion->id)
+            ->where('registranttype_id', Registranttype::REGISTERED)
+            ->first();
+
+        return (! in_array(Scoresummary::where('registrant_id', $registrant->id)->first()->result, $not_accepteds));
     }
 
     public function isStudent() : bool

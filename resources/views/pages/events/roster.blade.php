@@ -33,6 +33,18 @@ Profile
                                         <a href="{{route('registrant.profile.edit', ['eventversion' => $eventversion->id])}}" class="btn btn-info col-8 text-white">{{$eventversion->name}}</a>
                                     </div>
                                 @endif
+
+                                {{-- Events with participation fees --}}
+                                @if($eventversion->eventversionconfig->participation_fee)
+                                    @if( auth()->user()->isAccepted($eventversion))
+                                        <div style="padding: 1rem;">
+                                            <a href="{{ route('participationfee.show', ['eventversion' => $eventversion]) }}" style="background-color: lemonchiffon; color: darkred; border: 1px solid darkred; border-radius: 1rem; padding: 0.25rem 1rem; text-decoration: none;">
+                                                {{ $eventversion->name }} Participation Fee Payment
+                                            </a>
+                                        </div>
+                                    @endif
+                                @endif
+
                             @empty
                                 No active events found.<br />
                                 If you have been told that events are open,
@@ -41,7 +53,7 @@ Profile
                             @endforelse
 <div id="not-found">
 <p>If an expected event is not listed, please ask your Director to check their 'Auditions' page
-at TheDirectorsRoom.com.  If your name is listed on their page, return here and you should find 
+at TheDirectorsRoom.com.  If your name is listed on their page, return here and you should find
 the appropriate Event botton.
 </p>
 <p>If this does not work, please reach out using the green chat button at the bottom-right-hand corner of this page.
