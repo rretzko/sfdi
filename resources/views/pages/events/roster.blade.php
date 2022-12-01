@@ -35,8 +35,8 @@ Profile
                                 @endif
 
                                 {{-- Events with participation fees --}}
-                                @if($eventversion->eventversionconfig->participation_fee)
-                                    @if( auth()->user()->isAccepted($eventversion))
+                                @if($eventversion->eventversionconfig->participation_fee && $teacher_allows_paypal_participation_fee_payments)
+                                    @if(auth()->user()->isAccepted($eventversion))
                                         <div style="padding: 1rem;">
                                             <a href="{{ route('participationfee.show', ['eventversion' => $eventversion]) }}" style="background-color: lemonchiffon; color: darkred; border: 1px solid darkred; border-radius: 1rem; padding: 0.25rem 1rem; text-decoration: none;">
                                                 {{ $eventversion->name }} Participation Fee Payment

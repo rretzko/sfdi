@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Eventversion;
+use App\Eventversionteacherconfig;
+use App\Registrant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Student;
@@ -31,74 +34,16 @@ class EventsController extends Controller
     {
         $student = Student::find(auth()->user()->id);
 
+        /**
+         * workaround to produce $teacher_allows_paypal_participation_fee_payments
+         * for MAHC eventversion 73
+         */
+        $teacher_allows_paypal_participation_fee_payments = $this->teacherAllowsPaypalParticipationFeePayments($student);
+
         return view('pages.events.roster', [
             'eventversions' => $student->eventversionsOpen(),
+            'teacher_allows_paypal_participation_fee_payments' => $teacher_allows_paypal_participation_fee_payments,
         ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function update(\App\Http\Requests\StudentStoreRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 
 /** END OF PUBLIC METHODS *****************************************************/
@@ -143,4 +88,29 @@ class EventsController extends Controller
             'student' => '',
         ];
     }
+
+    /**
+     * Workaround to provide coverage for MAHC 2022 participation fee functionality
+     * @param Student $student
+     * @return bool
+     */
+    private function teacherAllowsPaypalParticipationFeePayments(Student $student): bool
+    {
+        $eventversion_id = 73; //MAHC event
+        $found = false;
+        $registrant = Registrant::where('user_id', $student->user_id)
+            ->where('eventversion_id', $eventversion_id)
+            ->first();
+
+        //early exit
+        if(! $registrant){ return false;}
+
+        $teacher_configs = Eventversionteacherconfig::where('user_id', $registrant->teacher_user_id)
+            ->where('eventversion_id', $registrant->eventversion_id)
+            ->where('school_id', $registrant->school_id)
+            ->first();
+
+        return $teacher_configs->paypal_participation_fee;
+    }
+
 }
