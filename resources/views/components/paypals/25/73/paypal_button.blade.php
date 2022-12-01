@@ -9,7 +9,7 @@
 <section class="mt-4">
 
     <div class="px-4">
-        <h4 class="font-bold mb-4 px-4" style="background-color: rgba(0,0,0,0.1);">PayPal Payment Amount Due: ${{ number_format($amountduenet, 2) }}</h4>
+        <h4 class="font-bold mb-4 px-4" style="background-color: rgba(0,0,0,0.1); text-align: center;">PayPal Payment Amount Due: ${{ number_format($amountduenet, 2) }}</h4>
        {{-- @if($amountduenet > 0) --}}
             <div class="m-auto" style="width: 12rem;">
                 <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank" >
