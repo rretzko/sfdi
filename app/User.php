@@ -74,7 +74,6 @@ class User extends Authenticatable implements MustVerifyEmail
             ->where('registranttype_id', Registranttype::REGISTERED)
             ->first();
 
-
         return (! $registrant)
             ? false
             : (! in_array(Scoresummary::where('registrant_id', $registrant->id)->first()->result, $not_accepteds));
