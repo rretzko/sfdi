@@ -12,7 +12,7 @@
         <h4 class="font-bold mb-4 px-4" style="background-color: rgba(0,0,0,0.1); text-align: center;">PayPal Payment Amount Due: ${{ number_format($amountduenet, 2) }}</h4>
        {{-- @if($amountduenet > 0) --}}
             <div class="m-auto" style="width: 12rem;">
-                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank" >
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" >
                     <!-- Identify your business so that you can collect the payments. -->
                     <input type="hidden" name="business" value="morrisareahonorchoir@gmail.com" >
                     <input type="hidden" name="notify_url" value="https://thedirectorsroom.com/update_account" >
