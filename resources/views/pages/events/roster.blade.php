@@ -34,7 +34,7 @@ Profile
                                     </div>
                                 @endif
 
-                                {{-- Events with participation fees
+                                {{-- Events with participation fees --}}
                                 @if($eventversion->eventversionconfig->participation_fee && $teacher_allows_paypal_participation_fee_payments)
                                     @if(auth()->user()->isAccepted($eventversion))
                                         <div class="mb-1 col-12 text-center" style="padding: 1rem; margin-top: 1rem;">
@@ -44,7 +44,7 @@ Profile
                                         </div>
                                     @endif
                                 @endif
---}}
+
                             @empty
                                 No active events found.<br />
                                 If you have been told that events are open,
