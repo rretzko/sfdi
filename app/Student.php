@@ -100,7 +100,7 @@ class Student extends Model
 
     foreach ($this->teachers as $teacher) {
 
-        foreach ($teacher->eventversionsOpen as $eventversion) {
+        foreach ($teacher->eventversionsOpenForStudents as $eventversion) {
 
             if ($eventversion->isQualified($this)) { //student
 
