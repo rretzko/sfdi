@@ -31,4 +31,19 @@ class Nonsubscriberemail extends Model
 
         return $users;
     }
+
+    public function emailExists($email): bool
+    {
+        foreach($this::all() AS $indb){
+
+            $exists = (strtolower($indb->email) === strtolower($email));
+
+            if($exists){
+
+                break;
+            }
+        }
+
+        return $exists;
+    }
 }

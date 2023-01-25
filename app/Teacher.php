@@ -28,8 +28,6 @@ class Teacher extends Model
             ->toArray();
 
         $teachers = Teacher::find( $userids);
-
-
     }
 
     public function getEventsAttribute()
@@ -46,19 +44,6 @@ class Teacher extends Model
         }
 
         return $a;
-
-        /*
-        foreach($this->organizationsAuthorized AS $collection){
-
-            foreach($collection AS $org){
-
-                foreach($org->events AS $event){
-
-                    $a[] = $event;
-                }
-            }
-        }
-        */
     }
 
     public function getEventversionsOpenAttribute()
@@ -69,6 +54,24 @@ class Teacher extends Model
         foreach($this->events AS $event)
         {
             $eventversions = $event->eventversionsOpenAndQualified($this);
+
+            if(count($eventversions)){
+
+                $a = array_merge($a, $eventversions);
+            }
+        }
+
+        return $a;
+    }
+
+    public function getEventversionsOpenForStudentsAttribute()
+    {
+        $a = [];
+
+        //all authorized events
+        foreach($this->events AS $event)
+        {
+            $eventversions = $event->eventversionsOpenAndQualifiedForStudents($this);
 
             if(count($eventversions)){
 

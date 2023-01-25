@@ -30,6 +30,9 @@ class EventServiceProvider extends ServiceProvider
         \App\Events\RegistrantPaymentEvent::class => [
             \App\Listeners\SendEmailTeacherRegistrantPaymentListener::class,
         ],
+        \App\Events\MakeRegistrationIdsEvent::class => [
+          \App\Listeners\MakeRegistrationIdsListener::class,
+        ],
         \App\Events\ResetPasswordRequestEvent::class => [
           \App\Listeners\SendPasswordResetEmailListener::class,
           \App\Listeners\StorePasswordResetEmailListener::class,

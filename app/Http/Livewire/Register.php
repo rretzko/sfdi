@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Emailtype;
+use App\Events\MakeRegistrationIdsEvent;
 use App\Instrumentation;
 use App\Nonsubscriberemail;
 use App\Person;
@@ -24,9 +25,10 @@ class Register extends Component
 {
     use UserName, SeniorYear;
 
+    public $duplicates='';
     public $email = '';
     public $first;
-    public $grade;
+    public $grade=12;
     public $last;
     public $password = '';
     public $passwordconfirmation = '';
@@ -175,6 +177,9 @@ class Register extends Component
 
         Auth::login($user);
 
+        //force creation of registration ids for currently open event registrations
+        event(new MakeRegistrationIdsEvent($student));
+
         return redirect('profile');
     }
 
@@ -202,6 +207,11 @@ class Register extends Component
             ->select('teachers.user_id','people.first','people.last', 'schools.id','schools.name','schools.postalcode')
             ->limit(20)
             ->get();
+    }
+
+    public function updatedVoicepart()
+    {
+        $this->duplicates = $this->findDuplicates();
     }
 
     private function findDuplicates()
@@ -258,11 +268,13 @@ class Register extends Component
 
     private function translateInstrumentation($descr)
     {
-        $romans1 = str_replace(1,'I', $descr);
+        $romans1 = str_replace(1,'I', strtolower($descr));
         $romans2 = str_replace(2,'II', $romans1);
+        $romans3 = str_replace('ii', 'II', $romans2);
+        $romans4 = str_replace('i', 'I', $romans3);
 
-        return (Instrumentation::where('descr', 'LIKE', $romans2)->exists())
-            ? Instrumentation::where('descr', 'LIKE', $romans2)->first()->id
-            : Instrumentation::where('descr', 'Soprano I')->first()->id;
+        return (Instrumentation::where('descr', 'LIKE', $romans4)->exists())
+            ? Instrumentation::where('descr', 'LIKE', $romans4)->first()->id
+            : Instrumentation::where('descr', 'Soprano I')->first()->id; //default
     }
 }

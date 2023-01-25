@@ -55,7 +55,7 @@
             {{-- EMAIL ADDRESS --}}
             <div class="form-group row">
                 <div class="col-12">
-                    <input wire:model="email" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="{{ __('Email Address') }}" >
+                    <input wire:model.lazy="email" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="{{ __('Email Address') }}" >
                     @error('email')
                     <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -112,7 +112,11 @@
                     <!-- {{-- <input wire:model="grade" id="grade" type="grade" class="form-control @error('grade') is-invalid @enderror" name="grade" value="{{ old('grade') }}" autocomplete="grade" placeholder="{{ __('Grade') }}" > --}} -->
                     <select wire:model="grade" id="grade" class="form-control @error('grade') is-invalid @enderror">
                         @for($i=12;$i>3;$i--)
-                            <option value="{{ $i }}">Grade: {{ $i }}</option>
+                            <option value="{{ $i }}"
+                            @if($i == 12) selected @endif
+                            >
+                                Grade: {{ $i }}
+                            </option>
                         @endfor
                     </select>
                     @error('grade')
@@ -126,7 +130,7 @@
             {{-- VOICE PART --}}
             <div class="form-group row">
                 <div class="col-12">
-                    <input wire:model="voicepart" id="voicepart" type="text" class="form-control @error('voicepart') is-invalid @enderror" name="voicepart" value="{{ old('voicepart') }}" autocomplete="voicepart" placeholder="{{ __('Voice part') }}" >
+                    <input wire:model.lazy="voicepart" id="voicepart" type="text" class="form-control @error('voicepart') is-invalid @enderror" name="voicepart" value="{{ old('voicepart') }}" autocomplete="voicepart" placeholder="{{ __('Voice part') }}" >
                     @error('voicepart')
                     <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

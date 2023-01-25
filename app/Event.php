@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
@@ -58,6 +59,36 @@ class Event extends Model
 
         return $a;
         */
+    }
+
+    /**
+     * Created for use at NJ All-State 2023-24
+     * @since 25-Jan-23
+     */
+    public function eventversionsOpenAndQualifiedForStudents(): array
+    {
+        $a = [];
+
+        foreach($this->eventversions AS $eventversion){
+
+            if($eventversion->id > 74) {
+
+                $resultsReleased = ($eventversion->eventversiondates->where('datetype_id', '=', Datetype::RESULTS_RELEASED)->first())
+                    ? strlen($eventversion->eventversiondates->where('datetype_id', '=', Datetype::RESULTS_RELEASED)->first()->dt)
+                    : 0;
+                $studentOpen = $eventversion->eventversiondates->where('datetype_id','=',Datetype::STUDENT_OPEN)->first()->dt;
+                $studentClose = $eventversion->eventversiondates->where('datetype_id','=',Datetype::STUDENT_CLOSE)->first()->dt;
+
+                if ((! $resultsReleased) &&
+                    ($studentOpen < Carbon::now()) &&
+                    ($studentClose > Carbon::now())) {
+
+                    $a[] = $eventversion;
+                }
+            }
+        }
+
+        return $a;
     }
 
     /**
