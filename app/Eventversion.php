@@ -557,10 +557,10 @@ if(($teacher->user_id == 362) ||
 
     private function isQualified_Student(Student $student) : bool
     {//if((auth()->id() == 2626) && ($this->id == 69)){dd(self::isQualified_Student_Grades($student));}
-        if($this->id === 71) {
-           // dd($this->isQualified_Student_Not_Prohibited($student));
-            //dd($this->isQualified_Student_Is_Approved($student));
-            //dd($this->isQualified_Student_Grades($student));
+        if($this->id === 75) {
+            //dd(__LINE__ . ': ' . $this->isQualified_Student_Not_Prohibited($student));
+            //dd(__LINE__ . ': ' . $this->isQualified_Student_Is_Approved($student));
+            //dd(__LINE__ . ': ' . $this->isQualified_Student_Grades($student));
 //dd($this->studentRegistrationDate('student_open'));
         }
         //early exit: student registration is not open
