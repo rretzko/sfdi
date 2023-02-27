@@ -53,6 +53,7 @@
             </li>
         -->
 
+        <!--
             {{-- 2022-23 --}}
             <li>Deep River
                 <ul>
@@ -65,7 +66,19 @@
                     </li>
                 </ul>
             </li>
-
+        -->
+            {{-- 2023-24 --}}
+            <li>Te Quiero
+                <ul>
+                    <li>
+                        <label>Solo</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/tequiero/Soprano_I/soprano_i-solo-tequiero.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/tequiero/Soprano_I/soprano_i-solo-tequiero.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li>
             <li>Swan
                 <ul>
                     @include('partials.sheetmusic')
