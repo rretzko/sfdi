@@ -8,6 +8,16 @@
     .pitches li ul li ul li audio{min-width: 54%;}
 </style>
 <ul class="pitches">
+    <li>
+        Te Quiero
+        <ul>
+            <li>
+                <a href="https://studentfolder.info/assets/pitchfiles/nja-sc/pronunciationGuides/tequiero/TeQuiero_IPA-2.pdf" target="_blank">
+                    Te Quiero Pronunciation Guide
+                </a>
+            </li>
+        </ul>
+    </li>
     <li>Soprano I
         <ul>
             <li>Scales
