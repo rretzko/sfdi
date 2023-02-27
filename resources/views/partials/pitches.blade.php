@@ -481,7 +481,7 @@
                     </li>
                 </ul>
             </li>
-        -->
+
 
             {{-- 2022-23 --}}
             <li>Deep River
@@ -491,6 +491,20 @@
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Tenor_II/tenor_ii-solo-deepriver.mp3" type="audio/mpeg">
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Tenor_II/tenor_ii-solo-deepriver.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li>
+        -->
+
+            {{-- 2023-24 --}}
+            <li>Te Quiero
+                <ul>
+                    <li>
+                        <label>Solo</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/tequiero/Tenor_II/tenor_ii-solo-tequiero.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/tequiero/Tenor_II/tenor_ii-solo-tequiero.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -554,7 +568,6 @@
                     </li>
                 </ul>
             </li>
-        -->
 
             {{-- 2022-23 --}}
             <li>Deep River
@@ -564,6 +577,19 @@
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Bass_I/bass_i-solo-deepriver.mp3" type="audio/mpeg">
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Bass_I/bass_i-solo-deepriver.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li>
+        -->
+            {{-- 2023-24 --}}
+            <li>Te Quiero
+                <ul>
+                    <li>
+                        <label>Solo</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/tequiero/Bass_I/bass_i-solo-tequiero.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/tequiero/Bass_I/bass_i-solo-tequiero.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
@@ -627,7 +653,6 @@
                     </li>
                 </ul>
             </li>
-        -->
 
             {{-- 2022-23 --}}
             <li>Deep River
@@ -637,6 +662,19 @@
                         <audio controls>
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Bass_II/bass_ii-solo-deepriver.mp3" type="audio/mpeg">
                             <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/deepriver/Bass_II/bass_ii-solo-deepriver.mp3" type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </li>
+        -->
+            {{-- 2023-24 --}}
+            <li>Te Quiero
+                <ul>
+                    <li>
+                        <label>Solo</label>
+                        <audio controls>
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/tequiero/Bass_II/bass_ii-solo-tequiero.mp3" type="audio/mpeg">
+                            <source src="https://studentfolder.info/assets/pitchfiles/nja-sc/tequiero/Bass_II/bass_ii-solo-tequiero.mp3" type="audio/ogg">
                         </audio>
                     </li>
                 </ul>
