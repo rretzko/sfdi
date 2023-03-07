@@ -110,7 +110,7 @@ class EventsController extends Controller
             ->where('school_id', $registrant->school_id)
             ->first();
 
-        return $teacher_configs->paypal_participation_fee;
+        return $teacher_configs ? $teacher_configs->paypal_participation_fee : 0;
     }
 
 }

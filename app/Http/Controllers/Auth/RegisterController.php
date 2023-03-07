@@ -180,7 +180,7 @@ class RegisterController extends Controller
     }
 
     private function email($search_email)
-    {dd(__METHOD__);
+    {//dd(__METHOD__);
         $blind_index = self::BlindIndex($search_email);
 
         return (Email::where('blind_index', '=', $blind_index)->exists())
