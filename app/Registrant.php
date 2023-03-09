@@ -46,11 +46,14 @@ class Registrant extends Model
     {
         //2021-08-28
         /** WORKAROUND $this->instrumentations not working */
-        return DB::table('instrumentation_registrant')
+        $chorals = DB::table('instrumentation_registrant')
             ->select('instrumentation_id')
             ->where('registrant_id', $this->id)
             ->get()
             ->toArray();
+
+        return  count($chorals) ? $chorals :  [Instrumentation::find(63)]; //default = Soprano I
+
         /*
         $parts = explode(',', $this->auditiondetail->voicings);
 
@@ -172,9 +175,11 @@ class Registrant extends Model
     {
         //2021-08-28
         //WORKAROUND as belongsToMany(Instrumentation) isn't working
-        return DB::table('instrumentation_registrant')
+        $id = DB::table('instrumentation_registrant')
            ->where('registrant_id', $this->id)
             ->value('instrumentation_id');
+
+        return $id ?? 63; //default = Soprano I
         /*
         if(! is_null($this->auditiondetail->voicings)){
 

@@ -231,7 +231,7 @@ class RegistrantController extends Controller
     {
         //
     }
-    
+
 /** END OF PUBLIC FUNCTIONS **************************************************/
 
     private function chorals(Registrant $registrant)
@@ -240,7 +240,7 @@ class RegistrantController extends Controller
             ? $this->MAHC_instrumentations()
             : $registrant->eventversion->event->eventensembles()[0]->instrumentations();
     }
-    
+
     /**
      * Workaround to return instrumentations for all Morris Area Honor Choirs
      * @return Collection
