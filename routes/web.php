@@ -166,8 +166,8 @@ Route::resource('persons', 'PersonsController');
 Route::resource('students', 'StudentsController');
 
 /** ADMIN */
-Route::get('/admin', 'Admins\AdminController@index')->name('admin');
-Route::post('/impersonate', 'Admins\AdminController@show')->name('impersonate.login');
+Route::get('/admin', 'Admin\AdminController@index')->name('admin');
+Route::post('/impersonate', 'Admin\AdminController@show')->name('impersonate');
 
 //Route::get('addSchoolForm', 'StudentAddSchoolController@index')->name('addSchool');
 //Route::get('student', 'HomeController@student');
