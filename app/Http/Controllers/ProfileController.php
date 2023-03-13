@@ -428,7 +428,7 @@ class ProfileController extends Controller
                     ->first() ?? null;
 
                 //remove blanked phone records
-                if($phone){ $phone->destroy(); }
+                if($phone){ $phone->delete(); }
             }
         }
 
