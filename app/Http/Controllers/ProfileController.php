@@ -434,6 +434,11 @@ class ProfileController extends Controller
 
         foreach($phones AS $type => $phone){
 
+            $curPhone = Phone::withTrashed()->where('user_id', auth()->id())->where('phonetype_id', $types[$type])->first();
+
+            //restore the current phonetype if soft-deleted
+            if($curPhone->trashed()){ $curPhone->restore(); }
+
             Phone::updateOrCreate(
                 [
                     'user_id' => auth()->id(),
