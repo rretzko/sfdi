@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Address;
 use App\Grades_Class_Ofs;
 use App\Http\Controllers\Controller;
 use App\Instrumentation;
@@ -151,5 +152,19 @@ class AdminController extends Controller
             'school' => '',
             'student' => '',
         ];
+    }
+
+    private function setAddress(Student $student): void
+    {
+        Address::create(
+            [
+                'user_id' => $student->user_id,
+                'geostate_id' => 37, //New Jersey
+                'address01' => '101 Main Street',
+                'address02' => '',
+                'city' => 'Anytown',
+                'postalcode' => '00000',
+            ]
+        );
     }
 }

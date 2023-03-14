@@ -36,7 +36,7 @@ class Student extends Model
     {
         if($this->person->address) {
 
-            if ($this->person->address->$type) {
+            if (! is_null($this->person->address->$type)) {
 
                 return $this->person->address->$type;
             }
