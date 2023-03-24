@@ -15,6 +15,13 @@ Profile
                              <div class="card-header-title">
                                 Event Rosters
                              </div>
+
+                            <div style="border: 1px solid black; padding: 0.25rem; background-color: rgba(0,0,0,0.1); width: 50%;">
+                                <h3>Please Note: Student self-registration for the NJ All-State Chorus is now closed.</h3>
+                                <p>
+                                    Please direct all questions regarding your registration for NJ All-State Chorus to your Choir Director.
+                                </p>
+                            </div>
                         </div>
 
                         <div class="card-body">
