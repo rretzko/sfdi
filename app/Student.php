@@ -172,9 +172,14 @@ class Student extends Model
         return $this->getCurrentSchoolAttribute()->name;
     }
 
+    /**
+     * Return the last teacher created for $this
+     *
+     * @return Teacher[]|\LaravelIdea\Helper\App\_IH_Teacher_C|mixed
+     */
     public function getCurrentTeachernameAttribute()
     {
-        return $this->teachers->first()->person->fullName;
+        return $this->teachers->sortBy('created_at')->last()->person->fullName;
 
     }
 
