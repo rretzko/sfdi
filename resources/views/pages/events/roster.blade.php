@@ -21,6 +21,9 @@ Profile
                                 <p>
                                     Please direct all questions regarding your registration for NJ All-State Chorus to your Choir Director.
                                 </p>
+                                <div>
+                                    <a href="{{ route('pitchfiles',75) }}">If needed the 2023-24 NJ All-State Chorus pitch files are here.</a>
+                                </div>
                             </div>
                         </div>
 
